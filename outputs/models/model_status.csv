@@ -1,0 +1,13 @@
+model,status,notes,n_obs,n_countries
+Model 1 - Pooled OLS,estimated,Country-clustered standard errors reported.,178,17
+Model 2 - Random Effects,estimated,Country-clustered robust standard errors reported.,178,17
+Model 3 - Country Fixed Effects,estimated,Country fixed effects; country-clustered robust standard errors reported.,178,17
+Model 4 - Two-way Fixed Effects,estimated,Preferred baseline; country and year fixed effects with country-clustered robust standard errors.,178,17
+Model 5 - Hausman Test,estimated,p.value=0.03134; fixed effects preferred when p<0.05.,178,17
+Model 6 - Arellano-Bond Dynamic Panel,estimated,Estimated as robustness only; inspect GMM diagnostics and singular weighting-matrix warnings.,178,17
+Model 7 - System GMM,estimated,Estimated as robustness only; inspect GMM diagnostics and singular weighting-matrix warnings.,178,17
+Model 8 - Informality x Social Protection,estimated,Interaction model; marginal effects depend on social protection coverage.,178,17
+Model 9 - Regional Heterogeneity,estimated,Region-specific slopes relative to Andean countries.,178,17
+Model 10a - Lagged Variables Robustness,estimated,Uses one-year lags to reduce simultaneity concerns.,165,16
+Model 10b - Extreme Poverty Robustness,estimated,Alternative dependent variable: extreme poverty.,178,17
+Model 10c - Alternative Informality Robustness,estimated,Alternative informality definition from Equity Lab.,65,11

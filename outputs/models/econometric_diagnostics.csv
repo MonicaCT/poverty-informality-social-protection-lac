@@ -1,0 +1,9 @@
+metric,value,p_value,interpretation
+main_model_observations,178,NA,Complete preferred-model country-year observations.
+main_model_countries,17,NA,Country clusters; cluster-robust inference is finite-sample sensitive below roughly 30 clusters.
+max_vif,5.12015909970083,NA,Values above 10 indicate severe multicollinearity; values above 5 deserve scrutiny.
+breusch_pagan_heteroskedasticity,64.82505335328605,1.2184024607650956e-12,Low p-value indicates heteroskedasticity; robust SE are therefore required.
+panel_serial_correlation_pbgtest,28.902837876259294,7.610133444419535e-8,Low p-value indicates serial correlation in panel residuals.
+pesaran_cross_sectional_dependence,-3.327088885150238,8.775837608881483e-4,Low p-value indicates cross-sectional dependence; interpret clustered SE cautiously.
+hausman_fe_vs_re,12.264466777933677,0.03133827834992289,Low p-value favors fixed effects over random effects.
+twfe_residual_lag1_autocorrelation,0.4593212699582919,NA,Heuristic residual autocorrelation; formal panel test reported separately.

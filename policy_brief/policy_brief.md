@@ -1,0 +1,33 @@
+# Policy Brief
+
+## Labor Informality, Social Protection, and Poverty in Latin America
+
+### Headline
+
+Social protection coverage is negatively associated with poverty in the audited two-way fixed-effects model, while the informality-poverty relationship is positive but less statistically decisive once country-clustered robust standard errors are used.
+
+### Evidence Base
+
+- Inventory: 3,411 structured files and 323,659 variables.
+- Panel: 1,789 country-year rows across 27 countries.
+- Preferred complete sample: 178 observations, 17 countries, years 2006-2023.
+- Diagnostics: heteroskedasticity, serial correlation, and cross-sectional dependence are present; robust inference is mandatory.
+
+### Main Findings
+
+1. Social protection coverage is associated with lower monetary poverty (TWFE coefficient -0.102, p=0.006).
+2. Labor informality has the expected positive sign but is not statistically decisive under clustered inference (coefficient 0.089, p=0.229).
+3. The interaction between informality and social protection is negative but imprecise (coefficient -0.0019, p=0.231).
+4. Bolivia should be a priority for microdata validation because the archive contains household survey resources.
+
+### Policy Priorities
+
+- Expand social protection coverage to informal workers.
+- Improve benefit adequacy and delivery reliability.
+- Integrate social protection with employment and formalization services.
+- Use the structural vulnerability index for monitoring and targeting.
+- Move from aggregate associations to microdata and policy-rollout evidence in the next stage.
+
+### Interpretation Caveat
+
+The results are policy-relevant associations, not causal impacts. Social protection responds to poverty, crises, and political choices. A causal version of this project should use program rollout timing, administrative rules, or household survey microdata.

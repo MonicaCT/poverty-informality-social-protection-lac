@@ -1,0 +1,13 @@
+﻿figure,file_stem,caption,interpretation
+Figure 1,figure_01_evolution_poverty,Evolution of monetary poverty,Tracks the regional average poverty headcount over time; use to identify shared macro and social-policy periods.
+Figure 2,figure_02_evolution_informality,Evolution of labor informality,Shows whether informality moved with or against poverty over the preferred panel window.
+Figure 3,figure_03_social_protection_coverage,Social protection coverage,"Summarizes expansion or contraction in coverage, the central mitigating variable."
+Figure 4,figure_04_scatter_informality_poverty,Informality vs poverty,Displays the unconditional relationship motivating the panel regressions.
+Figure 5,figure_05_scatter_social_protection_poverty,Social protection vs poverty,Shows the raw association between protection coverage and poverty.
+Figure 6,figure_06_interaction_plot,Informality-poverty gradient by protection coverage,Visualizes the interaction hypothesis before formal fixed-effects estimation.
+Figure 7,figure_07_regional_map,Regional vulnerability map,Interactive HTML choropleth ranks country-year vulnerability; static PNG/PDF fallback is included for reports.
+Figure 8,figure_08_heatmap_country_year,Country-year poverty heatmap,"Highlights panel coverage, persistence, and country-specific poverty episodes."
+Figure 9,figure_09_country_ranking,Country vulnerability ranking,Ranks latest country observations by the structural vulnerability index.
+Figure 10,figure_10_coefficient_plot,Cluster-robust coefficient plot,Summarizes preferred and robustness model estimates with confidence intervals.
+Figure 11,figure_11_distribution,Indicator distributions,"Compares the empirical distributions of poverty, informality, and protection coverage."
+Figure 12,figure_12_bolivia_vs_lac,Bolivia vs Latin America,Contrasts Bolivia's poverty trajectory with the regional average.

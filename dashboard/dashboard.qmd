@@ -1,0 +1,6 @@
+---
+title: "Poverty, Informality, and Social Protection Dashboard"
+format: html
+---
+
+This Quarto-ready dashboard uses `dashboard/dashboard_panel.csv`. The generated standalone HTML dashboard is `dashboard/index.html`.

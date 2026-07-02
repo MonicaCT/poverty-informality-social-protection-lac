@@ -1,0 +1,11 @@
+{
+  "rows": 1789,
+  "countries": 27,
+  "years": "1946-2025",
+  "duplicate_country_year_rows": 0,
+  "impossible_percent_values": 0,
+  "analysis_sample_rows": 648,
+  "complete_main_model_rows": 178,
+  "complete_main_model_countries": 17,
+  "complete_main_model_years": "2006-2023"
+}

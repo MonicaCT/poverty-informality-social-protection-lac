@@ -1,0 +1,39 @@
+﻿variable,description,source_or_construction,unit,available_in_panel,non_missing_obs
+iso3,ISO3 country code,standardized,code,True,1789
+country_name,Country name,standardized,text,True,1789
+year,Calendar year,standardized,year,True,1789
+region_lac,Analytical LAC subregion,constructed,category,True,1789
+bolivia,Indicator equal to 1 for Bolivia,constructed,0/1,True,1789
+analysis_sample,"Preferred estimation window, 2000-2023",constructed,0/1,True,1789
+monetary_poverty,"Poverty headcount, preferred moderate line","WDI upper-middle-income line, fallback Equity Lab 2021 PPP",percent,True,586
+extreme_poverty,Extreme poverty headcount,"WDI $2.15/day, fallback Equity Lab $3.00/day 2021 PPP",percent,True,586
+poverty_gap,Poverty gap,WDI upper-middle-income poverty gap,percent,True,501
+labor_informality,Labor informality rate,"ILOSTAT informal employment, fallback Equity Lab social-protection/productivity definitions",percent,True,337
+social_protection_coverage,Population covered by social protection,"ASPIRE all social protection coverage, fallback WDI",percent,True,202
+female_labor_participation,Female labor force participation,Equity Lab,percent,True,97
+male_labor_participation,Male labor force participation,Equity Lab,percent,True,97
+labor_force_participation,Total labor force participation,"Equity Lab, fallback ILOSTAT",percent,True,893
+unemployment,Unemployment rate,"Equity Lab, fallback ILOSTAT",percent,True,550
+youth_unemployment,Youth unemployment rate,Equity Lab,percent,True,97
+employment,Employment-to-population ratio,ILOSTAT,percent,True,748
+gdp_per_capita,"GDP per capita, constant local/international benchmark",WDI,currency index / constant dollars,True,1734
+log_gdp_per_capita,Natural log GDP per capita,constructed from WDI,log,True,1734
+gdp_per_capita_growth,GDP per capita growth,WDI,percent,True,1707
+population_total,Total population,WDI GDP/population extract,persons,True,600
+population_growth,Population growth,WDI,percent,True,1728
+gini,Gini coefficient,"World Bank Gini, fallback Equity Lab labor-income Gini",index,True,506
+social_expenditure,Public expenditure on social protection,CEPAL,percent of GDP or source unit,True,154
+education_expenditure,Public expenditure on education,CEPAL,percent of GDP or source unit,True,154
+health_expenditure,Public expenditure on health,CEPAL,percent of GDP or source unit,True,154
+government_expenditure_total,Total public expenditure,CEPAL,percent of GDP or source unit,True,154
+social_protection_adequacy_aspire,Adequacy of social protection benefits,ASPIRE,percent,True,199
+social_assistance_coverage_aspire,Social assistance coverage,ASPIRE,percent,True,202
+social_insurance_coverage_aspire,Social insurance coverage,ASPIRE,percent,True,201
+cash_transfer_coverage_aspire,Cash transfer coverage,ASPIRE,percent,True,86
+pension_coverage_aspire,Pension coverage,ASPIRE,percent,True,201
+public_transfer_benefit_q1_aspire,Benefit incidence/level for poorest quintile,ASPIRE,percent or source unit,True,199
+labor_informality_lag1,One-year lag of labor informality,constructed,percent,True,325
+social_protection_lag1,One-year lag of social protection coverage,constructed,percent,True,202
+poverty_lag1,One-year lag of monetary poverty,constructed,percent,True,584
+informality_x_social_protection,Interaction: informality times social protection coverage divided by 100,constructed,percentage-point interaction,True,181
+structural_vulnerability_index,Standardized vulnerability index,"mean of z-scored poverty, informality, unemployment, Gini, low social protection, low GDP",z-score,True,1747

@@ -1,0 +1,63 @@
+---
+title: "Labor Informality, Social Protection, and Poverty Dynamics in Latin America"
+format: html
+execute:
+  echo: false
+---
+
+
+# Labor Informality, Social Protection, and Poverty Dynamics in Latin America
+
+## Abstract
+
+This paper studies whether labor informality and social protection jointly explain poverty dynamics in Latin America and the Caribbean. The project begins with a recursive inventory of local development-economics data archives and then constructs a harmonized country-year panel from ASPIRE, Equity Lab, ILOSTAT, WDI, World Bank Gini, CEPAL, and SEDLAC outputs. The preferred specification is a two-way fixed-effects model with country and year effects and country-clustered robust standard errors. Social protection coverage is negatively associated with poverty, while labor informality is positively signed but not robustly significant after clustering. The interaction between informality and social protection is negative but imprecisely estimated. The results support a cautious policy conclusion: social protection is central to poverty reduction in highly informal economies, but stronger causal designs and microdata validation are required.
+
+## Introduction
+
+Labor informality is a defining feature of Latin American labor markets. It limits access to contributory social insurance, weakens tax capacity, increases income volatility, and exposes households to shocks. Social protection systems can offset some of these vulnerabilities when programs reach informal workers and provide adequate benefits. The central research question is whether social protection mitigates the poverty risks associated with informality.
+
+## Literature Review
+
+The analysis sits at the intersection of poverty dynamics, labor informality, social protection, and state capacity. The policy literature emphasizes that informality can be both an employment condition and a channel of exclusion from formal insurance. Social protection can partly close this gap through social assistance, pensions, cash transfers, and non-contributory coverage. However, social protection is also endogenous: governments expand programs in response to poverty, politics, crises, fiscal capacity, and institutional constraints.
+
+## Data
+
+The repository inventories 3,411 structured files, 323,659 variables, 541 documentation or script assets, and 96 source collections. The harmonized panel contains 1,789 country-year rows across 27 LAC countries. The preferred complete estimation sample contains 178 observations from 17 countries over 2006-2023.
+
+The core variables are monetary poverty, extreme poverty, labor informality, social protection coverage, gender labor-force participation, unemployment, youth unemployment, employment, GDP per capita, Gini, social expenditure, education expenditure, health expenditure, population, and a structural vulnerability index.
+
+## Methodology
+
+The preferred model is a two-way fixed-effects panel specification. Country effects absorb time-invariant institutional and structural differences; year effects absorb common macroeconomic and regional shocks. Robust inference is required because diagnostics detect heteroskedasticity, serial correlation, and cross-sectional dependence. Dynamic GMM is estimated but treated as robustness because the current complete sample is small and the GMM weighting matrices are singular.
+
+## Results
+
+The preferred TWFE model estimates a social protection coefficient of -0.102 (p=0.006), indicating that higher coverage is associated with lower monetary poverty after controlling for informality, GDP per capita, inequality, unemployment, country effects, and year effects. The informality coefficient is 0.089 (p=0.229); it is positive, as expected, but no longer statistically decisive under country-clustered robust inference. The interaction coefficient is -0.0019 (p=0.231), consistent with a mitigation hypothesis but too imprecise for a strong conclusion.
+
+## Discussion
+
+The evidence supports a structural vulnerability interpretation. Informality, inequality, unemployment, and weak macroeconomic conditions are strongly connected to poverty risk, while social protection coverage is a protective correlate. The results do not prove that social protection causally reduces the effect of informality, but they provide a disciplined empirical foundation for deeper work using policy timing, administrative rollout, or household microdata.
+
+## Bolivia Profile
+
+Bolivia is treated as a special analytical case because the archive contains household survey microdata and Bolivia-specific administrative sources. In the current repository version, Bolivia appears in the cross-country panel and dashboard, while the microdata are reserved for the next validation layer.
+
+## Policy Implications
+
+1. Expand social protection coverage for informal workers.
+2. Strengthen benefit adequacy, not only nominal coverage.
+3. Link social protection to labor-market services and formalization pathways.
+4. Use structural vulnerability rankings to monitor country risk.
+5. Validate aggregate results with household microdata before drawing country-specific causal conclusions.
+
+## Limitations
+
+The analysis is associational. The panel is unbalanced, the main model has 17 country clusters, social protection is endogenous, and dynamic GMM is fragile in the current sample. These limitations are documented rather than hidden.
+
+## Conclusions
+
+The repository demonstrates a full research pipeline from data inventory to reproducible analysis, diagnostics, visualization, dashboarding, and policy communication. The central policy conclusion is that poverty, informality, and social protection should be analyzed jointly, especially in Bolivia and other structurally vulnerable economies.
+
+## References
+
+See `paper/references.bib` for data-source and literature references.

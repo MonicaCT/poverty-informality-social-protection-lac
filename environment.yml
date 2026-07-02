@@ -1,0 +1,29 @@
+﻿name: poverty-informality-social-protection-lac
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - pandas>=2.2
+  - numpy>=1.26
+  - matplotlib>=3.8
+  - seaborn>=0.13
+  - statsmodels>=0.14
+  - plotly>=5.20
+  - openpyxl>=3.1
+  - pyarrow>=15
+  - jinja2>=3.1
+  - tabulate>=0.9
+  - pillow>=10
+  - r-base>=4.2
+  - r-readr
+  - r-dplyr
+  - r-plm
+  - r-fixest
+  - r-broom
+  - r-ggplot2
+  - r-openxlsx
+  - r-officer
+  - r-knitr
+  - r-lmtest
+  - r-sandwich
+  - r-car

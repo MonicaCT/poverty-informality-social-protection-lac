@@ -1,0 +1,28 @@
+﻿iso3,country_name,region_lac,first_year,last_year,n_years,poverty_obs,informality_obs,social_protection_obs
+ARG,Argentina,Mercosur,1960,2025,66,37,23,13
+BHS,Bahamas,Caribbean,1953,2025,67,0,1,0
+BLZ,Belize,Central America,1960,2025,66,8,0,1
+BOL,Bolivia,Andean,1950,2025,67,29,25,14
+BRA,Brazil,Mercosur,1960,2025,66,42,16,12
+BRB,Barbados,Caribbean,1960,2025,66,1,1,0
+CHL,Chile,Southern Cone,1952,2025,67,31,16,8
+COL,Colombia,Andean,1951,2025,67,32,20,12
+CRI,Costa Rica,Central America,1960,2025,66,39,16,14
+CUB,Cuba,Caribbean,1960,2025,66,0,0,0
+DOM,Dominican Republic,Caribbean,1960,2025,66,30,26,14
+ECU,Ecuador,Andean,1960,2025,66,31,24,13
+GTM,Guatemala,Central America,1960,2025,66,28,18,3
+GUY,Guyana,Caribbean,1960,2025,66,2,5,0
+HND,Honduras,Central America,1960,2025,66,36,12,10
+HTI,Haiti,Caribbean,1950,2025,67,2,1,1
+JAM,Jamaica,Caribbean,1960,2025,66,9,9,3
+MEX,Mexico,Mexico,1960,2025,66,31,28,8
+NIC,Nicaragua,Central America,1960,2025,66,27,1,3
+PAN,Panama,Central America,1950,2025,67,32,21,14
+PER,Peru,Andean,1960,2025,66,30,24,15
+PRY,Paraguay,Mercosur,1960,2025,66,29,18,16
+SLV,El Salvador,Central America,1960,2025,66,31,11,14
+SUR,Suriname,Caribbean,1960,2025,66,2,1,0
+TTO,Trinidad and Tobago,Caribbean,1946,2025,67,2,0,0
+URY,Uruguay,Mercosur,1960,2025,66,32,19,13
+VEN,Venezuela,Andean,1960,2025,66,13,1,1
