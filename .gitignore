@@ -1,0 +1,39 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+~$*
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Logs and transient outputs
+logs/
+*.log
+*.tmp
+*.temp
+*.bak
+
+# Large/private raw data should not be committed
+data/raw/**
+!data/raw/README.md
+!data/raw/.gitkeep

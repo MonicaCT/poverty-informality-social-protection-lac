@@ -1,0 +1,19 @@
+﻿name: Documentation improvement
+description: Suggest a README, docs, or publication clarity improvement.
+title: "[Docs]: "
+labels: [documentation]
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Page or section
+      description: Identify the file or section that needs improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement
+      description: Explain the requested change.
+    validations:
+      required: true

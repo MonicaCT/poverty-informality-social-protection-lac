@@ -1,0 +1,53 @@
+﻿name: Repository Verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    name: Reproduce public outputs and run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "4.5.2"
+
+      - name: Install R dependencies
+        run: |
+          Rscript -e 'install.packages(c("readr", "dplyr", "plm", "fixest", "broom", "ggplot2", "openxlsx", "officer", "knitr", "lmtest", "sandwich", "car"), repos="https://cloud.r-project.org")'
+
+      - name: Parse Python scripts without bytecode artifacts
+        run: python tests/test_publication_readiness.py --syntax-only
+
+      - name: Reproduce public outputs from processed panel
+        run: |
+          python code/python/02_descriptive_analysis.py
+          python code/python/03_build_dashboard.py
+          Rscript code/r/03_econometric_models.R
+          python code/python/04_generate_documents.py
+
+      - name: Run repository tests
+        run: |
+          python tests/test_panel_integrity.py
+          python tests/test_repository_outputs.py
+          python tests/test_publication_readiness.py

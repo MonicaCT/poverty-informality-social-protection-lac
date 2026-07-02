@@ -1,0 +1,24 @@
+﻿name: Data issue
+description: Report a data, metadata, source, or harmonization concern.
+title: "[Data]: "
+labels: [data, methodology]
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Source or variable affected
+      description: Name the dataset, file, country, year, or variable.
+    validations:
+      required: true
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+      description: Explain the suspected data problem and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link to source documentation or paste a short reproducible check.

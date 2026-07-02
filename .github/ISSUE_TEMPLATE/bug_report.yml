@@ -1,0 +1,27 @@
+﻿name: Bug report
+description: Report a reproducibility or code issue.
+title: "[Bug]: "
+labels: [bug, reproducibility]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact commands run.
+      placeholder: |
+        python code/python/02_descriptive_analysis.py
+        Rscript code/r/03_econometric_models.R
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: OS, Python version, R version

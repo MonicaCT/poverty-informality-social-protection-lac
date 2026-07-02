@@ -1,0 +1,24 @@
+﻿name: Econometric question
+description: Suggest or question a model, diagnostic, or identification choice.
+title: "[Econometrics]: "
+labels: [econometrics, research]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or proposal
+      description: State the model, assumption, diagnostic, or robustness check.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Economic rationale
+      description: Explain the identification or interpretation concern.
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Suggested implementation
+      description: Optional code, formula, or references.

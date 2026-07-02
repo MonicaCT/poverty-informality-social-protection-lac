@@ -1,0 +1,19 @@
+﻿name: Feature request
+description: Suggest a new research, dashboard, or reproducibility feature.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: Feature
+      description: What should be added?
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Research or portfolio value
+      description: Explain why this improves the repository.
+    validations:
+      required: true
