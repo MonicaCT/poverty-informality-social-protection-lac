@@ -1,4 +1,4 @@
-# Poverty, Informality, and Social Protection in Latin America
+﻿# Poverty, Informality, and Social Protection in Latin America
 
 ![Repository banner](assets/brand/repository-banner.png)
 
@@ -45,7 +45,7 @@ The project is designed for reviewers who care about research credibility, repro
 
 ## Dashboard
 
-The dashboard is generated from the processed panel and can be opened offline at [`dashboard/index.html`](dashboard/index.html).
+The dashboard is generated from the processed panel and is available as a live GitHub Pages dashboard after Pages is enabled: [Open dashboard](https://monicact.github.io/poverty-informality-social-protection-lac/dashboard/). The offline source file is also available at [`dashboard/index.html`](dashboard/index.html).
 
 ![Dashboard overview](assets/screenshots/dashboard-overview.png)
 
@@ -166,3 +166,4 @@ Code is released under the MIT License. Source datasets remain governed by their
 ## Citation
 
 If you use this repository, cite it using [`CITATION.cff`](CITATION.cff).
+

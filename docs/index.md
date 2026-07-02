@@ -7,7 +7,7 @@ This documentation site summarizes the repository workflow, empirical strategy, 
 ## Navigation
 
 - [Reproducibility guide](reproducibility.md)
-- [Dashboard documentation](dashboard.md)
+- [Dashboard documentation](dashboard.md)`n- [Interactive dashboard](dashboard/)
 - [Repository architecture](repository-architecture.md)
 - [Empirical strategy](EMPIRICAL_STRATEGY.md)
 - [Econometric diagnostics](ECONOMETRIC_DIAGNOSTICS.md)
@@ -47,3 +47,4 @@ flowchart LR
 | Figure 10 | ![Figure 10](assets/figures/figure_10_coefficient_plot.png) |
 | Figure 11 | ![Figure 11](assets/figures/figure_11_distribution.png) |
 | Figure 12 | ![Figure 12](assets/figures/figure_12_bolivia_vs_lac.png) |
+
