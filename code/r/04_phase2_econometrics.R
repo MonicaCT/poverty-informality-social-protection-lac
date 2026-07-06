@@ -48,8 +48,8 @@ phase2_events <- tibble::tribble(
 
 event_window_rows <- lapply(seq_len(nrow(phase2_events)), function(i) {
   event <- phase2_events[i, ]
-  required_vars <- event$required_vars[[1]]
-  mechanism_vars <- event$mechanism_vars[[1]]
+  required_vars <- unlist(event$required_vars, use.names = FALSE)
+  mechanism_vars <- unlist(event$mechanism_vars, use.names = FALSE)
   rows <- panel |>
     filter(iso3 == event$iso3, year >= event$event_year - 4, year <= event$event_year + 4) |>
     arrange(year)
