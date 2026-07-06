@@ -395,3 +395,125 @@ quantile_results <- quantile_panel_fit(
 write_csv(quantile_results, file.path(model_dir, "phase2_quantile_panel.csv"))
 write_md_table(quantile_results, file.path(model_dir, "phase2_quantile_panel.md"))
 cat("phase2_quantile_rows=", nrow(quantile_results), "\n")
+
+event_control_vars <- c("log_gdp_per_capita", "gini", "unemployment")
+core_event_isos <- c("BOL", "PER", "BRA")
+
+parse_event_term <- function(term) {
+  as.integer(sub(".*::(-?[0-9]+).*", "\\1", term))
+}
+
+event_study_fit <- function(target_iso, country, event_year, event_label, outcome,
+                            allowed_relative_years, section, controls = event_control_vars) {
+  window_min <- min(allowed_relative_years)
+  window_max <- max(allowed_relative_years)
+  excluded_isos <- setdiff(core_event_isos, target_iso)
+  event_data <- panel |>
+    filter(year >= event_year + window_min, year <= event_year + window_max) |>
+    filter(!(iso3 %in% excluded_isos)) |>
+    mutate(
+      treated = iso3 == target_iso,
+      relative_year = year - event_year
+    ) |>
+    filter(!treated | relative_year %in% allowed_relative_years) |>
+    filter(if_all(all_of(c(outcome, controls)), ~ !is.na(.x)))
+
+  treated_relative_years <- event_data |>
+    filter(treated, !is.na(.data[[outcome]])) |>
+    distinct(relative_year) |>
+    arrange(relative_year) |>
+    pull(relative_year)
+
+  if (!(-1 %in% treated_relative_years) || length(setdiff(treated_relative_years, -1)) == 0) {
+    return(tibble(
+      section = section,
+      country = country,
+      iso3 = target_iso,
+      event_label = event_label,
+      event_year = event_year,
+      outcome = outcome,
+      relative_year = NA_integer_,
+      estimate = NA_real_,
+      std.error = NA_real_,
+      statistic = NA_real_,
+      p.value = NA_real_,
+      n_obs = nrow(event_data),
+      n_countries = dplyr::n_distinct(event_data$iso3),
+      treated_relative_years = paste(treated_relative_years, collapse = ", "),
+      note = "Event-study not estimated: missing reference period -1 or no non-reference treated periods."
+    ))
+  }
+
+  formula_obj <- as.formula(paste(
+    outcome,
+    "~ i(relative_year, treated, ref = -1) +",
+    paste(controls, collapse = " + "),
+    "| iso3 + year"
+  ))
+  fit <- try(feols(formula_obj, data = event_data, cluster = cluster_formula), silent = TRUE)
+  if (inherits(fit, "try-error")) {
+    return(tibble(
+      section = section,
+      country = country,
+      iso3 = target_iso,
+      event_label = event_label,
+      event_year = event_year,
+      outcome = outcome,
+      relative_year = NA_integer_,
+      estimate = NA_real_,
+      std.error = NA_real_,
+      statistic = NA_real_,
+      p.value = NA_real_,
+      n_obs = nrow(event_data),
+      n_countries = dplyr::n_distinct(event_data$iso3),
+      treated_relative_years = paste(treated_relative_years, collapse = ", "),
+      note = as.character(fit)
+    ))
+  }
+  ct <- as.data.frame(summary(fit, cluster = cluster_formula)$coeftable)
+  event_rows <- tibble(
+    term = rownames(ct),
+    estimate = ct[[1]],
+    std.error = ct[[2]],
+    statistic = ct[[3]],
+    p.value = ct[[4]]
+  ) |>
+    filter(grepl("relative_year::", term)) |>
+    mutate(relative_year = parse_event_term(term)) |>
+    arrange(relative_year)
+
+  event_rows |>
+    transmute(
+      section = section,
+      country = country,
+      iso3 = target_iso,
+      event_label = event_label,
+      event_year = event_year,
+      outcome = outcome,
+      relative_year = relative_year,
+      estimate = estimate,
+      std.error = std.error,
+      statistic = statistic,
+      p.value = p.value,
+      n_obs = nrow(event_data),
+      n_countries = dplyr::n_distinct(event_data$iso3),
+      treated_relative_years = paste(treated_relative_years, collapse = ", "),
+      note = "Country and year fixed effects; country-clustered standard errors; reference relative year is -1."
+    )
+}
+
+bolivia_main_rels <- c(-4, -3, -2, -1, 0, 1, 3, 4)
+bolivia_mechanism_rels <- event_window_rows |>
+  filter(iso3 == "BOL", social_protection_available) |>
+  pull(relative_year)
+
+event_study_bolivia <- bind_rows(
+  event_study_fit("BOL", "Bolivia", 2008L, "Renta Dignidad", "monetary_poverty", bolivia_main_rels, "core"),
+  event_study_fit("BOL", "Bolivia", 2008L, "Renta Dignidad", "extreme_poverty", bolivia_main_rels, "core"),
+  event_study_fit("BOL", "Bolivia", 2008L, "Renta Dignidad", "labor_informality", bolivia_main_rels, "core"),
+  event_study_fit("BOL", "Bolivia", 2008L, "Renta Dignidad", "social_protection_coverage", bolivia_mechanism_rels, "mechanism")
+)
+
+write_csv(event_study_bolivia, file.path(model_dir, "phase2_event_study_bolivia.csv"))
+write_md_table(event_study_bolivia, file.path(model_dir, "phase2_event_study_bolivia.md"))
+cat("phase2_event_study_bolivia_rows=", nrow(event_study_bolivia), "\n")
