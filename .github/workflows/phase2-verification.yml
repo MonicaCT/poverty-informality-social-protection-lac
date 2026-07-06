@@ -43,11 +43,11 @@ jobs:
             any::quantreg
             any::remotes
 
-      - name: Install archived fwildclusterboot
+      - name: Install archived wild-bootstrap dependencies
         shell: bash
         run: |
           set -o pipefail
-          Rscript -e 'remotes::install_version("fwildclusterboot", version = "0.13.0", repos = "https://cran.r-project.org", upgrade = "never", dependencies = TRUE)'
+          Rscript -e 'deps <- c("Depends", "Imports", "LinkingTo"); remotes::install_version("summclust", version = "0.7.2", repos = "https://cran.r-project.org", upgrade = "never", dependencies = deps); remotes::install_version("fwildclusterboot", version = "0.13.0", repos = "https://cran.r-project.org", upgrade = "never", dependencies = deps); stopifnot(requireNamespace("summclust", quietly = TRUE)); stopifnot(requireNamespace("fwildclusterboot", quietly = TRUE))'
 
       - name: Run canonical Phase 2 script with full console log
         shell: bash
@@ -85,4 +85,5 @@ jobs:
             outputs/models/PROVISIONAL_NOTICE.md
           if-no-files-found: error
           retention-days: 30
+
 
