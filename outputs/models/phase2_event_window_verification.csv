@@ -1,4 +1,4 @@
-﻿iso3,country,event_year,event_label,year,relative_year,required_complete,social_protection_available,monetary_poverty_available,extreme_poverty_available,labor_informality_available
+iso3,country,event_year,event_label,year,relative_year,required_complete,social_protection_available,monetary_poverty_available,extreme_poverty_available,labor_informality_available
 BOL,Bolivia,2008,Renta Dignidad,2004,-4,TRUE,FALSE,TRUE,TRUE,TRUE
 BOL,Bolivia,2008,Renta Dignidad,2005,-3,TRUE,FALSE,TRUE,TRUE,TRUE
 BOL,Bolivia,2008,Renta Dignidad,2006,-2,TRUE,TRUE,TRUE,TRUE,TRUE

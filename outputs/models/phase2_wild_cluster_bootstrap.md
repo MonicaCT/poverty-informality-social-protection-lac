@@ -1,13 +1,10 @@
-﻿| model | term | estimate | cluster_std.error | cluster_t | cluster_p.value | wild_bootstrap_reps | wild_bootstrap_p.value |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| TWFE baseline | labor_informality | 0.088806 | 0.07556 | 1.175301 | 0.239874 | 999 | 0.298 |
-| TWFE baseline | social_protection_coverage | -0.102373 | 0.037478 | -2.731545 | 0.006304 | 999 | 0.039 |
-| TWFE baseline | log_gdp_per_capita | -25.96825 | 8.119746 | -3.19816 | 0.001383 | 999 | 0.04 |
-| TWFE baseline | gini | 0.508343 | 0.180413 | 2.817668 | 0.004838 | 999 | 0.024 |
-| TWFE baseline | unemployment | 0.893498 | 0.25987 | 3.438247 | 0.000586 | 999 | 0.001 |
-| TWFE interaction | labor_informality | 0.218339 | 0.118393 | 1.844184 | 0.065156 | 999 | 0.077 |
-| TWFE interaction | social_protection_coverage | 0.022967 | 0.097163 | 0.23638 | 0.813138 | 999 | 0.799 |
-| TWFE interaction | labor_informality:social_protection_coverage | -0.00189 | 0.001435 | -1.31739 | 0.187708 | 999 | 0.164 |
-| TWFE interaction | log_gdp_per_capita | -25.37457 | 8.097164 | -3.13376 | 0.001726 | 999 | 0.051 |
-| TWFE interaction | gini | 0.496094 | 0.180965 | 2.741387 | 0.006118 | 999 | 0.018 |
-| TWFE interaction | unemployment | 0.868717 | 0.244376 | 3.554831 | 0.000378 | 999 | 0.001 |
+|model            |term                                         | estimate| std.error| statistic| p.value| bootstrap_reps| bootstrap_valid_reps| bootstrap_std.error| wild_p.value|inference                                    |
+|:----------------|:--------------------------------------------|--------:|---------:|---------:|-------:|--------------:|--------------------:|-------------------:|------------:|:--------------------------------------------|
+|TWFE baseline    |labor_informality                            |   0.0888|    0.0798|    1.1130|  0.2832|            999|                  999|              0.0533|        0.111|Rademacher wild cluster bootstrap by country |
+|TWFE baseline    |social_protection_coverage                   |  -0.1024|    0.0396|   -2.5868|  0.0206|            999|                  999|              0.0313|        0.001|Rademacher wild cluster bootstrap by country |
+|TWFE baseline    |log_gdp_per_capita                           | -25.9682|    8.5741|   -3.0287|  0.0085|            999|                  999|              7.8382|        0.001|Rademacher wild cluster bootstrap by country |
+|TWFE baseline    |gini                                         |   0.5083|    0.1905|    2.6684|  0.0175|            999|                  999|              0.1652|        0.430|Rademacher wild cluster bootstrap by country |
+|TWFE baseline    |unemployment                                 |   0.8935|    0.2744|    3.2561|  0.0053|            999|                  999|              0.2874|        0.229|Rademacher wild cluster bootstrap by country |
+|TWFE interaction |labor_informality                            |   0.2183|    0.1251|    1.7458|  0.1013|            999|                  999|              0.0944|        0.179|Rademacher wild cluster bootstrap by country |
+|TWFE interaction |social_protection_coverage                   |   0.0230|    0.1026|    0.2238|  0.8260|            999|                  999|              0.0854|        0.917|Rademacher wild cluster bootstrap by country |
+|TWFE interaction |labor_informality:social_protection_coverage |  -0.0019|    0.0015|   -1.2471|  0.2315|            999|                  999|              0.0011|        0.547|Rademacher wild cluster bootstrap by country |
