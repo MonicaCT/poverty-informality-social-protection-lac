@@ -549,3 +549,56 @@ write_csv(event_study_all, file.path(model_dir, "phase2_event_study_all.csv"))
 write_md_table(event_study_all, file.path(model_dir, "phase2_event_study_all.md"))
 cat("phase2_event_study_brazil_rows=", nrow(event_study_brazil), "\n")
 cat("phase2_event_study_all_rows=", nrow(event_study_all), "\n")
+
+format_phase2_number <- function(x) {
+  ifelse(is.na(x), "NA", format(round(x, 4), nsmall = 4, trim = TRUE))
+}
+
+capture_md_table <- function(data, digits = 4) {
+  paste(capture.output(knitr::kable(data, format = "pipe", digits = digits)), collapse = "\n")
+}
+
+phase2_summary_lines <- c(
+  "# Phase 2 Econometric Results Summary",
+  "",
+  "Status: generated from the processed panel without rebuilding raw data.",
+  "",
+  "## Window Verification",
+  "",
+  capture_md_table(event_window_summary),
+  "",
+  "## Level 1: TWFE Inference Comparison",
+  "",
+  capture_md_table(inference_comparison),
+  "",
+  "## Level 1: Oster Sensitivity",
+  "",
+  capture_md_table(oster_results),
+  "",
+  "## Level 1: Panel Quantile Regression",
+  "",
+  capture_md_table(quantile_results),
+  "",
+  "## Level 2: Bolivia Event Study",
+  "",
+  capture_md_table(event_study_bolivia),
+  "",
+  "## Level 2: Peru Event Study",
+  "",
+  capture_md_table(event_study_peru),
+  "",
+  "## Level 2: Brazil Poverty-Only Extension",
+  "",
+  capture_md_table(event_study_brazil),
+  "",
+  "## Interpretation Guardrails",
+  "",
+  "- Level 1 remains observational. Coefficients must be described as conditional associations, not causal impacts.",
+  "- Wild bootstrap p-values are the finite-cluster inference reference because the main sample has 17 country clusters.",
+  "- Driscoll-Kraay standard errors are reported alongside clustered inference because diagnostics found cross-sectional dependence.",
+  "- Bolivia and Peru event studies are quasi-causal only if pre-event coefficients do not show systematic pre-trends.",
+  "- Brazil is a poverty-only extension; it should not be interpreted as evidence about informality or social-protection mechanisms."
+)
+
+writeLines(phase2_summary_lines, file.path(model_dir, "phase2_results_summary.md"))
+cat("phase2_summary_written=TRUE\n")

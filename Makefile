@@ -11,6 +11,7 @@ reproduce:
 	$(PYTHON) code/python/02_descriptive_analysis.py
 	$(PYTHON) code/python/03_build_dashboard.py
 	$(RSCRIPT) code/r/03_econometric_models.R
+	$(RSCRIPT) code/r/04_phase2_econometrics.R
 	$(PYTHON) code/python/04_generate_documents.py
 
 raw-rebuild:
@@ -19,6 +20,7 @@ raw-rebuild:
 
 models:
 	$(RSCRIPT) code/r/03_econometric_models.R
+	$(RSCRIPT) code/r/04_phase2_econometrics.R
 
 dashboard:
 	$(PYTHON) code/python/03_build_dashboard.py
