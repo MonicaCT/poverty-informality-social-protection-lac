@@ -517,3 +517,19 @@ event_study_bolivia <- bind_rows(
 write_csv(event_study_bolivia, file.path(model_dir, "phase2_event_study_bolivia.csv"))
 write_md_table(event_study_bolivia, file.path(model_dir, "phase2_event_study_bolivia.md"))
 cat("phase2_event_study_bolivia_rows=", nrow(event_study_bolivia), "\n")
+
+peru_main_rels <- c(-3, -2, -1, 0, 1, 2, 3, 4)
+peru_mechanism_rels <- event_window_rows |>
+  filter(iso3 == "PER", social_protection_available) |>
+  pull(relative_year)
+
+event_study_peru <- bind_rows(
+  event_study_fit("PER", "Peru", 2005L, "JUNTOS", "monetary_poverty", peru_main_rels, "core"),
+  event_study_fit("PER", "Peru", 2005L, "JUNTOS", "extreme_poverty", peru_main_rels, "core"),
+  event_study_fit("PER", "Peru", 2005L, "JUNTOS", "labor_informality", peru_main_rels, "core"),
+  event_study_fit("PER", "Peru", 2005L, "JUNTOS", "social_protection_coverage", peru_mechanism_rels, "mechanism")
+)
+
+write_csv(event_study_peru, file.path(model_dir, "phase2_event_study_peru.csv"))
+write_md_table(event_study_peru, file.path(model_dir, "phase2_event_study_peru.md"))
+cat("phase2_event_study_peru_rows=", nrow(event_study_peru), "\n")
