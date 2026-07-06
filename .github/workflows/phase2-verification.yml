@@ -1,4 +1,4 @@
-name: Phase 2 Canonical Verification
+name: Phase 2 and 3 Canonical Verification
 
 on:
   push:
@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   phase2-r:
-    name: Run canonical Phase 2 R pipeline
+    name: Run canonical Phase 2 and 3 R pipeline
     runs-on: ubuntu-latest
 
     env:
@@ -40,6 +40,8 @@ jobs:
             any::lmtest
             any::sandwich
             any::knitr
+            any::ggplot2
+            any::modelsummary
             any::quantreg
             any::remotes
 
@@ -55,7 +57,7 @@ jobs:
           set -o pipefail
           mkdir -p outputs/models
           {
-            echo "== Phase 2 canonical verification =="
+            echo "== Phase 2 and 3 canonical verification =="
             echo "UTC timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             echo "Git SHA: ${GITHUB_SHA}"
             echo "Git ref: ${GITHUB_REF}"
@@ -67,21 +69,26 @@ jobs:
             Rscript -e 'print(sessionInfo())'
             echo
             echo "== Installed package versions =="
-            Rscript -e 'pkgs <- c("readr","dplyr","fixest","plm","lmtest","sandwich","knitr","quantreg","fwildclusterboot"); print(data.frame(package = pkgs, version = vapply(pkgs, function(p) as.character(packageVersion(p)), character(1))))'
+            Rscript -e 'pkgs <- c("readr","dplyr","fixest","plm","lmtest","sandwich","knitr","ggplot2","modelsummary","quantreg","fwildclusterboot"); print(data.frame(package = pkgs, version = vapply(pkgs, function(p) as.character(packageVersion(p)), character(1))))'
             echo
             echo "== Running code/r/04_phase2_econometrics.R =="
             Rscript code/r/04_phase2_econometrics.R
             echo
-            echo "== Generated Phase 2 outputs =="
-            find outputs/models -maxdepth 1 -type f -name 'phase2_*' -printf '%f\n' | sort
+            echo "== Generated Phase 2 and 3 outputs =="
+            find outputs/models -maxdepth 1 -type f \( -name 'phase2_*' -o -name 'phase3_*' \) -printf 'outputs/models/%f\n' | sort
+            find outputs/tables -maxdepth 1 -type f -name 'phase3_*' -printf 'outputs/tables/%f\n' | sort
+            find outputs/figures -maxdepth 1 -type f -name 'phase3_*' -printf 'outputs/figures/%f\n' | sort
           } 2>&1 | tee outputs/models/phase2_execution_log.txt
 
       - name: Upload canonical Phase 2 outputs and log
         uses: actions/upload-artifact@v4
         with:
-          name: phase2-canonical-results
+          name: phase2-phase3-canonical-results
           path: |
             outputs/models/phase2_*
+            outputs/models/phase3_*
+            outputs/tables/phase3_*
+            outputs/figures/phase3_*
             outputs/models/PROVISIONAL_NOTICE.md
           if-no-files-found: error
           retention-days: 30
