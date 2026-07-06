@@ -307,8 +307,8 @@ write_md_table(oster_results, file.path(model_dir, "phase2_oster_sensitivity.md"
 cat("phase2_oster_rows=", nrow(oster_results), "\n")
 
 residualize_twfe <- function(data, var) {
-  fit <- feols(as.formula(paste(var, "~ 1 | iso3 + year")), data = data)
-  as.numeric(resid(fit))
+  fit <- stats::lm(as.formula(paste(var, "~ factor(iso3) + factor(year)")), data = data)
+  as.numeric(stats::resid(fit))
 }
 
 quantile_optim <- function(x, y, tau, ridge = 1e-8) {
