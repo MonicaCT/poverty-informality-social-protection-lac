@@ -192,3 +192,62 @@ wild_results <- bind_rows(
 write_csv(wild_results, file.path(model_dir, "phase2_wild_cluster_bootstrap.csv"))
 write_md_table(wild_results, file.path(model_dir, "phase2_wild_cluster_bootstrap.md"))
 cat("phase2_wild_bootstrap_rows=", nrow(wild_results), "\n")
+
+plm_base_formula <- monetary_poverty ~ labor_informality + social_protection_coverage +
+  log_gdp_per_capita + gini + unemployment
+plm_interaction_formula <- monetary_poverty ~ labor_informality * social_protection_coverage +
+  log_gdp_per_capita + gini + unemployment
+
+driscoll_kraay_plm <- function(formula_obj, data, model_label, terms) {
+  pdata <- pdata.frame(data, index = c("iso3", "year"), drop.index = FALSE, row.names = TRUE)
+  fit <- plm(formula_obj, data = pdata, model = "within", effect = "twoways")
+  time_count <- length(unique(data$year))
+  dk_lag <- max(1L, floor(time_count^(1 / 3)))
+  ct <- coeftest(fit, vcov. = vcovSCC(fit, type = "HC1", maxlag = dk_lag))
+  tibble(
+    model = model_label,
+    term = rownames(ct),
+    estimate = ct[, 1],
+    dk_std.error = ct[, 2],
+    dk_statistic = ct[, 3],
+    dk_p.value = ct[, 4],
+    dk_lag = dk_lag,
+    inference = "Driscoll-Kraay SCC standard errors"
+  ) |>
+    filter(term %in% terms)
+}
+
+dk_results <- bind_rows(
+  driscoll_kraay_plm(
+    plm_base_formula,
+    main_df,
+    "TWFE baseline",
+    c("labor_informality", "social_protection_coverage", "log_gdp_per_capita", "gini", "unemployment")
+  ),
+  driscoll_kraay_plm(
+    plm_interaction_formula,
+    main_df,
+    "TWFE interaction",
+    c("labor_informality", "social_protection_coverage", "labor_informality:social_protection_coverage")
+  )
+)
+
+inference_comparison <- wild_results |>
+  select(
+    model, term, estimate,
+    cluster_std.error = std.error,
+    cluster_p.value = p.value,
+    wild_bootstrap_std.error = bootstrap_std.error,
+    wild_bootstrap_p.value = wild_p.value
+  ) |>
+  left_join(
+    dk_results |>
+      select(model, term, dk_std.error, dk_p.value, dk_lag),
+    by = c("model", "term")
+  )
+
+write_csv(dk_results, file.path(model_dir, "phase2_driscoll_kraay.csv"))
+write_md_table(dk_results, file.path(model_dir, "phase2_driscoll_kraay.md"))
+write_csv(inference_comparison, file.path(model_dir, "phase2_twfe_inference_comparison.csv"))
+write_md_table(inference_comparison, file.path(model_dir, "phase2_twfe_inference_comparison.md"))
+cat("phase2_driscoll_kraay_rows=", nrow(dk_results), "\n")
