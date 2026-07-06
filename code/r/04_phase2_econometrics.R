@@ -533,3 +533,19 @@ event_study_peru <- bind_rows(
 write_csv(event_study_peru, file.path(model_dir, "phase2_event_study_peru.csv"))
 write_md_table(event_study_peru, file.path(model_dir, "phase2_event_study_peru.md"))
 cat("phase2_event_study_peru_rows=", nrow(event_study_peru), "\n")
+
+brazil_poverty_rels <- c(-4, -3, -2, -1, 0, 1, 2, 3, 4)
+
+event_study_brazil <- bind_rows(
+  event_study_fit("BRA", "Brazil", 2004L, "Bolsa Familia", "monetary_poverty", brazil_poverty_rels, "secondary poverty-only extension"),
+  event_study_fit("BRA", "Brazil", 2004L, "Bolsa Familia", "extreme_poverty", brazil_poverty_rels, "secondary poverty-only extension")
+)
+
+event_study_all <- bind_rows(event_study_bolivia, event_study_peru, event_study_brazil)
+
+write_csv(event_study_brazil, file.path(model_dir, "phase2_event_study_brazil.csv"))
+write_md_table(event_study_brazil, file.path(model_dir, "phase2_event_study_brazil.md"))
+write_csv(event_study_all, file.path(model_dir, "phase2_event_study_all.csv"))
+write_md_table(event_study_all, file.path(model_dir, "phase2_event_study_all.md"))
+cat("phase2_event_study_brazil_rows=", nrow(event_study_brazil), "\n")
+cat("phase2_event_study_all_rows=", nrow(event_study_all), "\n")
