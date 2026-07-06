@@ -1,4 +1,4 @@
-﻿suppressPackageStartupMessages({
+suppressPackageStartupMessages({
   library(readr)
   library(dplyr)
   library(fixest)
