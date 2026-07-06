@@ -311,21 +311,28 @@ residualize_twfe <- function(data, var) {
   as.numeric(resid(fit))
 }
 
-quantile_irls <- function(x, y, tau, max_iter = 500L, tol = 1e-7, ridge = 1e-8) {
-  beta <- solve(crossprod(x) + diag(ridge, ncol(x)), crossprod(x, y))
-  for (iter in seq_len(max_iter)) {
+quantile_optim <- function(x, y, tau, ridge = 1e-8) {
+  start <- solve(crossprod(x) + diag(ridge, ncol(x)), crossprod(x, y))
+  objective <- function(beta) {
     residual <- as.numeric(y - x %*% beta)
-    weights <- ifelse(residual >= 0, tau, 1 - tau) / pmax(abs(residual), 1e-6)
-    xw <- x * sqrt(weights)
-    yw <- y * sqrt(weights)
-    beta_new <- solve(crossprod(xw) + diag(ridge, ncol(x)), crossprod(xw, yw))
-    if (max(abs(beta_new - beta)) < tol) {
-      beta <- beta_new
-      break
-    }
-    beta <- beta_new
+    sum(ifelse(residual >= 0, tau * residual, (tau - 1) * residual)) +
+      ridge * sum(beta^2)
   }
-  as.numeric(beta)
+  fit <- stats::optim(
+    par = as.numeric(start),
+    fn = objective,
+    method = "BFGS",
+    control = list(maxit = 5000, reltol = 1e-10)
+  )
+  if (fit$convergence != 0) {
+    fit <- stats::optim(
+      par = as.numeric(fit$par),
+      fn = objective,
+      method = "Nelder-Mead",
+      control = list(maxit = 10000, reltol = 1e-10)
+    )
+  }
+  as.numeric(fit$par)
 }
 
 quantile_panel_fit <- function(data, taus = c(0.10, 0.25, 0.50, 0.75, 0.90), bootstrap_reps = 199L) {
@@ -363,11 +370,11 @@ quantile_panel_fit <- function(data, taus = c(0.10, 0.25, 0.50, 0.75, 0.90), boo
   y <- qr_data$y_resid
   set.seed(20260708L)
   out <- lapply(taus, function(tau) {
-    beta <- quantile_irls(x, y, tau)
+    beta <- quantile_optim(x, y, tau)
     boot <- matrix(NA_real_, nrow = bootstrap_reps, ncol = length(beta))
     for (b in seq_len(bootstrap_reps)) {
       idx <- sample(seq_len(nrow(x)), nrow(x), replace = TRUE)
-      boot[b, ] <- tryCatch(quantile_irls(x[idx, , drop = FALSE], y[idx], tau), error = function(e) rep(NA_real_, length(beta)))
+      boot[b, ] <- tryCatch(quantile_optim(x[idx, , drop = FALSE], y[idx], tau), error = function(e) rep(NA_real_, length(beta)))
     }
     se <- apply(boot, 2, sd, na.rm = TRUE)
     stat <- beta / se
@@ -378,7 +385,7 @@ quantile_panel_fit <- function(data, taus = c(0.10, 0.25, 0.50, 0.75, 0.90), boo
       std.error = se,
       statistic = stat,
       p.value = 2 * pnorm(abs(stat), lower.tail = FALSE),
-      method = "Canay-style residualized FE quantile regression via IRLS fallback"
+      method = "Canay-style residualized FE quantile regression via check-loss optimization fallback"
     )
   }) |>
     bind_rows()
@@ -602,3 +609,4 @@ phase2_summary_lines <- c(
 
 writeLines(phase2_summary_lines, file.path(model_dir, "phase2_results_summary.md"))
 cat("phase2_summary_written=TRUE\n")
+
