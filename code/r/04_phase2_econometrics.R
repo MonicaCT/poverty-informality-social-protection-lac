@@ -305,3 +305,93 @@ oster_results <- bind_rows(
 write_csv(oster_results, file.path(model_dir, "phase2_oster_sensitivity.csv"))
 write_md_table(oster_results, file.path(model_dir, "phase2_oster_sensitivity.md"))
 cat("phase2_oster_rows=", nrow(oster_results), "\n")
+
+residualize_twfe <- function(data, var) {
+  fit <- feols(as.formula(paste(var, "~ 1 | iso3 + year")), data = data)
+  as.numeric(resid(fit))
+}
+
+quantile_irls <- function(x, y, tau, max_iter = 500L, tol = 1e-7, ridge = 1e-8) {
+  beta <- solve(crossprod(x) + diag(ridge, ncol(x)), crossprod(x, y))
+  for (iter in seq_len(max_iter)) {
+    residual <- as.numeric(y - x %*% beta)
+    weights <- ifelse(residual >= 0, tau, 1 - tau) / pmax(abs(residual), 1e-6)
+    xw <- x * sqrt(weights)
+    yw <- y * sqrt(weights)
+    beta_new <- solve(crossprod(xw) + diag(ridge, ncol(x)), crossprod(xw, yw))
+    if (max(abs(beta_new - beta)) < tol) {
+      beta <- beta_new
+      break
+    }
+    beta <- beta_new
+  }
+  as.numeric(beta)
+}
+
+quantile_panel_fit <- function(data, taus = c(0.10, 0.25, 0.50, 0.75, 0.90), bootstrap_reps = 199L) {
+  covariates <- c("labor_informality", "social_protection_coverage", "log_gdp_per_capita", "gini", "unemployment")
+  qr_data <- data |>
+    mutate(y_resid = residualize_twfe(data, "monetary_poverty"))
+  for (v in covariates) {
+    qr_data[[paste0("x_", v)]] <- residualize_twfe(data, v)
+  }
+  x_names <- paste0("x_", covariates)
+  term_names <- c("Intercept", covariates)
+
+  if (requireNamespace("quantreg", quietly = TRUE)) {
+    out <- lapply(taus, function(tau) {
+      formula_obj <- as.formula(paste("y_resid ~", paste(x_names, collapse = " + ")))
+      fit <- quantreg::rq(formula_obj, data = qr_data, tau = tau)
+      ct <- as.data.frame(summary(fit, se = "nid")$coefficients)
+      tibble(
+        tau = tau,
+        term = gsub("^x_", "", rownames(ct)),
+        estimate = ct[[1]],
+        std.error = ct[[2]],
+        statistic = ct[[3]],
+        p.value = ct[[4]],
+        method = "Canay-style residualized FE quantile regression via quantreg::rq"
+      )
+    }) |>
+      bind_rows()
+    return(out |>
+      filter(term != "(Intercept)") |>
+      mutate(term = ifelse(term == "Intercept", "(Intercept)", term)))
+  }
+
+  x <- as.matrix(cbind(Intercept = 1, qr_data[, x_names, drop = FALSE]))
+  y <- qr_data$y_resid
+  set.seed(20260708L)
+  out <- lapply(taus, function(tau) {
+    beta <- quantile_irls(x, y, tau)
+    boot <- matrix(NA_real_, nrow = bootstrap_reps, ncol = length(beta))
+    for (b in seq_len(bootstrap_reps)) {
+      idx <- sample(seq_len(nrow(x)), nrow(x), replace = TRUE)
+      boot[b, ] <- tryCatch(quantile_irls(x[idx, , drop = FALSE], y[idx], tau), error = function(e) rep(NA_real_, length(beta)))
+    }
+    se <- apply(boot, 2, sd, na.rm = TRUE)
+    stat <- beta / se
+    tibble(
+      tau = tau,
+      term = term_names,
+      estimate = beta,
+      std.error = se,
+      statistic = stat,
+      p.value = 2 * pnorm(abs(stat), lower.tail = FALSE),
+      method = "Canay-style residualized FE quantile regression via IRLS fallback"
+    )
+  }) |>
+    bind_rows()
+  out |>
+    filter(term != "Intercept")
+}
+
+quantile_results <- quantile_panel_fit(
+  main_df,
+  taus = c(0.10, 0.25, 0.50, 0.75, 0.90),
+  bootstrap_reps = as.integer(Sys.getenv("PHASE2_QUANTILE_BOOTSTRAP_REPS", "199"))
+)
+
+write_csv(quantile_results, file.path(model_dir, "phase2_quantile_panel.csv"))
+write_md_table(quantile_results, file.path(model_dir, "phase2_quantile_panel.md"))
+cat("phase2_quantile_rows=", nrow(quantile_results), "\n")
