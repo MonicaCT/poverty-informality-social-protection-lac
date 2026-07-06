@@ -41,7 +41,13 @@ jobs:
             any::sandwich
             any::knitr
             any::quantreg
-            any::fwildclusterboot
+            any::remotes
+
+      - name: Install archived fwildclusterboot
+        shell: bash
+        run: |
+          set -o pipefail
+          Rscript -e 'remotes::install_version("fwildclusterboot", version = "0.13.0", repos = "https://cran.r-project.org", upgrade = "never", dependencies = TRUE)'
 
       - name: Run canonical Phase 2 script with full console log
         shell: bash
@@ -79,3 +85,4 @@ jobs:
             outputs/models/PROVISIONAL_NOTICE.md
           if-no-files-found: error
           retention-days: 30
+
