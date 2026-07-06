@@ -1,4 +1,4 @@
-suppressPackageStartupMessages({
+﻿suppressPackageStartupMessages({
   library(readr)
   library(dplyr)
   library(fixest)
@@ -251,3 +251,57 @@ write_md_table(dk_results, file.path(model_dir, "phase2_driscoll_kraay.md"))
 write_csv(inference_comparison, file.path(model_dir, "phase2_twfe_inference_comparison.csv"))
 write_md_table(inference_comparison, file.path(model_dir, "phase2_twfe_inference_comparison.md"))
 cat("phase2_driscoll_kraay_rows=", nrow(dk_results), "\n")
+
+model_r2_total <- function(fit, data, outcome) {
+  y <- data[[outcome]]
+  1 - sum(resid(fit)^2, na.rm = TRUE) / sum((y - mean(y, na.rm = TRUE))^2, na.rm = TRUE)
+}
+
+oster_delta <- function(restricted_formula, full_formula, data, term, model_label,
+                        outcome = "monetary_poverty", rmax_multiplier = 1.3) {
+  restricted_fit <- feols(as.formula(restricted_formula), data = data, cluster = cluster_formula)
+  full_fit <- feols(as.formula(full_formula), data = data, cluster = cluster_formula)
+  beta_restricted <- unname(coef(restricted_fit)[term])
+  beta_full <- unname(coef(full_fit)[term])
+  r_restricted <- model_r2_total(restricted_fit, data, outcome)
+  r_full <- model_r2_total(full_fit, data, outcome)
+  r_max <- min(1, rmax_multiplier * r_full)
+  denom <- (beta_restricted - beta_full) * (r_max - r_full)
+  delta_to_zero <- ifelse(abs(denom) < .Machine$double.eps, NA_real_, beta_full * (r_full - r_restricted) / denom)
+  beta_delta_1 <- beta_full - ((beta_restricted - beta_full) / (r_full - r_restricted)) * (r_max - r_full)
+
+  tibble(
+    model = model_label,
+    term = term,
+    beta_restricted = beta_restricted,
+    beta_full = beta_full,
+    r_restricted = r_restricted,
+    r_full = r_full,
+    r_max = r_max,
+    rmax_multiplier = rmax_multiplier,
+    delta_to_zero = delta_to_zero,
+    beta_adjusted_delta_1 = beta_delta_1,
+    interpretation = "Oster proportional-selection sensitivity; larger abs(delta_to_zero) implies greater robustness to omitted-variable selection."
+  )
+}
+
+oster_results <- bind_rows(
+  oster_delta(
+    "monetary_poverty ~ social_protection_coverage | iso3 + year",
+    phase2_base_formula,
+    main_df,
+    "social_protection_coverage",
+    "TWFE baseline social protection"
+  ),
+  oster_delta(
+    "monetary_poverty ~ labor_informality * social_protection_coverage | iso3 + year",
+    phase2_interaction_formula,
+    main_df,
+    "labor_informality:social_protection_coverage",
+    "TWFE interaction term"
+  )
+)
+
+write_csv(oster_results, file.path(model_dir, "phase2_oster_sensitivity.csv"))
+write_md_table(oster_results, file.path(model_dir, "phase2_oster_sensitivity.md"))
+cat("phase2_oster_rows=", nrow(oster_results), "\n")
