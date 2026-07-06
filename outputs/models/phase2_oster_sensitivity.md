@@ -1,0 +1,4 @@
+﻿| model | term | beta_restricted | beta_full | r_restricted | r_full | r_max | rmax_multiplier | delta_to_zero | beta_adjusted_delta_1 | interpretation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TWFE baseline social protection | social_protection_coverage | -0.149973 | -0.102373 | 0.950037 | 0.97281 | 1 | 1.3 | 1.801307 | -0.04554 | Oster proportional-selection sensitivity; larger abs(delta_to_zero) implies greater robustness to omitted-variable selection. |
+| TWFE interaction term | labor_informality:social_protection_coverage | -0.004406 | -0.00189 | 0.954319 | 0.973167 | 1 | 1.3 | 0.52754 | 0.001693 | Oster proportional-selection sensitivity; larger abs(delta_to_zero) implies greater robustness to omitted-variable selection. |

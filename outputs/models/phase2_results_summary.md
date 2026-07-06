@@ -1,0 +1,110 @@
+﻿# Phase 2 Econometric Results Summary
+
+Generated locally from the cleaned analysis panel. The canonical reproducible implementation is code/r/04_phase2_econometrics.R.
+
+## Event-window verification
+
+| iso3 | country | event_year | event_label | complete_years | lead_count | event_count | lag_count | available_leads | available_lags | passes_minimum_3_pre_3_post | inclusion_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BOL | Bolivia | 2008 | Renta Dignidad | 2004, 2005, 2006, 2007, 2008, 2009, 2011, 2012 | 4 | 1 | 3 | -4, -3, -2, -1 | 1, 3, 4 | TRUE | Hard outcomes only; social protection reported as mechanism when observed. |
+| PER | Peru | 2005 | JUNTOS | 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 | 3 | 1 | 4 | -3, -2, -1 | 1, 2, 3, 4 | TRUE | Hard outcomes only; social protection reported as mechanism when observed. |
+| BRA | Brazil | 2004 | Bolsa Familia | 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 | 4 | 1 | 4 | -4, -3, -2, -1 | 1, 2, 3, 4 | TRUE | Hard outcomes only; social protection reported as mechanism when observed. |
+
+
+## Nivel 1: TWFE inference comparison
+
+| model | term | estimate | cluster_std.error | cluster_t | cluster_p.value | wild_bootstrap_reps | wild_bootstrap_p.value | dk_std.error | dk_p.value | dk_lag |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TWFE baseline | social_protection_coverage | -0.102373 | 0.037478 | -2.731545 | 0.006304 | 999 | 0.039 | 0.01396 | 0 | 2 |
+| TWFE interaction | social_protection_coverage | 0.022967 | 0.097163 | 0.23638 | 0.813138 | 999 | 0.799 | 0.04911 | 0.640023 | 2 |
+| TWFE interaction | labor_informality:social_protection_coverage | -0.00189 | 0.001435 | -1.31739 | 0.187708 | 999 | 0.164 | 0.000832 | 0.023167 | 2 |
+
+## Oster sensitivity
+
+| model | term | beta_restricted | beta_full | r_restricted | r_full | r_max | rmax_multiplier | delta_to_zero | beta_adjusted_delta_1 | interpretation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TWFE baseline social protection | social_protection_coverage | -0.149973 | -0.102373 | 0.950037 | 0.97281 | 1 | 1.3 | 1.801307 | -0.04554 | Oster proportional-selection sensitivity; larger abs(delta_to_zero) implies greater robustness to omitted-variable selection. |
+| TWFE interaction term | labor_informality:social_protection_coverage | -0.004406 | -0.00189 | 0.954319 | 0.973167 | 1 | 1.3 | 0.52754 | 0.001693 | Oster proportional-selection sensitivity; larger abs(delta_to_zero) implies greater robustness to omitted-variable selection. |
+
+## Quantile panel: principal terms
+
+| tau | term | estimate | std.error | statistic | p.value | bootstrap_reps | method |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.1 | labor_informality | 0.042659 | 0.092268 | 0.462342 | 0.643836 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.1 | social_protection_coverage | -0.141679 | 0.037526 | -3.7755 | 0.00016 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.25 | labor_informality | 0.058385 | 0.069444 | 0.840745 | 0.400491 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.25 | social_protection_coverage | -0.100255 | 0.039086 | -2.564984 | 0.010318 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.5 | labor_informality | 0.070972 | 0.06921 | 1.025459 | 0.305147 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.5 | social_protection_coverage | -0.094336 | 0.028537 | -3.305696 | 0.000948 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.75 | labor_informality | 0.143598 | 0.066496 | 2.159488 | 0.030812 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.75 | social_protection_coverage | -0.100692 | 0.022766 | -4.422821 | 0.00001 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.9 | labor_informality | 0.205892 | 0.073642 | 2.795862 | 0.005176 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+| 0.9 | social_protection_coverage | -0.102005 | 0.033023 | -3.088955 | 0.002009 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+
+## Nivel 2: event-study non-reference coefficients
+
+| section | iso3 | country | event_year | event_label | outcome | relative_year | phase | estimate | std.error | statistic | p.value | n_obs | n_countries | window | reference_year | note |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | monetary_poverty | -4 | lead | 0.672759 | 1.596887 | 0.421294 | 0.673541 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | monetary_poverty | -3 | lead | 1.333995 | 1.694807 | 0.787107 | 0.431219 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | monetary_poverty | -2 | lead | -0.739607 | 1.118569 | -0.661208 | 0.508479 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | monetary_poverty | 0 | event | -2.470711 | 1.180793 | -2.092417 | 0.036401 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | monetary_poverty | 1 | lag | -4.534799 | 1.378131 | -3.290542 | 0.001 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | monetary_poverty | 3 | lag | -7.43408 | 1.97732 | -3.759674 | 0.00017 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | monetary_poverty | 4 | lag | -6.350159 | 1.65002 | -3.848534 | 0.000119 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | extreme_poverty | -4 | lead | -3.069923 | 1.436363 | -2.137289 | 0.032574 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | extreme_poverty | -3 | lead | 0.990807 | 1.418217 | 0.698629 | 0.484784 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | extreme_poverty | -2 | lead | 1.003105 | 0.90097 | 1.113361 | 0.265554 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | extreme_poverty | 0 | event | 1.056406 | 1.190777 | 0.887157 | 0.374994 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | extreme_poverty | 1 | lag | 1.798081 | 1.443261 | 1.245847 | 0.212821 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | extreme_poverty | 3 | lag | 1.478384 | 1.634471 | 0.904503 | 0.365729 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | extreme_poverty | 4 | lag | 1.269658 | 1.494366 | 0.84963 | 0.395531 | 111 | 18 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | labor_informality | -4 | lead | -11.225183 | 4.829861 | -2.324121 | 0.020119 | 75 | 14 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | labor_informality | -3 | lead | 2.628567 | 1.480437 | 1.775535 | 0.075809 | 75 | 14 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | labor_informality | -2 | lead | 8.548992 | 1.029118 | 8.307104 | 0 | 75 | 14 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | labor_informality | 0 | event | -0.089394 | 2.210737 | -0.040436 | 0.967745 | 75 | 14 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | labor_informality | 1 | lag | 1.265623 | 1.728392 | 0.732255 | 0.464013 | 75 | 14 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | labor_informality | 3 | lag | 1.067998 | 2.896858 | 0.368675 | 0.71237 | 75 | 14 | [-4, 4] | -1 |  |
+| core | BOL | Bolivia | 2008 | Renta Dignidad | labor_informality | 4 | lag | -0.072213 | 2.681528 | -0.02693 | 0.978516 | 75 | 14 | [-4, 4] | -1 |  |
+| mechanism | BOL | Bolivia | 2008 | Renta Dignidad | social_protection_coverage | -2 | lead | -62.221589 | 3.199169 | -19.449299 | 0 | 63 | 17 | [-2, 4] | -1 | Mechanism outcome; missing years are not inclusion criteria. |
+| mechanism | BOL | Bolivia | 2008 | Renta Dignidad | social_protection_coverage | 0 | event | 1.73626 | 1.574201 | 1.102946 | 0.270051 | 63 | 17 | [-2, 4] | -1 | Mechanism outcome; missing years are not inclusion criteria. |
+| mechanism | BOL | Bolivia | 2008 | Renta Dignidad | social_protection_coverage | 1 | lag | 4.676844 | 3.147151 | 1.486056 | 0.137264 | 63 | 17 | [-2, 4] | -1 | Mechanism outcome; missing years are not inclusion criteria. |
+| mechanism | BOL | Bolivia | 2008 | Renta Dignidad | social_protection_coverage | 3 | lag | 1.70751 | 5.99375 | 0.284882 | 0.775735 | 63 | 17 | [-2, 4] | -1 | Mechanism outcome; missing years are not inclusion criteria. |
+| mechanism | BOL | Bolivia | 2008 | Renta Dignidad | social_protection_coverage | 4 | lag | -8.646438 | 4.829086 | -1.790492 | 0.073375 | 63 | 17 | [-2, 4] | -1 | Mechanism outcome; missing years are not inclusion criteria. |
+| core | PER | Peru | 2005 | JUNTOS | monetary_poverty | -3 | lead | -2.117374 | 1.951408 | -1.085049 | 0.2779 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | monetary_poverty | -2 | lead | -2.721491 | 1.347947 | -2.018989 | 0.043488 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | monetary_poverty | 0 | event | 4.067564 | 0.753099 | 5.401101 | 0 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | monetary_poverty | 1 | lag | 1.041098 | 1.287619 | 0.808545 | 0.418777 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | monetary_poverty | 2 | lag | -2.905532 | 1.863829 | -1.558905 | 0.119019 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | monetary_poverty | 3 | lag | -2.0195 | 2.321057 | -0.870078 | 0.384258 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | monetary_poverty | 4 | lag | -2.108613 | 2.444856 | -0.862469 | 0.388429 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | extreme_poverty | -3 | lead | -2.404634 | 1.168411 | -2.058037 | 0.039586 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | extreme_poverty | -2 | lead | -4.365916 | 0.995756 | -4.384523 | 0.000012 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | extreme_poverty | 0 | event | 2.502456 | 0.367321 | 6.812723 | 0 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | extreme_poverty | 1 | lag | 0.187699 | 0.876823 | 0.214067 | 0.830495 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | extreme_poverty | 2 | lag | -1.82637 | 0.724115 | -2.522209 | 0.011662 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | extreme_poverty | 3 | lag | -2.653508 | 0.992142 | -2.674524 | 0.007484 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | extreme_poverty | 4 | lag | -4.199893 | 0.979044 | -4.289791 | 0.000018 | 101 | 17 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | labor_informality | -3 | lead | -4.116344 | 6.851403 | -0.600803 | 0.547971 | 50 | 11 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | labor_informality | -2 | lead | 3.2354 | 4.440396 | 0.728629 | 0.466229 | 50 | 11 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | labor_informality | 0 | event | 4.621579 | 3.930422 | 1.175848 | 0.239656 | 50 | 11 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | labor_informality | 1 | lag | 8.737352 | 4.177363 | 2.091595 | 0.036475 | 50 | 11 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | labor_informality | 2 | lag | 15.728741 | 6.980796 | 2.253144 | 0.02425 | 50 | 11 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | labor_informality | 3 | lag | 23.745834 | 9.556756 | 2.484717 | 0.012965 | 50 | 11 | [-3, 4] | -1 |  |
+| core | PER | Peru | 2005 | JUNTOS | labor_informality | 4 | lag | 22.69301 | 9.123366 | 2.487351 | 0.01287 | 50 | 11 | [-3, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | monetary_poverty | -4 | lead | 0 | 0 |  |  | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | monetary_poverty | -3 | lead | 1.230161 | 0.947802 | 1.29791 | 0.194318 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | monetary_poverty | -2 | lead | -0.093365 | 1.292846 | -0.072217 | 0.942429 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | monetary_poverty | 0 | event | -0.065833 | 0.834026 | -0.078934 | 0.937085 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | monetary_poverty | 1 | lag | 0.218898 | 1.298 | 0.168643 | 0.866078 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | monetary_poverty | 2 | lag | -1.452496 | 1.624469 | -0.894136 | 0.371249 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | monetary_poverty | 3 | lag | -2.492221 | 2.233915 | -1.115629 | 0.264581 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | monetary_poverty | 4 | lag | -2.157948 | 1.95238 | -1.105291 | 0.269034 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | extreme_poverty | -4 | lead | 0 | 0 |  |  | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | extreme_poverty | -3 | lead | 0.289302 | 1.087605 | 0.265999 | 0.79024 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | extreme_poverty | -2 | lead | -0.753414 | 0.98977 | -0.761201 | 0.446537 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | extreme_poverty | 0 | event | 0.131083 | 0.71231 | 0.184026 | 0.853993 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | extreme_poverty | 1 | lag | -0.13679 | 0.835025 | -0.163815 | 0.869877 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | extreme_poverty | 2 | lag | -1.150452 | 0.972691 | -1.182752 | 0.236908 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | extreme_poverty | 3 | lag | 0.097828 | 1.544921 | 0.063322 | 0.94951 | 109 | 17 | [-4, 4] | -1 |  |
+| secondary poverty-only extension | BRA | Brazil | 2004 | Bolsa Familia | extreme_poverty | 4 | lag | -0.535676 | 1.356072 | -0.395021 | 0.692828 | 109 | 17 | [-4, 4] | -1 |  |

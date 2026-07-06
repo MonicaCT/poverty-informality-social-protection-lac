@@ -1,0 +1,27 @@
+﻿section,iso3,country,event_year,event_label,outcome,relative_year,phase,estimate,std.error,statistic,p.value,n_obs,n_countries,window,reference_year,note
+core,BOL,Bolivia,2008,Renta Dignidad,monetary_poverty,-4,lead,0.672759,1.596887,0.421294,0.673541,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,monetary_poverty,-3,lead,1.333995,1.694807,0.787107,0.431219,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,monetary_poverty,-2,lead,-0.739607,1.118569,-0.661208,0.508479,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,monetary_poverty,0,event,-2.470711,1.180793,-2.092417,0.036401,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,monetary_poverty,1,lag,-4.534799,1.378131,-3.290542,0.001,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,monetary_poverty,3,lag,-7.43408,1.97732,-3.759674,0.00017,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,monetary_poverty,4,lag,-6.350159,1.65002,-3.848534,0.000119,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,extreme_poverty,-4,lead,-3.069923,1.436363,-2.137289,0.032574,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,extreme_poverty,-3,lead,0.990807,1.418217,0.698629,0.484784,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,extreme_poverty,-2,lead,1.003105,0.90097,1.113361,0.265554,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,extreme_poverty,0,event,1.056406,1.190777,0.887157,0.374994,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,extreme_poverty,1,lag,1.798081,1.443261,1.245847,0.212821,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,extreme_poverty,3,lag,1.478384,1.634471,0.904503,0.365729,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,extreme_poverty,4,lag,1.269658,1.494366,0.84963,0.395531,111,18,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,labor_informality,-4,lead,-11.225183,4.829861,-2.324121,0.020119,75,14,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,labor_informality,-3,lead,2.628567,1.480437,1.775535,0.075809,75,14,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,labor_informality,-2,lead,8.548992,1.029118,8.307104,0,75,14,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,labor_informality,0,event,-0.089394,2.210737,-0.040436,0.967745,75,14,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,labor_informality,1,lag,1.265623,1.728392,0.732255,0.464013,75,14,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,labor_informality,3,lag,1.067998,2.896858,0.368675,0.71237,75,14,"[-4, 4]",-1,
+core,BOL,Bolivia,2008,Renta Dignidad,labor_informality,4,lag,-0.072213,2.681528,-0.02693,0.978516,75,14,"[-4, 4]",-1,
+mechanism,BOL,Bolivia,2008,Renta Dignidad,social_protection_coverage,-2,lead,-62.221589,3.199169,-19.449299,0,63,17,"[-2, 4]",-1,Mechanism outcome; missing years are not inclusion criteria.
+mechanism,BOL,Bolivia,2008,Renta Dignidad,social_protection_coverage,0,event,1.73626,1.574201,1.102946,0.270051,63,17,"[-2, 4]",-1,Mechanism outcome; missing years are not inclusion criteria.
+mechanism,BOL,Bolivia,2008,Renta Dignidad,social_protection_coverage,1,lag,4.676844,3.147151,1.486056,0.137264,63,17,"[-2, 4]",-1,Mechanism outcome; missing years are not inclusion criteria.
+mechanism,BOL,Bolivia,2008,Renta Dignidad,social_protection_coverage,3,lag,1.70751,5.99375,0.284882,0.775735,63,17,"[-2, 4]",-1,Mechanism outcome; missing years are not inclusion criteria.
+mechanism,BOL,Bolivia,2008,Renta Dignidad,social_protection_coverage,4,lag,-8.646438,4.829086,-1.790492,0.073375,63,17,"[-2, 4]",-1,Mechanism outcome; missing years are not inclusion criteria.

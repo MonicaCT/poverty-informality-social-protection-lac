@@ -1,0 +1,5 @@
+﻿| iso3 | country | event_year | event_label | complete_years | lead_count | event_count | lag_count | available_leads | available_lags | passes_minimum_3_pre_3_post | inclusion_rule |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BOL | Bolivia | 2008 | Renta Dignidad | 2004, 2005, 2006, 2007, 2008, 2009, 2011, 2012 | 4 | 1 | 3 | -4, -3, -2, -1 | 1, 3, 4 | TRUE | Hard outcomes only; social protection reported as mechanism when observed. |
+| PER | Peru | 2005 | JUNTOS | 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 | 3 | 1 | 4 | -3, -2, -1 | 1, 2, 3, 4 | TRUE | Hard outcomes only; social protection reported as mechanism when observed. |
+| BRA | Brazil | 2004 | Bolsa Familia | 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 | 4 | 1 | 4 | -4, -3, -2, -1 | 1, 2, 3, 4 | TRUE | Hard outcomes only; social protection reported as mechanism when observed. |
