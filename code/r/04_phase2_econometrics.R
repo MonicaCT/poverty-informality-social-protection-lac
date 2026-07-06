@@ -93,3 +93,102 @@ write_md_table(event_window_summary, file.path(model_dir, "phase2_event_window_s
 
 cat("phase2_window_verification_rows=", nrow(event_window_rows), "\n")
 cat("phase2_window_passed=", all(event_window_summary$passes_minimum), "\n")
+
+main_vars <- c(
+  "monetary_poverty", "labor_informality", "social_protection_coverage",
+  "log_gdp_per_capita", "gini", "unemployment", "iso3", "year"
+)
+
+main_df <- panel |>
+  filter(if_all(all_of(main_vars), ~ !is.na(.x))) |>
+  arrange(iso3, year)
+
+cluster_formula <- ~ iso3
+phase2_base_formula <- "monetary_poverty ~ labor_informality + social_protection_coverage + log_gdp_per_capita + gini + unemployment | iso3 + year"
+phase2_interaction_formula <- "monetary_poverty ~ labor_informality * social_protection_coverage + log_gdp_per_capita + gini + unemployment | iso3 + year"
+
+tidy_fixest_cluster <- function(fit, model_label, terms) {
+  ct <- as.data.frame(summary(fit, cluster = cluster_formula)$coeftable)
+  tibble(
+    model = model_label,
+    term = rownames(ct),
+    estimate = ct[[1]],
+    std.error = ct[[2]],
+    statistic = ct[[3]],
+    p.value = ct[[4]]
+  ) |>
+    filter(term %in% terms)
+}
+
+wild_cluster_bootstrap_feols <- function(formula_text, data, model_label, terms,
+                                         cluster_var = "iso3", reps = 999L, seed = 20260706L) {
+  set.seed(seed)
+  fit <- feols(as.formula(formula_text), data = data, cluster = cluster_formula)
+  observed <- tidy_fixest_cluster(fit, model_label, terms)
+  rhs <- sub("^[^~]+~", "", formula_text)
+  boot_formula <- as.formula(paste(".boot_y ~", rhs))
+  cluster_values <- as.character(data[[cluster_var]])
+  clusters <- sort(unique(cluster_values))
+  fitted_values <- as.numeric(fitted(fit))
+  residual_values <- as.numeric(resid(fit))
+  boot_terms <- matrix(NA_real_, nrow = reps, ncol = length(terms))
+  colnames(boot_terms) <- terms
+  boot_data <- data
+
+  for (b in seq_len(reps)) {
+    weights <- sample(c(-1, 1), length(clusters), replace = TRUE)
+    names(weights) <- clusters
+    boot_data$.boot_y <- fitted_values + residual_values * weights[cluster_values]
+    boot_fit <- try(feols(boot_formula, data = boot_data), silent = TRUE)
+    if (!inherits(boot_fit, "try-error")) {
+      boot_coef <- coef(boot_fit)
+      available_terms <- intersect(names(boot_coef), terms)
+      boot_terms[b, available_terms] <- boot_coef[available_terms]
+    }
+  }
+
+  observed |>
+    rowwise() |>
+    mutate(
+      bootstrap_reps = reps,
+      bootstrap_valid_reps = sum(!is.na(boot_terms[, term])),
+      bootstrap_std.error = sd(boot_terms[, term], na.rm = TRUE),
+      wild_p.value = {
+        boot_draws <- boot_terms[, term]
+        boot_draws <- boot_draws[!is.na(boot_draws)]
+        if (length(boot_draws) == 0) {
+          NA_real_
+        } else {
+          boot_t <- (boot_draws - estimate) / std.error
+          obs_t <- estimate / std.error
+          (1 + sum(abs(boot_t) >= abs(obs_t))) / (length(boot_t) + 1)
+        }
+      },
+      inference = "Rademacher wild cluster bootstrap by country"
+    ) |>
+    ungroup()
+}
+
+bootstrap_reps <- as.integer(Sys.getenv("PHASE2_BOOTSTRAP_REPS", "999"))
+wild_results <- bind_rows(
+  wild_cluster_bootstrap_feols(
+    phase2_base_formula,
+    main_df,
+    "TWFE baseline",
+    c("labor_informality", "social_protection_coverage", "log_gdp_per_capita", "gini", "unemployment"),
+    reps = bootstrap_reps,
+    seed = 20260706L
+  ),
+  wild_cluster_bootstrap_feols(
+    phase2_interaction_formula,
+    main_df,
+    "TWFE interaction",
+    c("labor_informality", "social_protection_coverage", "labor_informality:social_protection_coverage"),
+    reps = bootstrap_reps,
+    seed = 20260707L
+  )
+)
+
+write_csv(wild_results, file.path(model_dir, "phase2_wild_cluster_bootstrap.csv"))
+write_md_table(wild_results, file.path(model_dir, "phase2_wild_cluster_bootstrap.md"))
+cat("phase2_wild_bootstrap_rows=", nrow(wild_results), "\n")
