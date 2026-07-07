@@ -45,6 +45,10 @@ label_terms <- c(
   labor_informality = "Labor informality",
   mechanism_value = "Mechanism coverage",
   `labor_informality:mechanism_value` = "Labor informality x mechanism",
+  social_assistance_coverage_aspire = "Social assistance coverage",
+  social_insurance_coverage_aspire = "Social insurance coverage",
+  `labor_informality:social_assistance_coverage_aspire` = "Labor informality x social assistance",
+  `labor_informality:social_insurance_coverage_aspire` = "Labor informality x social insurance",
   log_gdp_per_capita = "Log GDP per capita",
   gini = "Gini index",
   unemployment = "Unemployment"
@@ -201,9 +205,81 @@ comparison <- results |>
   ) |>
   arrange(model, term_label, mechanism)
 
+
+joint_terms <- c(
+  "labor_informality",
+  "social_assistance_coverage_aspire",
+  "social_insurance_coverage_aspire",
+  "labor_informality:social_assistance_coverage_aspire",
+  "labor_informality:social_insurance_coverage_aspire",
+  controls
+)
+
+joint_df <- panel |>
+  filter(if_all(all_of(c(
+    required_base,
+    "social_assistance_coverage_aspire",
+    "social_insurance_coverage_aspire"
+  )), ~ !is.na(.x))) |>
+  arrange(iso3, year)
+
+joint_formula <- paste(
+  "monetary_poverty ~ labor_informality * social_assistance_coverage_aspire +",
+  "labor_informality * social_insurance_coverage_aspire +",
+  "log_gdp_per_capita + gini + unemployment | iso3 + year"
+)
+
+joint_wild <- wild_cluster_bootstrap_feols(
+  joint_formula,
+  joint_df,
+  "joint_mechanisms",
+  "Social assistance + social insurance",
+  "TWFE joint interaction",
+  joint_terms,
+  reps = bootstrap_reps,
+  seed = 20260730L
+)
+
+joint_dk <- driscoll_kraay_plm(
+  monetary_poverty ~ labor_informality * social_assistance_coverage_aspire +
+    labor_informality * social_insurance_coverage_aspire +
+    log_gdp_per_capita + gini + unemployment,
+  joint_df,
+  "joint_mechanisms",
+  "Social assistance + social insurance",
+  "TWFE joint interaction",
+  joint_terms
+)
+
+joint_results <- joint_wild |>
+  left_join(
+    joint_dk |> select(mechanism_id, model, term, dk_std.error, dk_p.value, dk_lag),
+    by = c("mechanism_id", "model", "term")
+  ) |>
+  mutate(
+    source_column = "social_assistance_coverage_aspire + social_insurance_coverage_aspire",
+    n_obs = nrow(joint_df),
+    n_countries = dplyr::n_distinct(joint_df$iso3),
+    years = paste(range(joint_df$year), collapse = "-"),
+    term_label = unname(label_terms[term]),
+    term_label = ifelse(is.na(term_label), term, term_label)
+  )
+
+joint_comparison <- joint_results |>
+  filter(term %in% joint_terms) |>
+  select(
+    mechanism, model, term_label, estimate, cluster_std.error, cluster_p.value,
+    wild_bootstrap_std.error, wild_bootstrap_p.value, dk_std.error, dk_p.value,
+    n_obs, n_countries, years
+  ) |>
+  arrange(match(term_label, unname(label_terms[joint_terms])))
+
 write_csv(results, file.path(model_dir, "mechanism_robustness_twfe_full.csv"))
 write_csv(comparison, file.path(model_dir, "mechanism_robustness_twfe_comparison.csv"))
 write_md_table(comparison, file.path(model_dir, "mechanism_robustness_twfe_comparison.md"))
+write_csv(joint_results, file.path(model_dir, "mechanism_robustness_joint_twfe_full.csv"))
+write_csv(joint_comparison, file.path(model_dir, "mechanism_robustness_joint_twfe_comparison.csv"))
+write_md_table(joint_comparison, file.path(model_dir, "mechanism_robustness_joint_twfe_comparison.md"))
 
 summary_lines <- c(
   "# Mechanism Robustness: Social Protection Components",
@@ -216,6 +292,10 @@ summary_lines <- c(
   "",
   paste(capture.output(knitr::kable(comparison, format = "pipe", digits = 4)), collapse = "\n"),
   "",
+  "## Joint Mechanism Specification",
+  "",
+  paste(capture.output(knitr::kable(joint_comparison, format = "pipe", digits = 4)), collapse = "\n"),
+  "",
   "## Notes",
   "",
   "- All models include country and year fixed effects and controls for labor informality, log GDP per capita, Gini, and unemployment.",
@@ -227,9 +307,14 @@ writeLines(summary_lines, file.path(model_dir, "mechanism_robustness_summary.md"
 
 cat("mechanism_robustness_rows=", nrow(results), "\n")
 cat("mechanism_robustness_comparison_rows=", nrow(comparison), "\n")
+cat("mechanism_robustness_joint_rows=", nrow(joint_results), "\n")
+cat("mechanism_robustness_joint_comparison_rows=", nrow(joint_comparison), "\n")
 cat("mechanism_robustness_outputs=", paste(c(
   "outputs/models/mechanism_robustness_twfe_full.csv",
   "outputs/models/mechanism_robustness_twfe_comparison.csv",
   "outputs/models/mechanism_robustness_twfe_comparison.md",
+  "outputs/models/mechanism_robustness_joint_twfe_full.csv",
+  "outputs/models/mechanism_robustness_joint_twfe_comparison.csv",
+  "outputs/models/mechanism_robustness_joint_twfe_comparison.md",
   "outputs/models/mechanism_robustness_summary.md"
 ), collapse = ", "), "\n")
