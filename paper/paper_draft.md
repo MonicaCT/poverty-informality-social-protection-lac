@@ -18,6 +18,8 @@ The repository inventories 3,411 structured files, 323,659 variables, 541 docume
 
 The core variables are monetary poverty, extreme poverty, labor informality, social protection coverage, gender labor-force participation, unemployment, youth unemployment, employment, GDP per capita, Gini, social expenditure, education expenditure, health expenditure, population, and a structural vulnerability index. Social protection coverage is treated primarily as a combined architecture-wide measure. The component variables for social assistance and social insurance are used only as a robustness and mechanism check, not as separate causal channels.
 
+A final data-quality audit reviews every monetary- and extreme-poverty value filled from the Equity Lab fallback when WDI is missing. Fallback values that are incompatible with the same-country WDI scale in nearby years are retained as raw fields but excluded from audited presentation columns; the audit flags 75 monetary-poverty and 33 extreme-poverty country-year values. None of these exclusions affects the 178-observation TWFE analytic sample, so the approved Level 1 results do not require re-estimation.
+
 ## Methodology
 
 The preferred Level 1 model is a two-way fixed-effects panel specification. Country effects absorb time-invariant institutional and structural differences; year effects absorb common macroeconomic and regional shocks. Robust inference is required because diagnostics detect heteroskedasticity, serial correlation, and cross-sectional dependence. The canonical Phase 2 workflow therefore reports country-clustered standard errors, wild-cluster-bootstrap p-values for finite-cluster inference, Driscoll-Kraay standard errors, Oster-style sensitivity checks, and residualized panel quantile regressions. A targeted mechanism check replaces the combined protection variable with social assistance and social insurance components, first separately and then jointly with informality interactions.
@@ -38,7 +40,7 @@ The mechanism decomposition does not support a clean contributory versus non-con
 
 ![Specification curve for social-protection coefficients](../outputs/figures/phase3_figure_17_specification_curve.png)
 
-Figure 17 reorganizes the already-estimated Level 1 models into a specification curve. The main negative social-protection association is stable in the baseline all-SP specification, while interaction and component specifications show wider uncertainty and greater sensitivity to the inference method.
+Figure 17 reorganizes the already-estimated Level 1 models into a corrected specification curve. Baseline rows show main-effect coefficients, while interaction rows show the `labor_informality x mechanism` terms rather than the mechanism main effects. The main negative social-protection association is stable in the baseline all-SP specification, while interaction and component specifications show wider uncertainty and greater sensitivity to the inference method.
 
 The robustness dashboard in [HTML](../outputs/tables/phase3_table_3_robustness_dashboard.html) and [LaTeX](../outputs/tables/phase3_table_3_robustness_dashboard.tex) summarizes the same pattern with color-coded inference cells. It makes the mechanism limitation explicit: component estimates can look strong when entered separately, but lose robust 5 percent support under cluster and wild-bootstrap inference once assistance and insurance enter jointly.
 
@@ -56,7 +58,7 @@ Bolivia is treated as a special analytical case because the aggregate country-ye
 
 ![Bolivia policy timeline](../outputs/figures/phase3_figure_18_bolivia_policy_timeline.png)
 
-Figure 18 places the Bolivia event-study in historical sequence. The 2006 Bono Juancito Pinto rollout precedes the 2008 Renta Dignidad expansion, so the pre-period should be read as an overlapping policy environment rather than as a clean untreated baseline.
+Figure 18 places the Bolivia event-study in historical sequence using the audited aggregate panel. The implausible Equity Lab fallback values for monetary poverty in 2003 and 2010 are retained in the backing CSV as raw values but excluded from the plotted series, with affected lagged values flagged separately. The 2006 Bono Juancito Pinto rollout precedes the 2008 Renta Dignidad expansion, so the pre-period should be read as an overlapping policy environment rather than as a clean untreated baseline.
 
 ## Policy Implications
 

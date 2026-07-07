@@ -87,34 +87,41 @@ $methodMeta = @(
 )
 
 $specRows = New-Object System.Collections.Generic.List[object]
-foreach ($model in @('TWFE baseline','TWFE interaction')) {
-  $row = $phase2 | Where-Object { $_.model -eq $model -and $_.term -eq 'social_protection_coverage' } | Select-Object -First 1
+function AddSpecCurveRows([string]$variable, [string]$model, [object]$row, [string]$coefficientRole, [string]$termLabel, [string]$sourceFile) {
+  if ($null -eq $row) {
+    throw "Missing precomputed row for $variable / $model / $termLabel"
+  }
   foreach ($m in $methodMeta) {
     $est = D $row.estimate; $se = D $row.($m.se); $p = D $row.($m.p)
     $specRows.Add([pscustomobject]@{
-      variable = 'All social protection'; model = ($model -replace 'TWFE ', ''); inference = $m.method
+      variable = $variable; model = ($model -replace 'TWFE ', ''); coefficient_role = $coefficientRole; term_label = $termLabel; inference = $m.method
       estimate = $est; std_error = $se; p_value = $p
       ci_low = $est - 1.96 * $se; ci_high = $est + 1.96 * $se
-      n_obs = ''; n_countries = ''; color = $m.color; source = 'phase2_twfe_inference_comparison.csv'
+      n_obs = if ($row.PSObject.Properties.Name -contains 'n_obs') { $row.n_obs } else { '' }
+      n_countries = if ($row.PSObject.Properties.Name -contains 'n_countries') { $row.n_countries } else { '' }
+      color = $m.color; source = $sourceFile
     })
   }
 }
+foreach ($model in @('TWFE baseline','TWFE interaction')) {
+  $term = if ($model -eq 'TWFE baseline') { 'social_protection_coverage' } else { 'labor_informality:social_protection_coverage' }
+  $role = if ($model -eq 'TWFE baseline') { 'Main effect' } else { 'Interaction term' }
+  $label = if ($model -eq 'TWFE baseline') { 'Social protection coverage' } else { 'Labor informality x social protection' }
+  $row = $phase2 | Where-Object { $_.model -eq $model -and $_.term -eq $term } | Select-Object -First 1
+  AddSpecCurveRows 'All social protection' $model $row $role $label 'phase2_twfe_inference_comparison.csv'
+}
 foreach ($variable in @('Social assistance coverage','Social insurance coverage')) {
   foreach ($model in @('TWFE baseline','TWFE interaction')) {
-    $row = $mech | Where-Object { $_.mechanism -eq $variable -and $_.model -eq $model -and $_.term_label -eq 'Mechanism coverage' } | Select-Object -First 1
-    foreach ($m in $methodMeta) {
-      $est = D $row.estimate; $se = D $row.($m.se); $p = D $row.($m.p)
-      $specRows.Add([pscustomobject]@{
-        variable = ($variable -replace ' coverage',''); model = ($model -replace 'TWFE ', ''); inference = $m.method
-        estimate = $est; std_error = $se; p_value = $p
-        ci_low = $est - 1.96 * $se; ci_high = $est + 1.96 * $se
-        n_obs = $row.n_obs; n_countries = $row.n_countries; color = $m.color; source = 'mechanism_robustness_twfe_comparison.csv'
-      })
-    }
+    $termLabel = if ($model -eq 'TWFE baseline') { 'Mechanism coverage' } else { 'Labor informality x mechanism' }
+    $role = if ($model -eq 'TWFE baseline') { 'Main effect' } else { 'Interaction term' }
+    $shortVariable = ($variable -replace ' coverage','')
+    $label = if ($model -eq 'TWFE baseline') { $variable } else { 'Labor informality x ' + $shortVariable.ToLowerInvariant() }
+    $row = $mech | Where-Object { $_.mechanism -eq $variable -and $_.model -eq $model -and $_.term_label -eq $termLabel } | Select-Object -First 1
+    AddSpecCurveRows $shortVariable $model $row $role $label 'mechanism_robustness_twfe_comparison.csv'
   }
 }
 $specRowsSorted = @($specRows | Sort-Object estimate, variable, model, inference)
-$specRowsSorted | Select-Object variable,model,inference,estimate,std_error,p_value,ci_low,ci_high,n_obs,n_countries,source | Export-Csv (Join-Path $figureDir 'phase3_figure_17_specification_curve_data.csv') -NoTypeInformation
+$specRowsSorted | Select-Object variable,model,coefficient_role,term_label,inference,estimate,std_error,p_value,ci_low,ci_high,n_obs,n_countries,source | Export-Csv (Join-Path $figureDir 'phase3_figure_17_specification_curve_data.csv') -NoTypeInformation
 
 # Specification curve plot
 $w = 2400; $h = 1600
@@ -125,8 +132,8 @@ $g.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::ClearTypeGridFit
 $g.Clear([System.Drawing.Color]::White)
 $left = 230; $right = 80; $top = 160; $plotH = 760; $matrixTop = 1010; $matrixH = 390; $bottom = 90
 $plotW = $w - $left - $right
-DrawText $g 'Specification curve: social protection coefficients' 90 45 42 '#111111' 'Bold'
-DrawText $g 'Precomputed TWFE estimates only: model form x protection measure x inference method' 92 96 24 '#555555'
+DrawText $g 'Specification curve: social protection main effects and interactions' 90 45 42 '#111111' 'Bold'
+DrawText $g 'Precomputed TWFE estimates only: baseline rows show main effects; interaction rows show labor-informality interactions' 92 96 24 '#555555'
 $allLow = ($specRowsSorted | ForEach-Object { $_.ci_low })
 $allHigh = ($specRowsSorted | ForEach-Object { $_.ci_high })
 $yMin = [Math]::Floor((($allLow | Measure-Object -Minimum).Minimum - 0.05) * 10) / 10
@@ -172,7 +179,7 @@ foreach ($m in $methodMeta) {
 }
 # matrix
 DrawText $g 'Specification matrix' 90 ($matrixTop - 70) 30 '#111111' 'Bold'
-$matrixRows = @('All SP','Assistance','Insurance','Baseline','Interaction','Cluster','Wild','DK')
+$matrixRows = @('All SP','Assistance','Insurance','Main effect','Interaction term','Cluster','Wild','DK')
 $rowGap = $matrixH / ($matrixRows.Count + 1)
 for ($ridx=0; $ridx -lt $matrixRows.Count; $ridx++) {
   $yy = $matrixTop + ($ridx + 1) * $rowGap
@@ -187,7 +194,7 @@ for ($i = 0; $i -lt $n; $i++) {
   if ($r.variable -eq 'All social protection') { $active += 'All SP' }
   if ($r.variable -eq 'Social assistance') { $active += 'Assistance' }
   if ($r.variable -eq 'Social insurance') { $active += 'Insurance' }
-  if ($r.model -eq 'baseline') { $active += 'Baseline' } else { $active += 'Interaction' }
+  if ($r.coefficient_role -eq 'Main effect') { $active += 'Main effect' } else { $active += 'Interaction term' }
   if ($r.inference -eq 'Cluster') { $active += 'Cluster' }
   if ($r.inference -eq 'Wild bootstrap') { $active += 'Wild' }
   if ($r.inference -eq 'Driscoll-Kraay') { $active += 'DK' }
@@ -206,8 +213,55 @@ $g.Dispose(); SavePng $bmp (Join-Path $figureDir 'phase3_figure_17_specification
 
 # Bolivia timeline
 $panel = Import-Csv $dataPath
+$auditPath = Join-Path $ProjectRoot 'outputs\data_quality\equity_lab_fallback_audit.csv'
+$excludedPoverty = New-Object 'System.Collections.Generic.HashSet[string]'
+$exclusionReasons = @{}
+if (Test-Path $auditPath) {
+  foreach ($a in (Import-Csv $auditPath)) {
+    if ($a.decision -like 'exclude:*') {
+      $key = $a.iso3 + '|' + [int]$a.year + '|' + $a.variable
+      [void]$excludedPoverty.Add($key)
+      $exclusionReasons[$key] = $a.decision
+    }
+  }
+}
 $bolivia = @($panel | Where-Object { $_.iso3 -eq 'BOL' -and [int]$_.year -ge 2000 -and [int]$_.year -le 2012 } | Sort-Object { [int]$_.year } | ForEach-Object {
-  [pscustomobject]@{ year = [int]$_.year; monetary_poverty = D $_.monetary_poverty; social_assistance_coverage_aspire = D $_.social_assistance_coverage_aspire }
+  $year = [int]$_.year
+  $monKey = 'BOL|' + $year + '|monetary_poverty'
+  $extKey = 'BOL|' + $year + '|extreme_poverty'
+  $lagKey = 'BOL|' + ($year - 1) + '|monetary_poverty'
+  $excludeMonetary = $excludedPoverty.Contains($monKey)
+  $excludeExtreme = $excludedPoverty.Contains($extKey)
+  $lagFromExcludedYear = $excludedPoverty.Contains($lagKey)
+  $monetaryRaw = D $_.monetary_poverty
+  $extremeRaw = D $_.extreme_poverty
+  $lagRaw = D $_.poverty_lag1
+  $moderateWdi = D $_.poverty_moderate_wdi
+  $moderateEquity = D $_.poverty_moderate_equity
+  $povertySource = if ($null -ne $moderateWdi) { 'WDI' } elseif ($null -ne $moderateEquity) { 'Equity Lab fallback' } else { 'Missing' }
+  $monetaryPlot = if ($excludeMonetary) { $null } else { $monetaryRaw }
+  $extremePlot = if ($excludeExtreme) { $null } else { $extremeRaw }
+  $lagPlot = if ($lagFromExcludedYear) { $null } else { $lagRaw }
+  $reason = if ($excludeMonetary) { $exclusionReasons[$monKey] } else { '' }
+  $extremeReason = if ($excludeExtreme) { $exclusionReasons[$extKey] } else { '' }
+  $lagReason = if ($lagFromExcludedYear) { 'Lagged poverty is derived from an excluded monetary_poverty fallback year.' } else { '' }
+  [pscustomobject]@{
+    year = $year
+    monetary_poverty_raw = $monetaryRaw
+    extreme_poverty_raw = $extremeRaw
+    poverty_lag1_raw = $lagRaw
+    monetary_poverty = $monetaryPlot
+    extreme_poverty = $extremePlot
+    poverty_lag1 = $lagPlot
+    poverty_source = $povertySource
+    monetary_poverty_current_excluded = $excludeMonetary
+    extreme_poverty_current_excluded = $excludeExtreme
+    poverty_lag1_excluded = $lagFromExcludedYear
+    monetary_exclusion_reason = $reason
+    extreme_exclusion_reason = $extremeReason
+    lag_exclusion_reason = $lagReason
+    social_assistance_coverage_aspire = D $_.social_assistance_coverage_aspire
+  }
 })
 $bolivia | Export-Csv (Join-Path $figureDir 'phase3_figure_18_bolivia_policy_timeline_data.csv') -NoTypeInformation
 $w = 2400; $h = 1450
@@ -221,7 +275,7 @@ $xMin = 2000; $xMax = 2012; $yMin = 0; $yMax = 100
 function XYear([double]$yr) { return $left + ($yr - $xMin) / ($xMax - $xMin) * $plotW }
 function YPct([double]$v) { return $top + ($yMax - $v) / ($yMax - $yMin) * $plotH }
 DrawText $g 'Bolivia policy timeline: poverty and social assistance coverage' 90 45 40 '#111111' 'Bold'
-DrawText $g 'Raw country-year panel values; vertical markers denote overlapping policy rollouts' 92 96 24 '#555555'
+DrawText $g 'Country-year panel values; flagged Equity Lab fallback poverty points are shown as missing in the line' 92 96 24 '#555555'
 $gridPen = New-Object System.Drawing.Pen((ColorFromHex '#e6e6e6'), 1)
 $axisPen = New-Object System.Drawing.Pen((ColorFromHex '#333333'), 2)
 for ($tick=0; $tick -le 100; $tick += 10) {
@@ -263,7 +317,7 @@ foreach ($policy in @([pscustomobject]@{year=2006; label='2006 Bono Juancito Pin
 }
 DrawSeries $bolivia 'monetary_poverty' '#440154' 'Monetary poverty' 1135
 DrawSeries $bolivia 'social_assistance_coverage_aspire' '#21918c' 'Social assistance coverage (ASPIRE)' 1175
-DrawText $g 'Note: no microdata are used; the figure uses the same aggregate country-year panel as the event studies.' 90 1365 20 '#666666'
+DrawText $g 'Note: no microdata are used; excluded fallback points are retained as raw fields and flagged in the backing CSV.' 90 1365 20 '#666666'
 $policyPen.Dispose(); $g.Dispose(); SavePng $bmp (Join-Path $figureDir 'phase3_figure_18_bolivia_policy_timeline.png')
 
 # Robustness dashboard
