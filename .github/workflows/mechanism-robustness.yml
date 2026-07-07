@@ -1,0 +1,74 @@
+name: Mechanism Robustness Verification
+
+on:
+  push:
+    branches: [mechanism-robustness]
+  workflow_dispatch:
+
+concurrency:
+  group: mechanism-robustness-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  mechanism-r:
+    name: Run targeted mechanism robustness R script
+    runs-on: ubuntu-latest
+
+    env:
+      MECHANISM_BOOTSTRAP_REPS: "999"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "4.5.2"
+          use-public-rspm: true
+
+      - name: Install R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache: true
+          packages: |
+            any::readr
+            any::dplyr
+            any::fixest
+            any::plm
+            any::lmtest
+            any::sandwich
+            any::knitr
+
+      - name: Run targeted mechanism robustness script
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p outputs/models
+          {
+            echo "== Mechanism robustness verification =="
+            echo "UTC timestamp: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            echo "Git SHA: ${GITHUB_SHA}"
+            echo "Git ref: ${GITHUB_REF}"
+            echo
+            echo "== Rscript version =="
+            Rscript --version
+            echo
+            echo "== Installed package versions =="
+            Rscript -e 'pkgs <- c("readr","dplyr","fixest","plm","lmtest","sandwich","knitr"); print(data.frame(package = pkgs, version = vapply(pkgs, function(p) as.character(packageVersion(p)), character(1))))'
+            echo
+            echo "== Running code/r/05_mechanism_robustness.R =="
+            Rscript code/r/05_mechanism_robustness.R
+            echo
+            echo "== Generated mechanism robustness outputs =="
+            find outputs/models -maxdepth 1 -type f -name 'mechanism_robustness_*' -printf 'outputs/models/%f\n' | sort
+          } 2>&1 | tee outputs/models/mechanism_robustness_execution_log.txt
+
+      - name: Upload mechanism robustness outputs and log
+        uses: actions/upload-artifact@v4
+        with:
+          name: mechanism-robustness-results
+          path: |
+            outputs/models/mechanism_robustness_*
+          if-no-files-found: error
+          retention-days: 30
