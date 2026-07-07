@@ -1,0 +1,32 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Table 1. Descriptive statistics for the full panel and analytic sample},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-9}{solid, black, 0.05em},
+hline{1}={1-9}{solid, black, 0.08em},
+hline{16}={1-9}{solid, black, 0.08em},
+column{1-9}={}{halign=l},
+}                     %% tabularray inner close
+sample & sample\_observations & countries & variable & n & mean & sd & min & max \\
+Full harmonized panel & \num{1789.00} & \num{27.00} & Monetary poverty & \num{586.00} & \num{35.91} & \num{21.84} & \num{0.50} & \num{93.60} \\
+Full harmonized panel & \num{1789.00} & \num{27.00} & Extreme poverty & \num{586.00} & \num{10.78} & \num{10.14} & \num{0.00} & \num{75.10} \\
+Full harmonized panel & \num{1789.00} & \num{27.00} & Labor informality & \num{337.00} & \num{60.59} & \num{16.93} & \num{18.32} & \num{99.13} \\
+Full harmonized panel & \num{1789.00} & \num{27.00} & Social protection coverage & \num{202.00} & \num{60.12} & \num{18.22} & \num{14.52} & \num{97.99} \\
+Full harmonized panel & \num{1789.00} & \num{27.00} & Log GDP per capita & \num{1734.00} & \num{8.46} & \num{0.84} & \num{5.19} & \num{10.43} \\
+Full harmonized panel & \num{1789.00} & \num{27.00} & Gini index & \num{506.00} & \num{48.92} & \num{5.78} & \num{34.10} & \num{63.20} \\
+Full harmonized panel & \num{1789.00} & \num{27.00} & Unemployment & \num{550.00} & \num{7.07} & \num{3.59} & \num{1.58} & \num{25.44} \\
+Analytic TWFE sample & \num{178.00} & \num{17.00} & Monetary poverty & \num{178.00} & \num{29.94} & \num{13.93} & \num{4.50} & \num{88.20} \\
+Analytic TWFE sample & \num{178.00} & \num{17.00} & Extreme poverty & \num{178.00} & \num{6.05} & \num{5.31} & \num{0.10} & \num{40.40} \\
+Analytic TWFE sample & \num{178.00} & \num{17.00} & Labor informality & \num{178.00} & \num{58.54} & \num{16.30} & \num{21.43} & \num{96.15} \\
+Analytic TWFE sample & \num{178.00} & \num{17.00} & Social protection coverage & \num{178.00} & \num{60.82} & \num{17.94} & \num{15.24} & \num{97.99} \\
+Analytic TWFE sample & \num{178.00} & \num{17.00} & Log GDP per capita & \num{178.00} & \num{8.87} & \num{0.58} & \num{7.21} & \num{9.81} \\
+Analytic TWFE sample & \num{178.00} & \num{17.00} & Gini index & \num{178.00} & \num{46.77} & \num{4.37} & \num{38.00} & \num{56.70} \\
+Analytic TWFE sample & \num{178.00} & \num{17.00} & Unemployment & \num{178.00} & \num{6.58} & \num{3.05} & \num{1.90} & \num{19.62} \\
+\end{talltblr}
+\begin{minipage}{0.95\linewidth}
+\footnotesize Notes: \texttt{social\_protection\_coverage} is a combined social-protection measure. A targeted mechanism check found that social assistance and social insurance expand in correlated institutional packages; when both components and their interactions with labor informality enter jointly, neither component nor interaction is robustly significant at the 5 percent level under country-clustered or wild-bootstrap inference. Interpret component channels as a limitation, not as separately identified mechanisms.
+\end{minipage}
+\end{table}

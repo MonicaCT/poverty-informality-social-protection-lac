@@ -1,23 +1,23 @@
-﻿section,iso3,country,event_year,event_label,outcome,relative_year,phase,estimate,std.error,statistic,p.value,n_obs,n_countries,window,reference_year,note
-core,PER,Peru,2005,JUNTOS,monetary_poverty,-3,lead,-2.117374,1.951408,-1.085049,0.2779,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,monetary_poverty,-2,lead,-2.721491,1.347947,-2.018989,0.043488,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,monetary_poverty,0,event,4.067564,0.753099,5.401101,0,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,monetary_poverty,1,lag,1.041098,1.287619,0.808545,0.418777,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,monetary_poverty,2,lag,-2.905532,1.863829,-1.558905,0.119019,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,monetary_poverty,3,lag,-2.0195,2.321057,-0.870078,0.384258,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,monetary_poverty,4,lag,-2.108613,2.444856,-0.862469,0.388429,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,extreme_poverty,-3,lead,-2.404634,1.168411,-2.058037,0.039586,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,extreme_poverty,-2,lead,-4.365916,0.995756,-4.384523,0.000012,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,extreme_poverty,0,event,2.502456,0.367321,6.812723,0,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,extreme_poverty,1,lag,0.187699,0.876823,0.214067,0.830495,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,extreme_poverty,2,lag,-1.82637,0.724115,-2.522209,0.011662,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,extreme_poverty,3,lag,-2.653508,0.992142,-2.674524,0.007484,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,extreme_poverty,4,lag,-4.199893,0.979044,-4.289791,0.000018,101,17,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,labor_informality,-3,lead,-4.116344,6.851403,-0.600803,0.547971,50,11,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,labor_informality,-2,lead,3.2354,4.440396,0.728629,0.466229,50,11,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,labor_informality,0,event,4.621579,3.930422,1.175848,0.239656,50,11,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,labor_informality,1,lag,8.737352,4.177363,2.091595,0.036475,50,11,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,labor_informality,2,lag,15.728741,6.980796,2.253144,0.02425,50,11,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,labor_informality,3,lag,23.745834,9.556756,2.484717,0.012965,50,11,"[-3, 4]",-1,
-core,PER,Peru,2005,JUNTOS,labor_informality,4,lag,22.69301,9.123366,2.487351,0.01287,50,11,"[-3, 4]",-1,
-mechanism,PER,Peru,2005,JUNTOS,social_protection_coverage,,,,,,,0,0,"[3, 4]",-1,Event window does not include reference year -1; coefficient path not estimated.
+section,country,iso3,event_label,event_year,outcome,relative_year,estimate,std.error,statistic,p.value,n_obs,n_countries,treated_relative_years,note
+core,Peru,PER,JUNTOS,2005,monetary_poverty,-3,-2.11737370521214,2.049412842678848,-1.0331611382138401,0.31789950422341906,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,monetary_poverty,-2,-2.7214909410217247,1.4156442299388026,-1.9224398923586705,0.0737511542093889,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,monetary_poverty,0,4.067564207094964,0.7909214430109528,5.142816954880102,1.202341960343451e-4,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,monetary_poverty,1,1.0410980659205,1.3522866817387402,0.7698797007908702,0.4533258415954321,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,monetary_poverty,2,-2.905531717548447,1.9574347381206785,-1.4843568783999568,0.15842333573655734,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,monetary_poverty,3,-2.0194996323010344,2.4376258823181636,-0.8284698841400985,0.4203918460960985,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,monetary_poverty,4,-2.1086134340498894,2.567642535020242,-0.8212254647172941,0.42437832374420914,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,extreme_poverty,-3,-2.4046335071299807,1.2270917939471198,-1.9596199069958133,0.06889230808306274,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,extreme_poverty,-2,-4.365915841887845,1.0457654120242301,-4.1748520190938265,8.131966015429813e-4,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,extreme_poverty,0,2.5024558971646558,0.385768657704975,6.486934195360329,1.0260813173573958e-5,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,extreme_poverty,1,0.18769877324625917,0.9208592293250674,0.2038300396726552,0.8412258804537706,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,extreme_poverty,2,-1.8263696480272973,0.7604819612365329,-2.4015949636170806,0.029732090845017083,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,extreme_poverty,3,-2.6535077433293695,1.0419698541655051,-2.5466262125736026,0.022346916947024495,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,extreme_poverty,4,-4.1998928476258,1.028213650778356,-4.084649960099721,9.761766916374226e-4,101,17,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,labor_informality,-3,-4.116343817826345,7.741650779571393,-0.5317139632142179,0.6077965678373609,50,11,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,labor_informality,-2,3.235400313950941,5.017370223832454,0.6448398602484674,0.5351203028756754,50,11,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,labor_informality,0,4.621579180905453,4.44112437462929,1.040632684665857,0.32519317768853473,50,11,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,labor_informality,1,8.737351715725584,4.720152045989337,1.8510742091771426,0.09718469816016209,50,11,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,labor_informality,2,15.728740834010235,7.887850001687547,1.9940466452385868,0.0772909794253812,50,11,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,labor_informality,3,23.74583366476771,10.798522386706859,2.1989891592945328,0.05543187149177758,50,11,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+core,Peru,PER,JUNTOS,2005,labor_informality,4,22.693009874068927,10.308818830474232,2.2013200782019164,0.055221564583263744,50,11,"-3, -2, -1, 0, 1, 2, 3, 4",Country and year fixed effects; country-clustered standard errors; reference relative year is -1.
+mechanism,Peru,PER,JUNTOS,2005,social_protection_coverage,NA,NA,NA,NA,NA,19,12,"3, 4",Event-study not estimated: missing reference period -1 or no non-reference treated periods.

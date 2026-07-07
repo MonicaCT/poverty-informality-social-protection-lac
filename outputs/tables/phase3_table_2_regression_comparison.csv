@@ -1,0 +1,27 @@
+Model,Variable,Estimate,Cluster SE,Cluster p-value,Wild bootstrap p-value,Driscoll-Kraay SE,Driscoll-Kraay p-value,N,R-squared,Clusters
+Pooled OLS,Labor informality,0.241,0.161,0.137,0.129,0.072,0.001,178,0.695,17
+Pooled OLS,Social protection coverage,-0.217**,0.101,0.033,0.010,0.030,0.000,178,0.695,17
+Pooled OLS,Log GDP per capita,-10.449*,5.561,0.062,0.051,1.858,0.000,178,0.695,17
+Pooled OLS,Gini index,0.502,0.364,0.170,0.165,0.123,0.000,178,0.695,17
+Pooled OLS,Unemployment,0.159,0.395,0.688,0.726,0.269,0.556,178,0.695,17
+Random effects,Labor informality,0.076,0.069,0.276,0.455,0.040,0.060,178,0.783,17
+Random effects,Social protection coverage,-0.083**,0.034,0.015,0.001,0.019,0.000,178,0.783,17
+Random effects,Log GDP per capita,-25.962***,3.626,0.000,0.001,2.574,0.000,178,0.783,17
+Random effects,Gini index,0.799***,0.189,0.000,0.001,0.125,0.000,178,0.783,17
+Random effects,Unemployment,0.431**,0.184,0.020,0.042,0.059,0.000,178,0.783,17
+Country FE,Labor informality,0.094,0.073,0.198,0.197,0.023,0.000,178,0.779,17
+Country FE,Social protection coverage,-0.075**,0.031,0.019,0.008,0.014,0.000,178,0.779,17
+Country FE,Log GDP per capita,-30.357***,5.108,0.000,0.001,3.081,0.000,178,0.779,17
+Country FE,Gini index,0.690***,0.241,0.005,0.001,0.137,0.000,178,0.779,17
+Country FE,Unemployment,0.428**,0.202,0.036,0.022,0.059,0.000,178,0.779,17
+TWFE,Labor informality,0.089,0.080,0.283,0.111,0.019,0.000,178,0.536,17
+TWFE,Social protection coverage,-0.102**,0.040,0.021,0.001,0.014,0.000,178,0.536,17
+TWFE,Log GDP per capita,-25.968***,8.574,0.008,0.001,2.795,0.000,178,0.536,17
+TWFE,Gini index,0.508**,0.191,0.018,0.430,0.120,0.000,178,0.536,17
+TWFE,Unemployment,0.893***,0.274,0.005,0.229,0.142,0.000,178,0.536,17
+TWFE + interaction,Labor informality,0.218,0.125,0.101,0.179,0.053,0.000,178,0.542,17
+TWFE + interaction,Social protection coverage,0.023,0.103,0.826,0.917,0.050,0.646,178,0.542,17
+TWFE + interaction,Log GDP per capita,-25.375***,8.553,0.010,0.001,2.791,0.000,178,0.542,17
+TWFE + interaction,Gini index,0.496**,0.191,0.020,0.462,0.132,0.000,178,0.542,17
+TWFE + interaction,Unemployment,0.869***,0.258,0.004,0.283,0.138,0.000,178,0.542,17
+TWFE + interaction,Informality x social protection,-0.002,0.002,0.231,0.547,0.001,0.027,178,0.542,17

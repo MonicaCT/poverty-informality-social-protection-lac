@@ -1,27 +1,27 @@
-﻿| tau | term | estimate | std.error | statistic | p.value | bootstrap_reps | method |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 0.1 | labor_informality | 0.042659 | 0.092268 | 0.462342 | 0.643836 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.1 | social_protection_coverage | -0.141679 | 0.037526 | -3.7755 | 0.00016 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.1 | log_gdp_per_capita | -27.580578 | 5.69859 | -4.839896 | 0.000001 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.1 | gini | 0.752186 | 0.39012 | 1.928091 | 0.053844 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.1 | unemployment | 0.840769 | 0.312612 | 2.689497 | 0.007156 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.25 | labor_informality | 0.058385 | 0.069444 | 0.840745 | 0.400491 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.25 | social_protection_coverage | -0.100255 | 0.039086 | -2.564984 | 0.010318 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.25 | log_gdp_per_capita | -29.977565 | 4.721116 | -6.349677 | 0 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.25 | gini | 0.586932 | 0.269066 | 2.181369 | 0.029156 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.25 | unemployment | 0.689237 | 0.264795 | 2.60291 | 0.009244 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.5 | labor_informality | 0.070972 | 0.06921 | 1.025459 | 0.305147 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.5 | social_protection_coverage | -0.094336 | 0.028537 | -3.305696 | 0.000948 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.5 | log_gdp_per_capita | -23.920062 | 6.828779 | -3.502831 | 0.00046 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.5 | gini | 0.517821 | 0.194705 | 2.659516 | 0.007825 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.5 | unemployment | 0.72719 | 0.255544 | 2.845661 | 0.004432 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.75 | labor_informality | 0.143598 | 0.066496 | 2.159488 | 0.030812 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.75 | social_protection_coverage | -0.100692 | 0.022766 | -4.422821 | 0.00001 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.75 | log_gdp_per_capita | -33.08975 | 6.897037 | -4.797676 | 0.000002 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.75 | gini | 0.309785 | 0.212208 | 1.459817 | 0.14434 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.75 | unemployment | 1.118087 | 0.249458 | 4.482063 | 0.000007 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.9 | labor_informality | 0.205892 | 0.073642 | 2.795862 | 0.005176 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.9 | social_protection_coverage | -0.102005 | 0.033023 | -3.088955 | 0.002009 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.9 | log_gdp_per_capita | -26.791269 | 5.578122 | -4.802919 | 0.000002 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.9 | gini | 0.115373 | 0.277158 | 0.41627 | 0.677213 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
-| 0.9 | unemployment | 0.946175 | 0.329112 | 2.874937 | 0.004041 | 199 | Canay-style residualized FE quantile regression via check-loss optimization fallback |
+|  tau|term                       | estimate| std.error| statistic| p.value|method                                                           |
+|----:|:--------------------------|--------:|---------:|---------:|-------:|:----------------------------------------------------------------|
+| 0.10|labor_informality          |   0.0430|    0.0687|    0.6268|  0.5316|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.10|social_protection_coverage |  -0.1384|    0.0289|   -4.7822|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.10|log_gdp_per_capita         | -27.2762|    3.8835|   -7.0237|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.10|gini                       |   0.7381|    0.2333|    3.1635|  0.0018|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.10|unemployment               |   0.8651|    0.1412|    6.1266|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.25|labor_informality          |   0.0507|    0.0651|    0.7787|  0.4372|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.25|social_protection_coverage |  -0.0939|    0.0237|   -3.9685|  0.0001|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.25|log_gdp_per_capita         | -29.5797|    4.2225|   -7.0052|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.25|gini                       |   0.6001|    0.1826|    3.2864|  0.0012|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.25|unemployment               |   0.6787|    0.1323|    5.1295|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.50|labor_informality          |   0.0706|    0.0774|    0.9119|  0.3631|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.50|social_protection_coverage |  -0.0952|    0.0268|   -3.5453|  0.0005|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.50|log_gdp_per_capita         | -23.8903|    4.6260|   -5.1644|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.50|gini                       |   0.5128|    0.1805|    2.8408|  0.0050|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.50|unemployment               |   0.7288|    0.2242|    3.2499|  0.0014|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.75|labor_informality          |   0.1321|    0.0680|    1.9424|  0.0537|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.75|social_protection_coverage |  -0.1006|    0.0268|   -3.7506|  0.0002|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.75|log_gdp_per_capita         | -30.8404|    4.3719|   -7.0543|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.75|gini                       |   0.3735|    0.1258|    2.9685|  0.0034|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.75|unemployment               |   1.2061|    0.2164|    5.5736|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.90|labor_informality          |   0.1972|    0.0595|    3.3165|  0.0011|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.90|social_protection_coverage |  -0.0995|    0.0311|   -3.1965|  0.0017|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.90|log_gdp_per_capita         | -26.1297|    3.4022|   -7.6802|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.90|gini                       |   0.1819|    0.1704|    1.0675|  0.2872|Canay-style residualized FE quantile regression via quantreg::rq |
+| 0.90|unemployment               |   0.9389|    0.1147|    8.1862|  0.0000|Canay-style residualized FE quantile regression via quantreg::rq |

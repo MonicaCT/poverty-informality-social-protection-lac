@@ -1,12 +1,9 @@
-﻿model,term,estimate,dk_std.error,dk_statistic,dk_p.value,dk_lag
-TWFE baseline,labor_informality,0.088806,0.019031,4.666381,0.000003,2
-TWFE baseline,social_protection_coverage,-0.102373,0.01396,-7.333336,0,2
-TWFE baseline,log_gdp_per_capita,-25.96825,2.755188,-9.42522,0,2
-TWFE baseline,gini,0.508343,0.118571,4.287239,0.000018,2
-TWFE baseline,unemployment,0.893498,0.140112,6.377012,0,2
-TWFE interaction,labor_informality,0.218339,0.051711,4.22226,0.000024,2
-TWFE interaction,social_protection_coverage,0.022967,0.04911,0.467667,0.640023,2
-TWFE interaction,labor_informality:social_protection_coverage,-0.00189,0.000832,-2.270668,0.023167,2
-TWFE interaction,log_gdp_per_capita,-25.37457,2.743781,-9.248029,0,2
-TWFE interaction,gini,0.496094,0.129315,3.836329,0.000125,2
-TWFE interaction,unemployment,0.868717,0.135945,6.390193,0,2
+model,term,estimate,dk_std.error,dk_statistic,dk_p.value,dk_lag,inference
+TWFE baseline,labor_informality,0.08880569423128883,0.01930401196579988,4.600375009538028,9.401571488233132e-6,2,Driscoll-Kraay SCC standard errors
+TWFE baseline,social_protection_coverage,-0.10237303114487802,0.014160248908450463,-7.229606753860414,2.944603878786182e-11,2,Driscoll-Kraay SCC standard errors
+TWFE baseline,log_gdp_per_capita,-25.96824969601351,2.7947187719654236,-9.29190083685987,2.8215253546320566e-16,2,Driscoll-Kraay SCC standard errors
+TWFE baseline,gini,0.5083426641449504,0.1202723418012363,4.226596543576448,4.27277448908071e-5,2,Driscoll-Kraay SCC standard errors
+TWFE baseline,unemployment,0.8934977780496335,0.14212262830959901,6.286808713551538,3.921514081067215e-9,2,Driscoll-Kraay SCC standard errors
+TWFE interaction,labor_informality,0.21833910971725848,0.05260564296008472,4.150488377889923,5.774873466393304e-5,2,Driscoll-Kraay SCC standard errors
+TWFE interaction,social_protection_coverage,0.022967367573821056,0.04995971762164128,0.4597177219406896,0.646442271982862,2,Driscoll-Kraay SCC standard errors
+TWFE interaction,labor_informality:social_protection_coverage,-0.0018899264685494504,8.467144381327362e-4,-2.23207067629237,0.027222167300122706,2,Driscoll-Kraay SCC standard errors
