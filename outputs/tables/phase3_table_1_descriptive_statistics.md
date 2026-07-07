@@ -16,3 +16,5 @@ Table: Table 1. Descriptive statistics for the full panel and analytic sample
 |Analytic TWFE sample  |                 178|        17|Log GDP per capita         |  178|  8.867|  0.581|  7.211|  9.811|
 |Analytic TWFE sample  |                 178|        17|Gini index                 |  178| 46.766|  4.370| 38.000| 56.700|
 |Analytic TWFE sample  |                 178|        17|Unemployment               |  178|  6.580|  3.052|  1.902| 19.625|
+
+Note: social_protection_coverage is a combined social-protection measure. A targeted mechanism check found that social assistance and social insurance expand in correlated institutional packages; when both components and their interactions with labor informality enter jointly, neither component nor interaction is robustly significant at the 5 percent level under country-clustered or wild-bootstrap inference. Interpret component channels as a limitation, not as separately identified mechanisms.

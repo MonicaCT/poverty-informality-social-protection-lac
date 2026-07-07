@@ -28,3 +28,5 @@ Table: Table 2. Comparative panel estimates with clustered, wild-bootstrap, and 
 |TWFE + interaction |Gini index                      |0.496**    |0.191      |0.020           |0.462                  |0.132             |0.000                  | 178|0.542     |       17|
 |TWFE + interaction |Unemployment                    |0.869***   |0.258      |0.004           |0.283                  |0.138             |0.000                  | 178|0.542     |       17|
 |TWFE + interaction |Informality x social protection |-0.002     |0.002      |0.231           |0.547                  |0.001             |0.027                  | 178|0.542     |       17|
+
+Note: social_protection_coverage is a combined social-protection measure. A targeted mechanism check found that social assistance and social insurance expand in correlated institutional packages; when both components and their interactions with labor informality enter jointly, neither component nor interaction is robustly significant at the 5 percent level under country-clustered or wild-bootstrap inference. Interpret component channels as a limitation, not as separately identified mechanisms.
