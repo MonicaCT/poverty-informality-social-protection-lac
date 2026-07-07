@@ -36,6 +36,12 @@ Oster sensitivity is stronger for the social-protection main coefficient than fo
 
 The mechanism decomposition does not support a clean contributory versus non-contributory interpretation. In the analytic sample, social assistance has greater absolute dispersion than social insurance, and the insurance component loses Haiti 2012, reducing the joint component sample to 177 observations and 16 country clusters. When social assistance and social insurance enter the TWFE interaction model together, neither component nor either interaction is robustly significant at the 5 percent level under country-clustered or wild-bootstrap inference. This is best read as evidence that social-assistance and social-insurance coverage expand through correlated institutional architectures rather than as independent channels that can be isolated with this panel.
 
+![Specification curve for social-protection coefficients](../outputs/figures/phase3_figure_17_specification_curve.png)
+
+Figure 17 reorganizes the already-estimated Level 1 models into a specification curve. The main negative social-protection association is stable in the baseline all-SP specification, while interaction and component specifications show wider uncertainty and greater sensitivity to the inference method.
+
+The robustness dashboard in [HTML](../outputs/tables/phase3_table_3_robustness_dashboard.html) and [LaTeX](../outputs/tables/phase3_table_3_robustness_dashboard.tex) summarizes the same pattern with color-coded inference cells. It makes the mechanism limitation explicit: component estimates can look strong when entered separately, but lose robust 5 percent support under cluster and wild-bootstrap inference once assistance and insurance enter jointly.
+
 In Bolivia, the event-year estimate for monetary poverty around the 2008 Renta Dignidad expansion is suggestive but not robust at the conventional 5 percent level (beta = -2.4707, p = 0.0677). Later post-event poverty coefficients are negative and statistically significant, but the evidence remains small-sample and event-specific. Bolivia's informality coefficients are not statistically significant after the event. Historical sequencing also matters: Bono Juancito Pinto was established by Decreto Supremo 28899 on October 26, 2006, before the 2008 Renta Dignidad expansion, so the Renta Dignidad pre-period is partly confounded by a prior social-policy rollout.
 
 In Peru, the 2005 JUNTOS event-study shows a positive event-year monetary-poverty coefficient and later negative but imprecise poverty estimates. The labor-informality post-event coefficients lose 5 percent significance in the canonical specification; they are positive and mostly marginal at the 10 percent level. These estimates are reported as fragile findings, not as robust causal evidence.
@@ -46,7 +52,11 @@ The evidence supports a structural vulnerability interpretation. Informality, in
 
 ## Bolivia Profile
 
-Bolivia is treated as a special analytical case because the archive contains household survey microdata and Bolivia-specific administrative sources. In the current repository version, Bolivia appears in the cross-country panel, dashboard, and exploratory event-study layer, while the microdata are reserved for the next validation layer.
+Bolivia is treated as a special analytical case because the aggregate country-year panel contains a documented sequence of social-policy expansions around the event-study window. Under the current scope, Phase 4 is restricted to the same aggregate panel used in the event studies; no household microdata are searched, integrated, or interpreted.
+
+![Bolivia policy timeline](../outputs/figures/phase3_figure_18_bolivia_policy_timeline.png)
+
+Figure 18 places the Bolivia event-study in historical sequence. The 2006 Bono Juancito Pinto rollout precedes the 2008 Renta Dignidad expansion, so the pre-period should be read as an overlapping policy environment rather than as a clean untreated baseline.
 
 ## Policy Implications
 
