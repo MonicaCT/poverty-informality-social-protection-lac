@@ -7,24 +7,20 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_FILES = [
     "README.md",
     "DATA_INVENTORY.md",
-    "AUDIT_REPORT.md",
-    "FINAL_REPOSITORY_REVIEW.md",
-    "docs/EMPIRICAL_STRATEGY.md",
-    "docs/ECONOMETRIC_DIAGNOSTICS.md",
     "docs/DATA_LINEAGE.md",
-    "docs/MODEL_LIMITATIONS.md",
+    "docs/dashboard.md",
     "data/metadata/CODEBOOK.md",
     "data/metadata/validation_report.md",
     "data/processed/lac_poverty_informality_social_protection_panel.csv",
-    "outputs/models/model_results.csv",
-    "outputs/models/econometric_diagnostics.csv",
-    "outputs/models/gmm_diagnostics.md",
-    "outputs/figures/figure_catalog.md",
+    "dashboard/dashboard.qmd",
+    "dashboard/dashboard_panel.csv",
     "dashboard/index.html",
     "dashboard/dashboard_preview.png",
-    "policy_brief/policy_brief.pdf",
-    "paper/paper_draft.md",
-    "PUBLICATION_CHECKLIST.md",
+    "outputs/figures/figure_catalog.md",
+    "outputs/tables/table_1_descriptive_statistics.csv",
+    "outputs/tables/table_2_correlation_matrix.csv",
+    "outputs/tables/table_3_country_ranking.csv",
+    "outputs/tables/table_4_regional_summary.csv",
     "assets/brand/repository-banner.png",
     "assets/brand/social-preview.png",
     "assets/screenshots/dashboard-overview.png",
@@ -34,21 +30,16 @@ REQUIRED_FILES = [
 
 def main() -> int:
     missing = [f for f in REQUIRED_FILES if not (ROOT / f).exists()]
-    assert not missing, f"Missing required artifacts: {missing}"
+    assert not missing, f"Missing dashboard artifacts: {missing}"
     summary = json.loads((ROOT / "data" / "metadata" / "panel_build_summary.json").read_text(encoding="utf-8"))
-    assert summary["complete_main_model_rows"] >= 100, "Main model sample is unexpectedly small"
-    assert summary["complete_main_model_countries"] >= 10, "Too few countries in main model sample"
-    results = pd.read_csv(ROOT / "outputs" / "models" / "model_results.csv")
-    assert "se_type" in results.columns, "Model results must document standard-error type"
-    assert results["se_type"].str.contains("cluster|robust", case=False, na=False).any(), "Robust or clustered SE missing"
-    diagnostics = pd.read_csv(ROOT / "outputs" / "models" / "econometric_diagnostics.csv")
-    required_metrics = {"max_vif", "breusch_pagan_heteroskedasticity", "panel_serial_correlation_pbgtest", "pesaran_cross_sectional_dependence", "hausman_fe_vs_re"}
-    assert required_metrics.issubset(set(diagnostics["metric"])), "Econometric diagnostics incomplete"
+    assert summary["rows"] >= 500, "Panel is unexpectedly small"
+    assert summary["countries"] >= 20, "Too few countries in dashboard panel"
     figure_catalog = pd.read_csv(ROOT / "outputs" / "figures" / "figure_catalog.csv")
-    assert len(figure_catalog) >= 12, "Figure catalog must cover all required figures"
+    assert len(figure_catalog) >= 10, "Figure catalog should cover dashboard figures"
     dashboard = (ROOT / "dashboard" / "index.html").read_text(encoding="utf-8")
-    assert "plotly.js" in dashboard.lower(), "Dashboard should embed Plotly for offline use"
-    print("repository_output_tests_passed")
+    assert "Poverty, Informality" in dashboard, "Dashboard title missing"
+    assert "plotly" in dashboard.lower(), "Dashboard should embed interactive chart assets"
+    print("dashboard_output_tests_passed")
     return 0
 
 

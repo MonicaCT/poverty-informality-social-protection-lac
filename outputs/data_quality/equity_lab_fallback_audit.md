@@ -1,4 +1,4 @@
-# Equity Lab Fallback Audit
+﻿# Equity Lab Fallback Audit
 
 ## Scope
 
@@ -16,7 +16,7 @@ For each fallback observation, the raw Equity Lab value is compared with the sam
 - Monetary poverty exclusions: 75.
 - Extreme poverty exclusions: 33.
 - Lagged monetary poverty exclusions in the audited panel: 75.
-- Main TWFE analytic sample impact: 0 of 178 observations.
+- Main complete-case analytic sample impact: 0 of 178 observations.
 
 ## Definition Check
 
@@ -35,3 +35,4 @@ Sources checked:
 - Non-canonical audited panel for future presentation/model reruns: `outputs/data_quality/lac_poverty_informality_social_protection_panel_audited.csv`.
 
 The canonical processed panel is not overwritten in this step, so existing approved model outputs remain reproducible from the original canonical inputs. Future reruns should use the audited columns or rebuild the canonical panel with these exclusions applied.
+

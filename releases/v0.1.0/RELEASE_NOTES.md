@@ -1,21 +1,15 @@
-﻿# v0.1.0 - First Public Portfolio Release
+﻿# Release v0.1.0
 
-## Summary
+Initial dashboard-oriented release.
 
-Initial publication-ready release of the Poverty, Informality, and Social Protection in Latin America repository.
+## Includes
 
-## Included
+- Harmonized LAC country-year panel.
+- Structural Vulnerability Index inputs and descriptive outputs.
+- Interactive Quarto dashboard.
+- Dashboard screenshots, repository banner, and social preview image.
+- Data lineage, codebook, validation metadata, and reproducibility checks.
 
-- Harmonized LAC country-year processed panel.
-- Full metadata and validation reports.
-- Twelve publication-quality figures.
-- Robust econometric model outputs and diagnostics.
-- Offline Plotly dashboard.
-- Policy brief and paper draft.
-- GitHub Pages documentation and CI.
+## Notes
 
-## Known Limitations
-
-- The public workflow starts from the processed panel; full raw-source rebuild requires private local source archives.
-- The empirical interpretation is associational, not causal.
-- Dynamic GMM models are exploratory because of singular weighting-matrix warnings.
+This repository is maintained as the visualization and descriptive analytics component of the broader research portfolio.

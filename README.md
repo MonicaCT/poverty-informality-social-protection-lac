@@ -1,169 +1,133 @@
-﻿# Poverty, Informality, and Social Protection in Latin America
+﻿# Poverty, Informality, and Social Protection in LAC
+
+![Status](https://img.shields.io/badge/status-interactive%20dashboard-0B2F44)
+![Scope](https://img.shields.io/badge/scope-Latin%20America%20and%20Caribbean-2F5F8F)
+![Reproducibility](https://img.shields.io/badge/reproducible-data%20analytics-6F8F7A)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ![Repository banner](assets/brand/repository-banner.png)
 
-[![CI](https://github.com/MonicaCT/poverty-informality-social-protection-lac/actions/workflows/ci.yml/badge.svg)](https://github.com/MonicaCT/poverty-informality-social-protection-lac/actions/workflows/ci.yml)
-![Status](https://img.shields.io/badge/status-pre--publication%20ready-blue)
-![Research](https://img.shields.io/badge/research-development%20economics-005A8B)
-![Python](https://img.shields.io/badge/python-3.10%2B-3776AB)
-![R](https://img.shields.io/badge/R-4.2%2B-276DC3)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Reproducibility](https://img.shields.io/badge/reproducibility-verified-success)
+## Overview
 
-A professional applied economics portfolio repository studying the joint relationship between poverty, labor informality, and social protection in Latin America and the Caribbean, with a dedicated Bolivia lens. The repository combines a harmonized country-year panel, audited econometric models, publication figures, a policy brief, and an offline dashboard.
+This repository contains an interactive research dashboard on poverty, labor informality, social protection, and structural vulnerability in Latin America and the Caribbean. It is organized as a data analytics and visualization project for policy audiences, international organizations, and applied development research portfolios.
 
-> Publication status: prepared for GitHub publication, but not yet published.
+The dashboard summarizes a reproducible country-year panel and presents descriptive evidence through institutional-style indicators, country profiles, rankings, and high-level regional patterns.
 
-## Research Question
+## Data
 
-To what extent do labor informality and social protection jointly explain poverty dynamics in Latin America and the Caribbean?
+The project uses a harmonized country-year panel combining indicators from:
 
-The project is designed for reviewers who care about research credibility, reproducibility, and software engineering quality: development economists, policy institutions, data scientists, and GitHub portfolio reviewers.
+- SEDLAC
+- World Development Indicators
+- ILOSTAT
+- ASPIRE
+- CEPALSTAT
 
-## Executive Findings
+The main dashboard input is:
 
-- Harmonized panel: 1,789 country-year rows, 27 countries, 1946-2025.
-- Preferred model sample: 178 complete observations, 17 country clusters, 2006-2023.
-- Preferred estimator: country and year fixed effects with country-clustered robust standard errors.
-- Social protection is negatively associated with poverty in the preferred model.
-- Informality has the expected positive sign, but the clustered estimate is not robustly significant in the preferred specification.
-- Dynamic GMM estimates are retained only as robustness checks because the weighting matrix is singular in this panel.
+`dashboard/dashboard_panel.csv`
 
-## Repository Highlights
+The broader processed panel is stored in:
 
-| Component | What it provides |
-|---|---|
-| `data/processed/` | Publication-ready country-year panel used by the reproducible public workflow. |
-| `data/metadata/` | Codebook, validation reports, source provenance, missingness, and build summaries. |
-| `code/python/` | Data inventory, panel construction, descriptive analysis, dashboard, and document generation. |
-| `code/r/` | Econometric models, robust inference, diagnostics, and model tables. |
-| `outputs/figures/` | Twelve publication figures in PNG and PDF formats plus a figure catalog. |
-| `outputs/models/` | Model outputs, clustered standard errors, diagnostics, VIFs, and GMM notes. |
-| `dashboard/` | Self-contained offline dashboard with embedded Plotly and data. |
-| `docs/` | GitHub Pages documentation for data lineage, methodology, dashboard, and reproducibility. |
-| `.github/` | Issue templates, pull request template, CI, and manual Pages workflow. |
+`data/processed/lac_poverty_informality_social_protection_panel.csv`
 
 ## Dashboard
 
-The dashboard is generated from the processed panel and is available as a live GitHub Pages dashboard after Pages is enabled: [Open dashboard](https://monicact.github.io/poverty-informality-social-protection-lac/dashboard/). The offline source file is also available at [`dashboard/index.html`](dashboard/index.html).
+The Quarto dashboard is located at:
 
-![Dashboard overview](assets/screenshots/dashboard-overview.png)
+`dashboard/dashboard.qmd`
 
-## Methodology At A Glance
+The rendered dashboard is located at:
 
-```mermaid
-flowchart LR
-  A[Source inventories] --> B[Harmonized country-year panel]
-  B --> C[Quality checks and metadata]
-  C --> D[Descriptive tables and figures]
-  C --> E[Fixed-effects econometrics]
-  C --> F[Offline dashboard]
-  E --> G[Policy brief and paper draft]
-  D --> H[Publication outputs]
-  F --> H
-  G --> H
+`dashboard/index.html`
+
+It presents:
+
+- summary indicators for countries, years, observations, poverty, informality, and social protection
+- a structural vulnerability ranking
+- a Bolivia country profile
+- concise research-question and methodology panels
+- descriptive policy-oriented interpretation
+
+## Indicators
+
+Core variables include:
+
+- monetary poverty
+- extreme poverty
+- labor informality
+- social protection coverage
+- GDP per capita
+- unemployment
+- gender labor indicators
+- inequality indicators
+
+Variable definitions and provenance are documented in:
+
+`data/metadata/CODEBOOK.md`
+
+## Structural Vulnerability Index
+
+The dashboard includes a composite Structural Vulnerability Index constructed from normalized indicators of poverty, informality, social protection, GDP per capita, and gender labor conditions. Higher values indicate greater structural vulnerability.
+
+The index is intended for descriptive comparison across countries and years. It should be interpreted as a visualization and diagnostic tool, not as a causal estimate.
+
+## Interactive Visualizations
+
+Key visual outputs include:
+
+- latest structural vulnerability ranking
+- regional trends in poverty, informality, and social protection
+- country-year heatmaps
+- Bolivia profile
+- descriptive scatter plots
+- country rankings and summary tables
+
+Figures and tables are stored in:
+
+`outputs/figures/`
+
+`outputs/tables/`
+
+## Country Profiles
+
+The dashboard includes a focused Bolivia profile showing long-run changes in poverty, informality, social protection, and structural vulnerability. This profile is designed as an example of how the panel can support country-level descriptive analysis.
+
+## How to Run
+
+Open the rendered dashboard directly:
+
+`dashboard/index.html`
+
+To rebuild the dashboard in a local Quarto environment:
+
+```bash
+quarto render dashboard/dashboard.qmd
 ```
 
-The preferred empirical strategy is a two-way fixed-effects panel model:
+To rebuild the data and descriptive outputs from the existing project scripts:
+
+```bash
+powershell -ExecutionPolicy Bypass -File run_pipeline.ps1
+```
+
+## Repository Structure
 
 ```text
-poverty_it = beta1 informality_it + beta2 social_protection_it + beta3 X_it + country FE + year FE + error_it
+dashboard/        Quarto dashboard, dashboard panel, rendered HTML
+data/             processed panel, metadata, validation files
+code/python/      data construction and descriptive analysis scripts
+outputs/figures/  dashboard and descriptive figures
+outputs/tables/   dashboard and descriptive tables
+docs/             dashboard documentation and GitHub Pages materials
+assets/           repository banner, social preview, screenshots
+tests/            repository integrity checks
 ```
 
-Robustness checks include random effects, Hausman tests, lagged regressors, interaction models, regional heterogeneity, alternative outcomes, alternative informality definitions, and exploratory dynamic panel specifications.
+## Reproducibility
 
-## Figure Gallery
+The repository keeps source data documentation, processed dashboard inputs, validation metadata, rendered outputs, and scripts together so the visual analysis can be reproduced or audited on a clean machine.
 
-Every figure is generated by the reproducible analysis pipeline.
+## License
 
-| Figure | Caption | Preview |
-|---|---|---|
-| Figure 1 | Evolution of monetary poverty | ![Evolution of monetary poverty](outputs/figures/figure_01_evolution_poverty.png) |
-| Figure 2 | Evolution of labor informality | ![Evolution of labor informality](outputs/figures/figure_02_evolution_informality.png) |
-| Figure 3 | Social protection coverage | ![Social protection coverage](outputs/figures/figure_03_social_protection_coverage.png) |
-| Figure 4 | Informality vs poverty | ![Informality vs poverty](outputs/figures/figure_04_scatter_informality_poverty.png) |
-| Figure 5 | Social protection vs poverty | ![Social protection vs poverty](outputs/figures/figure_05_scatter_social_protection_poverty.png) |
-| Figure 6 | Informality-poverty gradient by protection coverage | ![Informality-poverty gradient by protection coverage](outputs/figures/figure_06_interaction_plot.png) |
-| Figure 7 | Regional vulnerability map | ![Regional vulnerability map](outputs/figures/figure_07_regional_map.png) |
-| Figure 8 | Country-year poverty heatmap | ![Country-year poverty heatmap](outputs/figures/figure_08_heatmap_country_year.png) |
-| Figure 9 | Country vulnerability ranking | ![Country vulnerability ranking](outputs/figures/figure_09_country_ranking.png) |
-| Figure 10 | Cluster-robust coefficient plot | ![Cluster-robust coefficient plot](outputs/figures/figure_10_coefficient_plot.png) |
-| Figure 11 | Indicator distributions | ![Indicator distributions](outputs/figures/figure_11_distribution.png) |
-| Figure 12 | Bolivia vs Latin America | ![Bolivia vs Latin America](outputs/figures/figure_12_bolivia_vs_lac.png) |
-
-## Quick Start On A Clean Computer
-
-Clone the repository and install dependencies:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
-
-Install R packages:
-
-```r
-install.packages(c("readr", "dplyr", "plm", "fixest", "broom", "ggplot2", "openxlsx", "officer", "knitr", "lmtest", "sandwich", "car"))
-```
-
-Reproduce public outputs from the included processed panel:
-
-```bash
-python code/python/02_descriptive_analysis.py
-python code/python/03_build_dashboard.py
-Rscript code/r/03_econometric_models.R
-python code/python/04_generate_documents.py
-python tests/test_panel_integrity.py
-python tests/test_repository_outputs.py
-python tests/test_publication_readiness.py
-```
-
-Windows users can run the portable PowerShell workflow:
-
-```powershell
-./run_pipeline.ps1
-```
-
-The full raw-source rebuild is optional and requires local copies of the original data archives configured in [`config/project_sources.yml`](config/project_sources.yml):
-
-```powershell
-./run_pipeline.ps1 -FullRawRebuild
-```
-
-## Documentation
-
-- [GitHub Pages index](docs/index.md)
-- [Empirical strategy](docs/EMPIRICAL_STRATEGY.md)
-- [Econometric diagnostics](docs/ECONOMETRIC_DIAGNOSTICS.md)
-- [Data lineage](docs/DATA_LINEAGE.md)
-- [Model limitations](docs/MODEL_LIMITATIONS.md)
-- [Data license notes](docs/DATA_LICENSE.md)
-- [Publication checklist](PUBLICATION_CHECKLIST.md)
-- [Final repository review](FINAL_REPOSITORY_REVIEW.md)
-
-## Key Outputs
-
-- Processed panel: [`data/processed/lac_poverty_informality_social_protection_panel.csv`](data/processed/lac_poverty_informality_social_protection_panel.csv)
-- Codebook: [`data/metadata/CODEBOOK.md`](data/metadata/CODEBOOK.md)
-- Validation report: [`data/metadata/validation_report.md`](data/metadata/validation_report.md)
-- Model results: [`outputs/models/model_results.md`](outputs/models/model_results.md)
-- Diagnostics: [`outputs/models/econometric_diagnostics.md`](outputs/models/econometric_diagnostics.md)
-- Policy brief: [`policy_brief/policy_brief.pdf`](policy_brief/policy_brief.pdf)
-- Paper draft: [`paper/paper_draft.md`](paper/paper_draft.md)
-
-## Reproducibility Contract
-
-The public workflow does not require proprietary raw microdata. It starts from the included processed panel and regenerates figures, tables, dashboard assets, econometric outputs, and documents. The raw inventory and full rebuild scripts are retained for transparency and future private extensions.
-
-Continuous integration verifies processed panel integrity, required research outputs, robust standard-error metadata, publication assets, README figure coverage, and relative links.
-
-## Data And Licensing
-
-Code is released under the MIT License. Source datasets remain governed by their original providers and are not relicensed by this repository. See [`docs/DATA_LICENSE.md`](docs/DATA_LICENSE.md) for details.
-
-## Citation
-
-If you use this repository, cite it using [`CITATION.cff`](CITATION.cff).
-
+This project is released under the MIT License.

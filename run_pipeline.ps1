@@ -4,7 +4,6 @@
 
 $ErrorActionPreference = "Stop"
 $Python = if ($env:PYTHON) { $env:PYTHON } else { "python" }
-$Rscript = if ($env:RSCRIPT) { $env:RSCRIPT } else { "Rscript" }
 
 function Invoke-Step {
     param([string]$Name, [scriptblock]$Command)
@@ -26,8 +25,6 @@ if ($FullRawRebuild) {
 
 Invoke-Step "Generate descriptive tables and figures" { & $Python code/python/02_descriptive_analysis.py }
 Invoke-Step "Build dashboard" { & $Python code/python/03_build_dashboard.py }
-Invoke-Step "Estimate econometric models" { & $Rscript code/r/03_econometric_models.R }
-Invoke-Step "Generate documents" { & $Python code/python/04_generate_documents.py }
 Invoke-Step "Run panel integrity tests" { & $Python tests/test_panel_integrity.py }
 Invoke-Step "Run output tests" { & $Python tests/test_repository_outputs.py }
-Invoke-Step "Run publication readiness tests" { & $Python tests/test_publication_readiness.py }
+Invoke-Step "Run dashboard readiness tests" { & $Python tests/test_publication_readiness.py }

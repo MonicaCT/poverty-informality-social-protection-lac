@@ -17,8 +17,6 @@ Before opening a pull request, run:
 ```bash
 python code/python/02_descriptive_analysis.py
 python code/python/03_build_dashboard.py
-Rscript code/r/03_econometric_models.R
-python code/python/04_generate_documents.py
 python tests/test_panel_integrity.py
 python tests/test_repository_outputs.py
 python tests/test_publication_readiness.py
@@ -37,3 +35,4 @@ If your change requires raw data, explain which source is needed and why the pub
 ## Pull Request Expectations
 
 A strong pull request includes a concise motivation, a list of changed files, the commands run, and any remaining limitations.
+

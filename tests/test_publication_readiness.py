@@ -23,7 +23,6 @@ REQUIRED_FILES = [
     ".github/pull_request_template.md",
     ".github/ISSUE_TEMPLATE/bug_report.yml",
     ".github/ISSUE_TEMPLATE/data_issue.yml",
-    ".github/ISSUE_TEMPLATE/econometric_question.yml",
     ".github/ISSUE_TEMPLATE/documentation.yml",
     ".github/ISSUE_TEMPLATE/feature_request.yml",
     "assets/brand/repository-banner.png",
@@ -39,14 +38,7 @@ REQUIRED_FILES = [
     "releases/v0.1.0/RELEASE_NOTES.md",
 ]
 
-TEMP_PATTERNS = {
-    "__pycache__",
-    ".pytest_cache",
-    ".mypy_cache",
-    ".ruff_cache",
-    ".DS_Store",
-    "Thumbs.db",
-}
+TEMP_PATTERNS = {"__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".DS_Store", "Thumbs.db"}
 TEMP_SUFFIXES = {".pyc", ".pyo", ".tmp", ".temp", ".bak", ".swp", ".swo", ".log"}
 MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
@@ -58,17 +50,7 @@ def parse_python_scripts() -> None:
 
 def test_required_files() -> None:
     missing = [rel for rel in REQUIRED_FILES if not (ROOT / rel).exists()]
-    assert not missing, f"Missing publication files: {missing}"
-
-
-def test_readme_contains_all_figures() -> None:
-    readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    missing = []
-    for i in range(1, 13):
-        token = f"outputs/figures/figure_{i:02d}_"
-        if token not in readme:
-            missing.append(token)
-    assert not missing, f"README is missing figure references: {missing}"
+    assert not missing, f"Missing dashboard publication files: {missing}"
 
 
 def iter_markdown_files():
@@ -125,10 +107,11 @@ def test_no_temporary_files() -> None:
     assert not bad, "Temporary files found:\n" + "\n".join(bad[:50])
 
 
-def test_github_actions_are_publication_safe() -> None:
+def test_github_actions_are_dashboard_safe() -> None:
     ci = (ROOT / ".github/workflows/ci.yml").read_text(encoding="utf-8")
     pages = (ROOT / ".github/workflows/pages.yml").read_text(encoding="utf-8")
-    assert "tests/test_publication_readiness.py" in ci
+    assert "code/python/03_build_dashboard.py" in ci
+    assert "Rscript" not in ci
     assert "workflow_dispatch" in pages
     assert "push:" not in pages, "Pages deployment should remain manual until publication"
 
@@ -142,14 +125,12 @@ def main() -> int:
         print("python_syntax_tests_passed")
         return 0
     test_required_files()
-    test_readme_contains_all_figures()
     test_relative_markdown_links_are_valid()
     test_no_temporary_files()
-    test_github_actions_are_publication_safe()
-    print("publication_readiness_tests_passed")
+    test_github_actions_are_dashboard_safe()
+    print("dashboard_readiness_tests_passed")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

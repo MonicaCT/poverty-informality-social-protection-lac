@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   verify:
-    name: Reproduce public outputs and run tests
+    name: Reproduce dashboard outputs and run tests
     runs-on: ubuntu-latest
 
     steps:
@@ -31,44 +31,16 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: Set up R
-        uses: r-lib/actions/setup-r@v2
-        with:
-          r-version: "4.5.2"
-          use-public-rspm: true
-
-      - name: Install R dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          cache: true
-          packages: |
-            any::readr
-            any::dplyr
-            any::plm
-            any::fixest
-            any::broom
-            any::ggplot2
-            any::openxlsx
-            any::officer
-            any::knitr
-            any::lmtest
-            any::sandwich
-            any::car
-
       - name: Parse Python scripts without bytecode artifacts
         run: python tests/test_publication_readiness.py --syntax-only
 
-      - name: Reproduce public outputs from processed panel
+      - name: Reproduce dashboard outputs from processed panel
         run: |
           python code/python/02_descriptive_analysis.py
           python code/python/03_build_dashboard.py
-          Rscript code/r/03_econometric_models.R
-          Rscript code/r/04_phase2_econometrics.R
-          python code/python/04_generate_documents.py
 
       - name: Run repository tests
         run: |
           python tests/test_panel_integrity.py
           python tests/test_repository_outputs.py
           python tests/test_publication_readiness.py
-

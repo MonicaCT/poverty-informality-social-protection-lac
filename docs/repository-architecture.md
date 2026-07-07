@@ -1,20 +1,18 @@
 ﻿# Repository Architecture
 
-This repository keeps research code, generated outputs, documentation, dashboard files, and publication assets separate.
+This repository is organized as an interactive data analytics and dashboard project.
 
 | Folder | Purpose |
 |---|---|
 | `.github/` | CI, Pages workflow, issue templates, and pull request template. |
-| `assets/` | Repository banner, social preview, and screenshots used by GitHub-facing documentation. |
-| `code/` | Reproducible Python, R, Stata, and Quarto source files. |
+| `assets/` | Repository banner, social preview, and dashboard screenshots. |
+| `code/python/` | Data inventory, panel construction, descriptive analysis, and dashboard generation scripts. |
 | `config/` | Source-path and project configuration. |
 | `data/` | Processed panel and metadata. Raw data are not redistributed. |
-| `dashboard/` | Offline dashboard and dashboard data extract. |
-| `docs/` | GitHub Pages documentation. |
-| `outputs/` | Reproducible tables, figures, and model artifacts. |
-| `paper/` | Research paper draft and bibliography. |
-| `policy_brief/` | Policy brief source and PDF. |
-| `releases/` | Release notes and publication packages. |
-| `tests/` | Integrity, output, and publication-readiness checks. |
+| `dashboard/` | Quarto dashboard, dashboard data extract, preview image, and rendered HTML. |
+| `docs/` | GitHub Pages documentation for the dashboard and reproducibility workflow. |
+| `outputs/` | Descriptive tables, dashboard figures, and data-quality outputs. |
+| `releases/` | Dashboard release notes and publication packages. |
+| `tests/` | Integrity, output, and dashboard-readiness checks. |
 
-File names use descriptive lowercase stems for generated outputs, numbered prefixes for ordered figures and tables, and conventional uppercase names for repository entrypoints such as `README.md`, `LICENSE`, and `CITATION.cff`.
+Generated outputs use descriptive lowercase file names. Ordered figures and tables retain numeric prefixes to make the dashboard workflow easy to audit.

@@ -1,6 +1,164 @@
 ---
-title: "Poverty, Informality, and Social Protection Dashboard"
-format: html
+title: "Poverty, Informality, and Social Protection in LAC"
+format:
+  html:
+    page-layout: full
+    toc: false
 ---
 
-This Quarto-ready dashboard uses `dashboard/dashboard_panel.csv`. The generated standalone HTML dashboard is `dashboard/index.html`.
+<style>
+:root {
+  --navy:#0B2F44;
+  --blue:#2F5F8F;
+  --sage:#6F8F7A;
+  --gold:#8A7650;
+  --ink:#102A43;
+  --muted:#627D98;
+  --line:#D9E2EC;
+  --grid:#E8EEF4;
+  --bg:#F6F8FB;
+  --panel:#FFFFFF;
+}
+body { margin:0; font-family: Inter, Segoe UI, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+.dashboard { max-width:1220px; margin:0 auto; padding:42px 34px 54px; }
+.hero { padding:30px 0 18px; border-bottom:1px solid var(--line); margin-bottom:26px; }
+.hero h1 { margin:0 0 12px; color:var(--navy); font-size:42px; line-height:1.12; font-weight:760; letter-spacing:0; }
+.hero p { margin:0; max-width:1040px; color:var(--muted); font-size:16px; line-height:1.58; }
+.hero .abstract { margin-top:12px; max-width:900px; color:var(--ink); font-size:14px; line-height:1.55; }
+.controls { display:flex; flex-wrap:wrap; gap:12px; align-items:center; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:24px 0; }
+label { font-size:12px; color:var(--muted); display:flex; flex-direction:column; gap:5px; font-weight:650; text-transform:uppercase; letter-spacing:.04em; }
+select,input { min-width:170px; padding:9px 11px; border:1px solid #BCCCDC; border-radius:6px; background:white; color:var(--ink); }
+#yearLabel { color:var(--navy); font-size:18px; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:14px; margin:26px 0 32px; }
+.kpi { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:17px 18px; min-height:108px; }
+.kpi .label { color:var(--muted); font-size:11px; font-weight:750; text-transform:uppercase; letter-spacing:.05em; }
+.kpi .value { color:var(--navy); font-size:31px; font-weight:760; line-height:1; margin-top:16px; }
+.section-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; margin:22px 0; }
+.box,.chart { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+.box { padding:20px 22px; }
+.box h3 { margin:0 0 10px; color:var(--navy); font-size:18px; font-weight:760; }
+.box p,.box li { color:var(--muted); line-height:1.55; }
+.box ul { margin:9px 0 0 18px; padding:0; }
+.findings { grid-template-columns:1.15fr .85fr; }
+.chart-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:26px 0 22px; }
+.chart { min-height:480px; padding:10px; }
+.note { color:var(--muted); font-size:12px; line-height:1.5; margin-top:16px; border-top:1px solid var(--line); padding-top:14px; }
+@media(max-width:920px) { .dashboard { padding:24px 18px 40px; } .hero h1 { font-size:32px; } .chart-grid,.findings { grid-template-columns:1fr; } }
+</style>
+
+<div class="dashboard">
+  <section class="hero">
+    <h1>Poverty, Informality, and Social Protection in LAC</h1>
+    <p>An interactive research dashboard on structural vulnerability, labor informality, poverty, and social protection in Latin America and the Caribbean</p>
+    <p class="abstract">This dashboard summarizes a reproducible country-year panel and provides descriptive evidence for doctoral research in applied development economics.</p>
+  </section>
+
+  <section class="controls">
+    <label>Country<select id="country"></select></label>
+    <label>Year<input id="year" type="range" /></label>
+    <strong id="yearLabel"></strong>
+  </section>
+
+  <section class="kpis">
+    <div class="kpi"><div class="label">Countries</div><div class="value" id="kpiCountries">NA</div></div>
+    <div class="kpi"><div class="label">Years</div><div class="value" id="kpiYears">NA</div></div>
+    <div class="kpi"><div class="label">Country-year observations</div><div class="value" id="kpiObs">NA</div></div>
+    <div class="kpi"><div class="label">Latest high-risk countries</div><div class="value" id="kpiRisk">NA</div></div>
+    <div class="kpi"><div class="label">Average poverty</div><div class="value" id="kpiPov">NA</div></div>
+    <div class="kpi"><div class="label">Average informality</div><div class="value" id="kpiInf">NA</div></div>
+    <div class="kpi"><div class="label">Average social protection</div><div class="value" id="kpiSP">NA</div></div>
+  </section>
+
+  <section class="section-grid">
+    <article class="box"><h3>Research Question</h3><p>How do poverty, labor informality, and social protection jointly shape structural vulnerability across Latin America and the Caribbean?</p></article>
+  </section>
+
+  <section class="section-grid findings">
+    <article class="box"><h3>Key Descriptive Findings</h3><ul><li>Haiti and Venezuela show the highest recent structural vulnerability in the panel.</li><li>Bolivia experienced a marked long-run decline in poverty, while labor informality remained persistently high.</li><li>Social protection expansion appears to be associated with lower vulnerability, although cross-country heterogeneity remains substantial.</li><li>The evidence suggests that structural vulnerability in LAC is multidimensional and cannot be explained by poverty alone.</li></ul></article>
+    <article class="box"><h3>Structural Vulnerability Index</h3><p>The index combines normalized indicators of poverty, labor informality, social protection, GDP per capita, and gender labor conditions. Higher values indicate greater structural vulnerability.</p></article>
+  </section>
+
+  <section class="chart-grid">
+    <div class="chart" id="ranking"></div>
+    <div class="chart" id="bolivia"></div>
+  </section>
+
+  <section class="section-grid">
+    <article class="box"><h3>Interpretation</h3><p>The ranking highlights countries facing overlapping risks across poverty, informality, and social protection coverage. The Bolivia profile illustrates why vulnerability analysis requires combining trend evidence with multidimensional indicators.</p></article>
+    <article class="box"><h3>Research Contribution</h3><p>The dashboard demonstrates the ability to build a reproducible panel dataset, construct composite indicators, communicate policy-relevant evidence, and translate quantitative analysis into an academic research narrative.</p></article>
+  </section>
+
+  <p class="note">Data sources: SEDLAC, World Development Indicators, ILOSTAT, ASPIRE, and CEPALSTAT. Descriptive dashboard for research portfolio purposes.</p>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script>
+const fmt = x => (x === null || x === undefined || Number.isNaN(Number(x))) ? 'NA' : Number(x).toFixed(1);
+const palette = {navy:'#0B2F44', blue:'#2F5F8F', sage:'#6F8F7A', gold:'#8A7650', gray:'#627D98', line:'#E8EEF4'};
+function parseCsv(text) {
+  const lines = text.trim().split(/\r?\n/);
+  const headers = lines.shift().split(',');
+  return lines.map(line => {
+    const cells = line.split(',');
+    const row = {};
+    headers.forEach((h,i) => {
+      const value = cells[i] ?? '';
+      row[h] = value === '' ? null : (Number.isNaN(Number(value)) ? value : Number(value));
+    });
+    return row;
+  });
+}
+function average(rows, field) {
+  const vals = rows.map(d=>d[field]).filter(v=>v!==null && v!==undefined && !Number.isNaN(Number(v)));
+  return vals.length ? vals.reduce((a,b)=>a+Number(b),0)/vals.length : null;
+}
+function plotLayout(title, extra={}) {
+  return Object.assign({
+    title:{text:title, font:{size:18, color:palette.navy, family:'Inter, Segoe UI, Arial, sans-serif'}},
+    paper_bgcolor:'rgba(0,0,0,0)',
+    plot_bgcolor:'#FFFFFF',
+    font:{family:'Inter, Segoe UI, Arial, sans-serif', color:'#102A43'},
+    margin:{t:68,l:66,r:28,b:58},
+    hovermode:'closest',
+    xaxis:{gridcolor:palette.line, zerolinecolor:palette.line, titlefont:{color:palette.gray}, tickfont:{color:palette.gray}},
+    yaxis:{gridcolor:palette.line, zerolinecolor:palette.line, titlefont:{color:palette.gray}, tickfont:{color:palette.gray}},
+    legend:{orientation:'h', y:-0.2, x:0, font:{size:12, color:palette.gray}, bgcolor:'rgba(255,255,255,0)'}
+  }, extra);
+}
+function render(data) {
+  const countries = [...new Set(data.map(d => d.country_name))].filter(Boolean).sort();
+  const years = [...new Set(data.map(d => d.year))].sort((a,b)=>a-b);
+  const latestYear = years[years.length-1];
+  const select = document.getElementById('country');
+  const yearInput = document.getElementById('year');
+  countries.forEach(c => { const o=document.createElement('option'); o.value=c; o.textContent=c; select.appendChild(o); });
+  select.value = countries.includes('Bolivia') ? 'Bolivia' : countries[0];
+  yearInput.min = years[0]; yearInput.max = latestYear; yearInput.value = latestYear;
+  function update() {
+    const year = +yearInput.value;
+    document.getElementById('yearLabel').textContent = year;
+    const rowsYear = data.filter(d=>d.year===year);
+    const latestRows = data.filter(d=>d.year===latestYear);
+    const vul = latestRows.map(d=>d.structural_vulnerability_index).filter(v=>v!==null && !Number.isNaN(Number(v))).sort((a,b)=>a-b);
+    const cutoff = vul.length ? vul[Math.floor(vul.length * 0.75)] : null;
+    const highRisk = cutoff === null ? null : latestRows.filter(d=>d.structural_vulnerability_index!==null && d.structural_vulnerability_index>=cutoff).length;
+    document.getElementById('kpiCountries').textContent = countries.length;
+    document.getElementById('kpiYears').textContent = `${years[0]}-${latestYear}`;
+    document.getElementById('kpiObs').textContent = data.length.toLocaleString('en-US');
+    document.getElementById('kpiRisk').textContent = highRisk ?? 'NA';
+    document.getElementById('kpiPov').textContent = fmt(average(rowsYear, 'monetary_poverty'));
+    document.getElementById('kpiInf').textContent = fmt(average(rowsYear, 'labor_informality'));
+    document.getElementById('kpiSP').textContent = fmt(average(rowsYear, 'social_protection_coverage'));
+    const rank = rowsYear.filter(d=>d.structural_vulnerability_index!==null).sort((a,b)=>b.structural_vulnerability_index-a.structural_vulnerability_index).slice(0,12).reverse();
+    Plotly.react('ranking', [{type:'bar', orientation:'h', y:rank.map(d=>d.country_name), x:rank.map(d=>d.structural_vulnerability_index), marker:{color:palette.blue, line:{color:'#FFFFFF', width:.6}}, hovertemplate:'%{y}<br>Index: %{x:.2f}<extra></extra>'}], plotLayout('Latest Structural Vulnerability Ranking', {xaxis:{title:'Structural vulnerability index', gridcolor:palette.line, zerolinecolor:palette.line}, yaxis:{gridcolor:'rgba(0,0,0,0)'}, margin:{t:68,l:148,r:26,b:58}, showlegend:false}), {responsive:true, displayModeBar:false});
+    const bol = data.filter(d=>d.country_name==='Bolivia').sort((a,b)=>a.year-b.year);
+    Plotly.react('bolivia', [{x:bol.map(d=>d.year), y:bol.map(d=>d.monetary_poverty), mode:'lines+markers', name:'Poverty', line:{color:palette.navy,width:2.6}, marker:{size:5}}, {x:bol.map(d=>d.year), y:bol.map(d=>d.labor_informality), mode:'lines+markers', name:'Informality', line:{color:palette.gold,width:2.6}, marker:{size:5}}, {x:bol.map(d=>d.year), y:bol.map(d=>d.social_protection_coverage), mode:'lines+markers', name:'Social protection', line:{color:palette.sage,width:2.6}, marker:{size:5}}], plotLayout('Bolivia Profile', {yaxis:{title:'Percent', gridcolor:palette.line, zerolinecolor:palette.line}, xaxis:{title:'Year', gridcolor:palette.line, zerolinecolor:palette.line}, margin:{t:68,l:66,r:28,b:78}}), {responsive:true, displayModeBar:false});
+  }
+  select.addEventListener('change', update);
+  yearInput.addEventListener('input', update);
+  update();
+}
+fetch('dashboard_panel.csv').then(r => r.text()).then(text => render(parseCsv(text))).catch(() => {
+  document.querySelector('.dashboard').insertAdjacentHTML('beforeend', '<p class="note">Dashboard data could not be loaded in this environment.</p>');
+});
+</script>
