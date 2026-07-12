@@ -8,8 +8,8 @@ This inventory is the first project deliverable. It scans the two local archives
 
 ## Scope
 
-- Root 1: `D:\Papers Desarrollo_2026\Datos_papers_PART-I`
-- Root 2: `C:\Users\Asus\Documents\Datos_papers_PART-II`
+- Root 1: `sources/part_i`
+- Root 2: `sources/part_ii`
 - Structured data files inventoried: 3,411
 - Documentation and existing scripts inventoried: 541
 - Source collections detected: 96

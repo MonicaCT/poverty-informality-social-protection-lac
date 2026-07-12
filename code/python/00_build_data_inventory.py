@@ -35,10 +35,10 @@ except Exception:  # pragma: no cover
 
 
 ROOTS = [
-    Path(r"D:\Papers Desarrollo_2026\Datos_papers_PART-I"),
-    Path(r"C:\Users\Asus\Documents\Datos_papers_PART-II"),
+    Path(r"sources/part_i"),
+    Path(r"sources/part_ii"),
 ]
-PROJECT_DIR = Path(r"C:\Users\Asus\Documents\Github\poverty-informality-social-protection-lac")
+PROJECT_DIR = Path(r".")
 METADATA_DIR = PROJECT_DIR / "data" / "metadata"
 LOG_DIR = PROJECT_DIR / "logs"
 
@@ -1152,8 +1152,8 @@ def build_report(rows: list[dict[str, Any]], assets: list[dict[str, Any]], sourc
         "",
         "## Scope",
         "",
-        "- Root 1: `D:\\Papers Desarrollo_2026\\Datos_papers_PART-I`",
-        "- Root 2: `C:\\Users\\Asus\\Documents\\Datos_papers_PART-II`",
+        "- Root 1: `sources/part_i`",
+        "- Root 2: `sources/part_ii`",
         f"- Structured data files inventoried: {len(rows):,}",
         f"- Documentation and existing scripts inventoried: {len(assets):,}",
         f"- Source collections detected: {len(sources):,}",

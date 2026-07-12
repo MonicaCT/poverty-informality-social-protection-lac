@@ -1,6 +1,6 @@
 [
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/1_WB - ASPIRE/ASPIRE_WB_STANDARDIZED.rds",
+    "path": "sources/part_i/1_WB - ASPIRE/ASPIRE_WB_STANDARDIZED.rds",
     "extension": ".rds",
     "size_mb": 14.759,
     "status": "ok",
@@ -14,7 +14,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/10_CEPII Gravity/Gravity_rds_V202211/Gravity_V202211.rds",
+    "path": "sources/part_i/10_CEPII Gravity/Gravity_rds_V202211/Gravity_V202211.rds",
     "extension": ".rds",
     "size_mb": 125.68,
     "status": "ok",
@@ -28,7 +28,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/10_CEPII Gravity/output_country_year/cepii_gravity_country_year.rds",
+    "path": "sources/part_i/10_CEPII Gravity/output_country_year/cepii_gravity_country_year.rds",
     "extension": ".rds",
     "size_mb": 3.184,
     "status": "ok",
@@ -42,7 +42,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/10_CEPII Gravity/processed/cepii_gravity_country_year.rds",
+    "path": "sources/part_i/10_CEPII Gravity/processed/cepii_gravity_country_year.rds",
     "extension": ".rds",
     "size_mb": 2.662,
     "status": "ok",
@@ -56,7 +56,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/10_CEPII Gravity/raw_unzipped/Gravity_rds_V202211/Gravity_V202211.rds",
+    "path": "sources/part_i/10_CEPII Gravity/raw_unzipped/Gravity_rds_V202211/Gravity_V202211.rds",
     "extension": ".rds",
     "size_mb": 125.68,
     "status": "ok",
@@ -70,7 +70,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/11_WB - GINI/API_SI.POV.GINI_DS2_en_excel_v2_252234.xls",
+    "path": "sources/part_i/11_WB - GINI/API_SI.POV.GINI_DS2_en_excel_v2_252234.xls",
     "extension": ".xls",
     "size_mb": 0.145,
     "status": "ok",
@@ -84,7 +84,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/11_WB - GINI/output_country_year/panel_country_year_gini.rds",
+    "path": "sources/part_i/11_WB - GINI/output_country_year/panel_country_year_gini.rds",
     "extension": ".rds",
     "size_mb": 1.089,
     "status": "ok",
@@ -98,7 +98,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/11_WB - GINI/wb_gini_country_year.rds",
+    "path": "sources/part_i/11_WB - GINI/wb_gini_country_year.rds",
     "extension": ".rds",
     "size_mb": 0.012,
     "status": "ok",
@@ -112,7 +112,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/12_WTO/output_country_year/panel_country_year_wto.rds",
+    "path": "sources/part_i/12_WTO/output_country_year/panel_country_year_wto.rds",
     "extension": ".rds",
     "size_mb": 0.43,
     "status": "ok",
@@ -126,7 +126,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/2_Barro-Lee Dataset/barro_lee_age_cohorts.rds",
+    "path": "sources/part_i/2_Barro-Lee Dataset/barro_lee_age_cohorts.rds",
     "extension": ".rds",
     "size_mb": 1.861,
     "status": "ok",
@@ -140,7 +140,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/2_Barro-Lee Dataset/barro_lee_master_country_year.rds",
+    "path": "sources/part_i/2_Barro-Lee Dataset/barro_lee_master_country_year.rds",
     "extension": ".rds",
     "size_mb": 0.309,
     "status": "ok",
@@ -154,7 +154,7 @@
     "notes": null
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/7_IMF/weoapr2025all.xls",
+    "path": "sources/part_i/7_IMF/weoapr2025all.xls",
     "extension": ".xls",
     "size_mb": 19.263,
     "status": "error",
@@ -165,10 +165,10 @@
     "variable_types": [],
     "labels": [],
     "sheets": [],
-    "notes": "\n  filepath: D:\\Papers Desarrollo_2026\\Datos_papers_PART-I\\7_IMF\\weoapr2025all.xls\n  libxls error: Unable to open file"
+    "notes": "\n  filepath: sources/part_i\\7_IMF\\weoapr2025all.xls\n  libxls error: Unable to open file"
   },
   {
-    "path": "D:/Papers Desarrollo_2026/Datos_papers_PART-I/API_NY.GDP.MKTP.CD_DS2_es_excel_v2_501.xls",
+    "path": "sources/part_i/API_NY.GDP.MKTP.CD_DS2_es_excel_v2_501.xls",
     "extension": ".xls",
     "size_mb": 0.322,
     "status": "ok",
@@ -182,7 +182,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/21_ADB MRIO/raw_unzipped/ETD_230918.RDS",
+    "path": "sources/part_ii/21_ADB MRIO/raw_unzipped/ETD_230918.RDS",
     "extension": ".rds",
     "size_mb": 0.672,
     "status": "ok",
@@ -196,7 +196,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/22_BCB/Depositos(2026-6).xls",
+    "path": "sources/part_ii/22_BCB/Depositos(2026-6).xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -210,7 +210,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/31_HCP/output_country_year/hcp_long_country_year_indicator.rds",
+    "path": "sources/part_ii/31_HCP/output_country_year/hcp_long_country_year_indicator.rds",
     "extension": ".rds",
     "size_mb": 0.043,
     "status": "ok",
@@ -224,7 +224,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/31_HCP/output_country_year/hcp_panel_country_year.rds",
+    "path": "sources/part_ii/31_HCP/output_country_year/hcp_panel_country_year.rds",
     "extension": ".rds",
     "size_mb": 0.046,
     "status": "ok",
@@ -238,7 +238,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070101.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070101.xls",
     "extension": ".xls",
     "size_mb": 0.045,
     "status": "ok",
@@ -252,7 +252,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070102.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070102.xls",
     "extension": ".xls",
     "size_mb": 0.043,
     "status": "ok",
@@ -266,7 +266,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070103.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070103.xls",
     "extension": ".xls",
     "size_mb": 0.032,
     "status": "ok",
@@ -280,7 +280,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070106.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070106.xls",
     "extension": ".xls",
     "size_mb": 0.04,
     "status": "ok",
@@ -294,7 +294,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070107.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070107.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -308,7 +308,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070108.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070108.xls",
     "extension": ".xls",
     "size_mb": 0.038,
     "status": "ok",
@@ -322,7 +322,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070109.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070109.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -336,7 +336,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070114.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070114.xls",
     "extension": ".xls",
     "size_mb": 0.04,
     "status": "ok",
@@ -350,7 +350,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/36_Ministerio Economia Bolivia/c03070115.xls",
+    "path": "sources/part_ii/36_Ministerio Economia Bolivia/c03070115.xls",
     "extension": ".xls",
     "size_mb": 0.035,
     "status": "ok",
@@ -364,7 +364,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030101 (4).xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030101 (4).xls",
     "extension": ".xls",
     "size_mb": 0.054,
     "status": "ok",
@@ -378,7 +378,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030201.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030201.xls",
     "extension": ".xls",
     "size_mb": 0.063,
     "status": "ok",
@@ -392,7 +392,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030202.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030202.xls",
     "extension": ".xls",
     "size_mb": 0.052,
     "status": "ok",
@@ -406,7 +406,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030203.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030203.xls",
     "extension": ".xls",
     "size_mb": 0.134,
     "status": "ok",
@@ -420,7 +420,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030204.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030204.xls",
     "extension": ".xls",
     "size_mb": 0.097,
     "status": "ok",
@@ -434,7 +434,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030205.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030205.xls",
     "extension": ".xls",
     "size_mb": 0.087,
     "status": "ok",
@@ -448,7 +448,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030206.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030206.xls",
     "extension": ".xls",
     "size_mb": 0.184,
     "status": "ok",
@@ -462,7 +462,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030207.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030207.xls",
     "extension": ".xls",
     "size_mb": 0.097,
     "status": "ok",
@@ -476,7 +476,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030208.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030208.xls",
     "extension": ".xls",
     "size_mb": 0.071,
     "status": "ok",
@@ -490,7 +490,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030209.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030209.xls",
     "extension": ".xls",
     "size_mb": 0.128,
     "status": "ok",
@@ -504,7 +504,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030210.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030210.xls",
     "extension": ".xls",
     "size_mb": 0.078,
     "status": "ok",
@@ -518,7 +518,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030211.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030211.xls",
     "extension": ".xls",
     "size_mb": 0.066,
     "status": "ok",
@@ -532,7 +532,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030212.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030212.xls",
     "extension": ".xls",
     "size_mb": 0.182,
     "status": "ok",
@@ -546,7 +546,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030213.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030213.xls",
     "extension": ".xls",
     "size_mb": 0.062,
     "status": "ok",
@@ -560,7 +560,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030214.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030214.xls",
     "extension": ".xls",
     "size_mb": 0.059,
     "status": "ok",
@@ -574,7 +574,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030215.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030215.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -588,7 +588,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030216.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030216.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -602,7 +602,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030217.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030217.xls",
     "extension": ".xls",
     "size_mb": 0.036,
     "status": "ok",
@@ -616,7 +616,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030218.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030218.xls",
     "extension": ".xls",
     "size_mb": 0.035,
     "status": "ok",
@@ -630,7 +630,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030219.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030219.xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -644,7 +644,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030220 (1).xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030220 (1).xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -658,7 +658,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030220.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030220.xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -672,7 +672,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030221.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030221.xls",
     "extension": ".xls",
     "size_mb": 0.036,
     "status": "ok",
@@ -686,7 +686,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030222.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030222.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -700,7 +700,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030223.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030223.xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -714,7 +714,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030224.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030224.xls",
     "extension": ".xls",
     "size_mb": 0.08,
     "status": "ok",
@@ -728,7 +728,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030225.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030225.xls",
     "extension": ".xls",
     "size_mb": 0.102,
     "status": "ok",
@@ -742,7 +742,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030226.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030226.xls",
     "extension": ".xls",
     "size_mb": 0.041,
     "status": "ok",
@@ -756,7 +756,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030227 (1).xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030227 (1).xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -770,7 +770,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030227.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030227.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -784,7 +784,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030228.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030228.xls",
     "extension": ".xls",
     "size_mb": 0.067,
     "status": "ok",
@@ -798,7 +798,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030230.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030230.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -812,7 +812,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030231.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030231.xls",
     "extension": ".xls",
     "size_mb": 0.078,
     "status": "ok",
@@ -826,7 +826,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030232.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030232.xls",
     "extension": ".xls",
     "size_mb": 0.055,
     "status": "ok",
@@ -840,7 +840,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030233.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030233.xls",
     "extension": ".xls",
     "size_mb": 0.055,
     "status": "ok",
@@ -854,7 +854,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030234.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030234.xls",
     "extension": ".xls",
     "size_mb": 0.088,
     "status": "ok",
@@ -868,7 +868,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030235.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030235.xls",
     "extension": ".xls",
     "size_mb": 0.052,
     "status": "ok",
@@ -882,7 +882,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030236.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030236.xls",
     "extension": ".xls",
     "size_mb": 0.072,
     "status": "ok",
@@ -896,7 +896,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030237.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030237.xls",
     "extension": ".xls",
     "size_mb": 0.054,
     "status": "ok",
@@ -910,7 +910,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030238.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030238.xls",
     "extension": ".xls",
     "size_mb": 0.083,
     "status": "ok",
@@ -924,7 +924,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030239.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030239.xls",
     "extension": ".xls",
     "size_mb": 0.044,
     "status": "ok",
@@ -938,7 +938,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030240 (1).xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030240 (1).xls",
     "extension": ".xls",
     "size_mb": 0.052,
     "status": "ok",
@@ -952,7 +952,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030240.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030240.xls",
     "extension": ".xls",
     "size_mb": 0.052,
     "status": "ok",
@@ -966,7 +966,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030241.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030241.xls",
     "extension": ".xls",
     "size_mb": 0.034,
     "status": "ok",
@@ -980,7 +980,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030242.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030242.xls",
     "extension": ".xls",
     "size_mb": 0.034,
     "status": "ok",
@@ -994,7 +994,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030243.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030243.xls",
     "extension": ".xls",
     "size_mb": 0.111,
     "status": "ok",
@@ -1008,7 +1008,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030244.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030244.xls",
     "extension": ".xls",
     "size_mb": 0.035,
     "status": "ok",
@@ -1022,7 +1022,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030245.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030245.xls",
     "extension": ".xls",
     "size_mb": 0.034,
     "status": "ok",
@@ -1036,7 +1036,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030246.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030246.xls",
     "extension": ".xls",
     "size_mb": 0.081,
     "status": "ok",
@@ -1050,7 +1050,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030247.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030247.xls",
     "extension": ".xls",
     "size_mb": 0.035,
     "status": "ok",
@@ -1064,7 +1064,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030248.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030248.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -1078,7 +1078,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030249.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030249.xls",
     "extension": ".xls",
     "size_mb": 0.112,
     "status": "ok",
@@ -1092,7 +1092,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030301.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030301.xls",
     "extension": ".xls",
     "size_mb": 0.056,
     "status": "ok",
@@ -1106,7 +1106,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030302.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030302.xls",
     "extension": ".xls",
     "size_mb": 0.074,
     "status": "ok",
@@ -1120,7 +1120,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030303.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030303.xls",
     "extension": ".xls",
     "size_mb": 0.041,
     "status": "ok",
@@ -1134,7 +1134,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030304 (1).xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030304 (1).xls",
     "extension": ".xls",
     "size_mb": 0.041,
     "status": "ok",
@@ -1148,7 +1148,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030305.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030305.xls",
     "extension": ".xls",
     "size_mb": 0.074,
     "status": "ok",
@@ -1162,7 +1162,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030306.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030306.xls",
     "extension": ".xls",
     "size_mb": 0.038,
     "status": "ok",
@@ -1176,7 +1176,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030307.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030307.xls",
     "extension": ".xls",
     "size_mb": 0.041,
     "status": "ok",
@@ -1190,7 +1190,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030308.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030308.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -1204,7 +1204,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030309.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030309.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -1218,7 +1218,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030310.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030310.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -1232,7 +1232,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030311.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030311.xls",
     "extension": ".xls",
     "size_mb": 0.044,
     "status": "ok",
@@ -1246,7 +1246,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030401.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030401.xls",
     "extension": ".xls",
     "size_mb": 0.084,
     "status": "ok",
@@ -1260,7 +1260,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030402.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030402.xls",
     "extension": ".xls",
     "size_mb": 0.084,
     "status": "ok",
@@ -1274,7 +1274,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030403.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030403.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -1288,7 +1288,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030404.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030404.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -1302,7 +1302,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030405.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030405.xls",
     "extension": ".xls",
     "size_mb": 0.084,
     "status": "ok",
@@ -1316,7 +1316,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030501.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030501.xls",
     "extension": ".xls",
     "size_mb": 0.049,
     "status": "ok",
@@ -1330,7 +1330,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030502.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030502.xls",
     "extension": ".xls",
     "size_mb": 0.043,
     "status": "ok",
@@ -1344,7 +1344,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030503.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030503.xls",
     "extension": ".xls",
     "size_mb": 0.049,
     "status": "ok",
@@ -1358,7 +1358,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030504.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030504.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -1372,7 +1372,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030505.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030505.xls",
     "extension": ".xls",
     "size_mb": 0.054,
     "status": "ok",
@@ -1386,7 +1386,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030506.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030506.xls",
     "extension": ".xls",
     "size_mb": 0.047,
     "status": "ok",
@@ -1400,7 +1400,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030507.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030507.xls",
     "extension": ".xls",
     "size_mb": 0.048,
     "status": "ok",
@@ -1414,7 +1414,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030508.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030508.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -1428,7 +1428,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030509.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030509.xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -1442,7 +1442,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030510.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030510.xls",
     "extension": ".xls",
     "size_mb": 0.031,
     "status": "ok",
@@ -1456,7 +1456,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030511.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030511.xls",
     "extension": ".xls",
     "size_mb": 0.035,
     "status": "ok",
@@ -1470,7 +1470,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030512.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030512.xls",
     "extension": ".xls",
     "size_mb": 0.031,
     "status": "ok",
@@ -1484,7 +1484,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030513.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030513.xls",
     "extension": ".xls",
     "size_mb": 0.036,
     "status": "ok",
@@ -1498,7 +1498,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030514.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030514.xls",
     "extension": ".xls",
     "size_mb": 0.032,
     "status": "ok",
@@ -1512,7 +1512,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030515.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030515.xls",
     "extension": ".xls",
     "size_mb": 0.038,
     "status": "ok",
@@ -1526,7 +1526,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030516.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030516.xls",
     "extension": ".xls",
     "size_mb": 0.032,
     "status": "ok",
@@ -1540,7 +1540,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030517.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030517.xls",
     "extension": ".xls",
     "size_mb": 0.036,
     "status": "ok",
@@ -1554,7 +1554,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030518.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030518.xls",
     "extension": ".xls",
     "size_mb": 0.035,
     "status": "ok",
@@ -1568,7 +1568,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030519.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030519.xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -1582,7 +1582,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030520.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030520.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -1596,7 +1596,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030521.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030521.xls",
     "extension": ".xls",
     "size_mb": 0.041,
     "status": "ok",
@@ -1610,7 +1610,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030522.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030522.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -1624,7 +1624,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030523.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030523.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -1638,7 +1638,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030524.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030524.xls",
     "extension": ".xls",
     "size_mb": 0.038,
     "status": "ok",
@@ -1652,7 +1652,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030525.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030525.xls",
     "extension": ".xls",
     "size_mb": 0.038,
     "status": "ok",
@@ -1666,7 +1666,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030526.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030526.xls",
     "extension": ".xls",
     "size_mb": 0.04,
     "status": "ok",
@@ -1680,7 +1680,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030527.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030527.xls",
     "extension": ".xls",
     "size_mb": 0.035,
     "status": "ok",
@@ -1694,7 +1694,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030601.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030601.xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -1708,7 +1708,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030602.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030602.xls",
     "extension": ".xls",
     "size_mb": 0.053,
     "status": "ok",
@@ -1722,7 +1722,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030603.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030603.xls",
     "extension": ".xls",
     "size_mb": 0.082,
     "status": "ok",
@@ -1736,7 +1736,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/37_Ministerio Educacion Bolivia/c03030604.xls",
+    "path": "sources/part_ii/37_Ministerio Educacion Bolivia/c03030604.xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -1750,7 +1750,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/38_Ministerio Trabajo Bolivia/c03020201.xls",
+    "path": "sources/part_ii/38_Ministerio Trabajo Bolivia/c03020201.xls",
     "extension": ".xls",
     "size_mb": 0.034,
     "status": "ok",
@@ -1764,7 +1764,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060101.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060101.xls",
     "extension": ".xls",
     "size_mb": 0.044,
     "status": "ok",
@@ -1778,7 +1778,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060102.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060102.xls",
     "extension": ".xls",
     "size_mb": 0.059,
     "status": "ok",
@@ -1792,7 +1792,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060103.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060103.xls",
     "extension": ".xls",
     "size_mb": 0.05,
     "status": "ok",
@@ -1806,7 +1806,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060301.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060301.xls",
     "extension": ".xls",
     "size_mb": 0.039,
     "status": "ok",
@@ -1820,7 +1820,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060401.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060401.xls",
     "extension": ".xls",
     "size_mb": 0.052,
     "status": "ok",
@@ -1834,7 +1834,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060501.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060501.xls",
     "extension": ".xls",
     "size_mb": 0.037,
     "status": "ok",
@@ -1848,7 +1848,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060502.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060502.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -1862,7 +1862,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060503.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060503.xls",
     "extension": ".xls",
     "size_mb": 0.041,
     "status": "ok",
@@ -1876,7 +1876,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060601.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060601.xls",
     "extension": ".xls",
     "size_mb": 0.033,
     "status": "ok",
@@ -1890,7 +1890,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060701.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060701.xls",
     "extension": ".xls",
     "size_mb": 0.18,
     "status": "ok",
@@ -1904,7 +1904,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060801.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060801.xls",
     "extension": ".xls",
     "size_mb": 0.15,
     "status": "ok",
@@ -1918,7 +1918,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060802.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060802.xls",
     "extension": ".xls",
     "size_mb": 0.176,
     "status": "ok",
@@ -1932,7 +1932,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/40_UDAPE/c03060901.xls",
+    "path": "sources/part_ii/40_UDAPE/c03060901.xls",
     "extension": ".xls",
     "size_mb": 0.131,
     "status": "ok",
@@ -1946,7 +1946,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/42_UNDP/output_country_year/undp_hdr_country_year_panel.rds",
+    "path": "sources/part_ii/42_UNDP/output_country_year/undp_hdr_country_year_panel.rds",
     "extension": ".rds",
     "size_mb": 0.941,
     "status": "ok",
@@ -1960,7 +1960,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/49_ASEANstats/raw_unzipped/empTable_extracted_172745.xls",
+    "path": "sources/part_ii/49_ASEANstats/raw_unzipped/empTable_extracted_172745.xls",
     "extension": ".xls",
     "size_mb": 1.951,
     "status": "error",
@@ -1971,10 +1971,10 @@
     "variable_types": [],
     "labels": [],
     "sheets": [],
-    "notes": "\n  filepath: C:\\Users\\Asus\\Documents\\Datos_papers_PART-II\\49_ASEANstats\\raw_unzipped\\empTable_extracted_172745.xls\n  libxls error: Unable to open file"
+    "notes": "\n  filepath: sources/part_ii\\49_ASEANstats\\raw_unzipped\\empTable_extracted_172745.xls\n  libxls error: Unable to open file"
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/49_ASEANstats/raw_unzipped/fdiTable_extracted_17325.xls",
+    "path": "sources/part_ii/49_ASEANstats/raw_unzipped/fdiTable_extracted_17325.xls",
     "extension": ".xls",
     "size_mb": 2.487,
     "status": "error",
@@ -1985,10 +1985,10 @@
     "variable_types": [],
     "labels": [],
     "sheets": [],
-    "notes": "\n  filepath: C:\\Users\\Asus\\Documents\\Datos_papers_PART-II\\49_ASEANstats\\raw_unzipped\\fdiTable_extracted_17325.xls\n  libxls error: Unable to open file"
+    "notes": "\n  filepath: sources/part_ii\\49_ASEANstats\\raw_unzipped\\fdiTable_extracted_17325.xls\n  libxls error: Unable to open file"
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/49_ASEANstats/raw_unzipped/fdiTable_extracted_173331.xls",
+    "path": "sources/part_ii/49_ASEANstats/raw_unzipped/fdiTable_extracted_173331.xls",
     "extension": ".xls",
     "size_mb": 0.133,
     "status": "error",
@@ -1999,10 +1999,10 @@
     "variable_types": [],
     "labels": [],
     "sheets": [],
-    "notes": "\n  filepath: C:\\Users\\Asus\\Documents\\Datos_papers_PART-II\\49_ASEANstats\\raw_unzipped\\fdiTable_extracted_173331.xls\n  libxls error: Unable to open file"
+    "notes": "\n  filepath: sources/part_ii\\49_ASEANstats\\raw_unzipped\\fdiTable_extracted_173331.xls\n  libxls error: Unable to open file"
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/49_ASEANstats/raw_unzipped/ILMS_ASEAN_Tables_Feb2025 (1).xls",
+    "path": "sources/part_ii/49_ASEANstats/raw_unzipped/ILMS_ASEAN_Tables_Feb2025 (1).xls",
     "extension": ".xls",
     "size_mb": 0.8,
     "status": "ok",
@@ -2016,7 +2016,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/_2Empleo1.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/_2Empleo1.xls",
     "extension": ".xls",
     "size_mb": 0.175,
     "status": "ok",
@@ -2030,7 +2030,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000 - educacion.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000 - educacion.xls",
     "extension": ".xls",
     "size_mb": 0.113,
     "status": "ok",
@@ -2044,7 +2044,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000 - empleo.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000 - empleo.xls",
     "extension": ".xls",
     "size_mb": 0.175,
     "status": "ok",
@@ -2058,7 +2058,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_0Caratula.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_0Caratula.xls",
     "extension": ".xls",
     "size_mb": 0.055,
     "status": "ok",
@@ -2072,7 +2072,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_1Educación, Salud.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_1Educación, Salud.xls",
     "extension": ".xls",
     "size_mb": 0.459,
     "status": "ok",
@@ -2086,7 +2086,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_2Empleo1.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_2Empleo1.xls",
     "extension": ".xls",
     "size_mb": 0.175,
     "status": "ok",
@@ -2100,7 +2100,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_3ingresos_no laborales1.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_3ingresos_no laborales1.xls",
     "extension": ".xls",
     "size_mb": 0.071,
     "status": "ok",
@@ -2114,7 +2114,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_4Agropecuario1.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_4Agropecuario1.xls",
     "extension": ".xls",
     "size_mb": 0.042,
     "status": "ok",
@@ -2128,7 +2128,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_5Gastos.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_5Gastos.xls",
     "extension": ".xls",
     "size_mb": 0.124,
     "status": "ok",
@@ -2142,7 +2142,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_6Vivienda1.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000_6Vivienda1.xls",
     "extension": ".xls",
     "size_mb": 0.164,
     "status": "ok",
@@ -2156,7 +2156,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000cuestionario de precios2.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000cuestionario de precios2.xls",
     "extension": ".xls",
     "size_mb": 0.053,
     "status": "ok",
@@ -2170,7 +2170,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2000Traducciones.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2000Traducciones.xls",
     "extension": ".xls",
     "size_mb": 0.047,
     "status": "ok",
@@ -2184,7 +2184,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2005 - cuestionario.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2005 - cuestionario.xls",
     "extension": ".xls",
     "size_mb": 6.014,
     "status": "ok",
@@ -2198,7 +2198,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2005, CUESTIONARIO EH 2005 DEFINITIVO.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2005, CUESTIONARIO EH 2005 DEFINITIVO.xls",
     "extension": ".xls",
     "size_mb": 6.014,
     "status": "ok",
@@ -2212,7 +2212,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2006 - cuestionario.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2006 - cuestionario.xls",
     "extension": ".xls",
     "size_mb": 6.586,
     "status": "ok",
@@ -2226,7 +2226,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2007 - cuestionario.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2007 - cuestionario.xls",
     "extension": ".xls",
     "size_mb": 6.25,
     "status": "ok",
@@ -2240,7 +2240,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2008 - cuestionario.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2008 - cuestionario.xls",
     "extension": ".xls",
     "size_mb": 7.047,
     "status": "ok",
@@ -2254,7 +2254,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2008, Cuestionario_EH_2008_FIN.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2008, Cuestionario_EH_2008_FIN.xls",
     "extension": ".xls",
     "size_mb": 6.958,
     "status": "ok",
@@ -2268,7 +2268,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2012 - cuestionario.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2012 - cuestionario.xls",
     "extension": ".xls",
     "size_mb": 5.674,
     "status": "ok",
@@ -2282,7 +2282,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2012, Cuestionario EH-2012_SAM2012.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2012, Cuestionario EH-2012_SAM2012.xls",
     "extension": ".xls",
     "size_mb": 5.674,
     "status": "ok",
@@ -2296,7 +2296,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2013 - cuestionario.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2013 - cuestionario.xls",
     "extension": ".xls",
     "size_mb": 7.233,
     "status": "ok",
@@ -2310,7 +2310,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/2013, Cuestionario EH-2013.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/2013, Cuestionario EH-2013.xls",
     "extension": ".xls",
     "size_mb": 7.233,
     "status": "ok",
@@ -2324,7 +2324,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/Cuestionario EH-2012_SAM2012.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/Cuestionario EH-2012_SAM2012.xls",
     "extension": ".xls",
     "size_mb": 5.674,
     "status": "ok",
@@ -2338,7 +2338,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/Cuestionario EH-2013 - copia.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/Cuestionario EH-2013 - copia.xls",
     "extension": ".xls",
     "size_mb": 7.233,
     "status": "ok",
@@ -2352,7 +2352,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/CUESTIONARIO EH 2005 DEFINITIVO - copia.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/CUESTIONARIO EH 2005 DEFINITIVO - copia.xls",
     "extension": ".xls",
     "size_mb": 6.014,
     "status": "ok",
@@ -2366,7 +2366,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/C. Cuestionarios 1989 2022/Cuestionario_EH_2008_FIN - copia.xls",
+    "path": "sources/part_ii/52_EHogares_monica/C. Cuestionarios 1989 2022/Cuestionario_EH_2008_FIN - copia.xls",
     "extension": ".xls",
     "size_mb": 6.958,
     "status": "ok",
@@ -2380,7 +2380,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/EH2022_Persona.sav",
+    "path": "sources/part_ii/52_EHogares_monica/EH2022_Persona.sav",
     "extension": ".sav",
     "size_mb": 21.261,
     "status": "ok",
@@ -2394,7 +2394,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/EH2023_Persona.sav",
+    "path": "sources/part_ii/52_EHogares_monica/EH2023_Persona.sav",
     "extension": ".sav",
     "size_mb": 37.139,
     "status": "ok",
@@ -2408,7 +2408,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/52_EHogares_monica/EH2024_Persona.sav",
+    "path": "sources/part_ii/52_EHogares_monica/EH2024_Persona.sav",
     "extension": ".sav",
     "size_mb": 20.484,
     "status": "ok",
@@ -2422,7 +2422,7 @@
     "notes": null
   },
   {
-    "path": "C:/Users/Asus/Documents/Datos_papers_PART-II/panel_global_revision.rds",
+    "path": "sources/part_ii/panel_global_revision.rds",
     "extension": ".rds",
     "size_mb": 0.305,
     "status": "ok",

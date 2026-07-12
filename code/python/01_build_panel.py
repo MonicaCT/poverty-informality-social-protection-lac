@@ -23,14 +23,14 @@ OUTPUTS = PROJECT_ROOT / "outputs"
 LOGS = PROJECT_ROOT / "logs"
 
 SOURCES = {
-    "aspire": Path(r"D:\Papers Desarrollo_2026\Datos_papers_PART-I\1_WB - ASPIRE\output_country_year\aspire_wide_country_year.csv"),
-    "equity_lab": Path(r"C:\Users\Asus\Documents\Datos_papers_PART-II\28_Equity Lab\output_country_year\equitylab_master_country_year.csv"),
-    "ilostat": Path(r"C:\Users\Asus\Documents\Datos_papers_PART-II\33_ILOSTAT\output_country_year\ilostat_panel_country_year_wide.csv"),
-    "wdi": Path(r"C:\Users\Asus\Documents\Datos_papers_PART-II\20_WDI\output_country_year\wdi_wide_country_year.csv"),
-    "wdi_gdp_pop": Path(r"C:\Users\Asus\Documents\Datos_papers_PART-II\56_WDI_gdp\output_country_year\wdi_gdp_population_country_year.csv"),
-    "wb_gini": Path(r"D:\Papers Desarrollo_2026\Datos_papers_PART-I\11_WB - GINI\output_country_year\panel_country_year_gini.csv"),
-    "cepal": Path(r"C:\Users\Asus\Documents\Datos_papers_PART-II\24_CEPAL\output_country_year\cepal_master_country_year.csv"),
-    "sedlac": Path(r"C:\Users\Asus\Documents\Datos_papers_PART-II\34_SEDLAC\output_country_year\sedlac_master_country_year.csv"),
+    "aspire": Path(r"sources/part_i\1_WB - ASPIRE\output_country_year\aspire_wide_country_year.csv"),
+    "equity_lab": Path(r"sources/part_ii\28_Equity Lab\output_country_year\equitylab_master_country_year.csv"),
+    "ilostat": Path(r"sources/part_ii\33_ILOSTAT\output_country_year\ilostat_panel_country_year_wide.csv"),
+    "wdi": Path(r"sources/part_ii\20_WDI\output_country_year\wdi_wide_country_year.csv"),
+    "wdi_gdp_pop": Path(r"sources/part_ii\56_WDI_gdp\output_country_year\wdi_gdp_population_country_year.csv"),
+    "wb_gini": Path(r"sources/part_i\11_WB - GINI\output_country_year\panel_country_year_gini.csv"),
+    "cepal": Path(r"sources/part_ii\24_CEPAL\output_country_year\cepal_master_country_year.csv"),
+    "sedlac": Path(r"sources/part_ii\34_SEDLAC\output_country_year\sedlac_master_country_year.csv"),
 }
 
 LAC_COUNTRIES = {

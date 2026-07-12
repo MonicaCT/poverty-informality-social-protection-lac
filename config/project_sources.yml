@@ -1,13 +1,13 @@
 project: poverty-informality-social-protection-lac
 local_roots:
-  part_i: "D:/Papers Desarrollo_2026/Datos_papers_PART-I"
-  part_ii: "C:/Users/Asus/Documents/Datos_papers_PART-II"
+  part_i: "sources/part_i"
+  part_ii: "sources/part_ii"
 selected_country_year_sources:
-  aspire: "D:/Papers Desarrollo_2026/Datos_papers_PART-I/1_WB - ASPIRE/output_country_year/aspire_wide_country_year.csv"
-  equity_lab: "C:/Users/Asus/Documents/Datos_papers_PART-II/28_Equity Lab/output_country_year/equitylab_master_country_year.csv"
-  ilostat: "C:/Users/Asus/Documents/Datos_papers_PART-II/33_ILOSTAT/output_country_year/ilostat_panel_country_year_wide.csv"
-  wdi: "C:/Users/Asus/Documents/Datos_papers_PART-II/20_WDI/output_country_year/wdi_wide_country_year.csv"
-  wdi_gdp_pop: "C:/Users/Asus/Documents/Datos_papers_PART-II/56_WDI_gdp/output_country_year/wdi_gdp_population_country_year.csv"
-  wb_gini: "D:/Papers Desarrollo_2026/Datos_papers_PART-I/11_WB - GINI/output_country_year/panel_country_year_gini.csv"
-  cepal: "C:/Users/Asus/Documents/Datos_papers_PART-II/24_CEPAL/output_country_year/cepal_master_country_year.csv"
-  sedlac: "C:/Users/Asus/Documents/Datos_papers_PART-II/34_SEDLAC/output_country_year/sedlac_master_country_year.csv"
+  aspire: "sources/part_i/1_WB - ASPIRE/output_country_year/aspire_wide_country_year.csv"
+  equity_lab: "sources/part_ii/28_Equity Lab/output_country_year/equitylab_master_country_year.csv"
+  ilostat: "sources/part_ii/33_ILOSTAT/output_country_year/ilostat_panel_country_year_wide.csv"
+  wdi: "sources/part_ii/20_WDI/output_country_year/wdi_wide_country_year.csv"
+  wdi_gdp_pop: "sources/part_ii/56_WDI_gdp/output_country_year/wdi_gdp_population_country_year.csv"
+  wb_gini: "sources/part_i/11_WB - GINI/output_country_year/panel_country_year_gini.csv"
+  cepal: "sources/part_ii/24_CEPAL/output_country_year/cepal_master_country_year.csv"
+  sedlac: "sources/part_ii/34_SEDLAC/output_country_year/sedlac_master_country_year.csv"

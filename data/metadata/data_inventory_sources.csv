@@ -1,97 +1,97 @@
-﻿root,top_folder,data_files,documentation_files,script_files,size_mb,extensions,main_roles,max_integration_score,recommended_use
-C:\Users\Asus\Documents\Datos_papers_PART-II,13_WB - IDA_GFDR,23,0,2,10.7,.csv:22; .r:2; .xlsx:1,auxiliary_or_context; macro_controls; poverty; demographics; trade_finance,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,14_Energy-Institute,48,5,1,341.3,.csv:41; .pdf:5; .r:1; .xlsx:7,climate_energy; labor_informality; poverty; trade_finance,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,14_OurworldData,19,1,1,1345.9,.csv:19; .md:1; .r:1,auxiliary_or_context; climate_energy; poverty; macro_controls; demographics,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,14_UNEnergy-Statistics,19,1,3,0.4,.csv:17; .pdf:1; .r:3; .xlsx:2,climate_energy; trade_finance,4,"Context, documentation, or lower-priority auxiliary source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,14_UNEnergy-Statistics_2,17,0,1,4.3,.csv:17; .r:1,climate_energy; trade_finance,6,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,15_Yale,622,0,3,178.9,.csv:622; .r:3,auxiliary_or_context; macro_controls; governance; social_protection; demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,16_WB - Doing Bussiness,15,0,2,130.0,.csv:15; .r:2,auxiliary_or_context,4,"Context, documentation, or lower-priority auxiliary source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,17_BIS,10,0,1,34249.2,.csv:10; .r:1,labor_informality; governance; auxiliary_or_context; social_protection; demographics,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,18_OPECstatistics,55,0,2,2.4,.csv:9; .r:2; .xlsx:46,auxiliary_or_context; poverty; macro_controls; demographics; trade_finance,12,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,19_Latinobarometro,92,182,2,449.5,.csv:12; .dta:46; .pdf:182; .r:2; .xlsx:34,gender; demographics; poverty; labor_informality; social_protection,18,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,20_WDI,18,0,1,109.1,.csv:18; .r:1,macro_controls; climate_energy,9,Country-year controls and poverty/inequality benchmarks.
-C:\Users\Asus\Documents\Datos_papers_PART-II,20_WID,851,2,1,5865.4,.csv:851; .md:2; .r:1,demographics; auxiliary_or_context,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,21_ADB MRIO,175,4,1,166.9,.dta:4; .pdf:4; .r:1; .rds:1; .txt:1; .xlsx:169,auxiliary_or_context; macro_controls; trade_finance; demographics; labor_informality,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,22_BCB,2,0,1,0.0,.csv:1; .r:1; .xls:1,auxiliary_or_context; demographics,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,23_U.Michigan,2,0,2,0.3,.csv:2; .r:2,auxiliary_or_context,4,"Context, documentation, or lower-priority auxiliary source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,24_CEPAL,28,0,2,14.1,.csv:27; .r:2; .xlsx:1,auxiliary_or_context; labor_informality; social_protection; macro_controls; demographics,15,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,26_CENSO AGROP_2013,6,0,1,3.0,.csv:5; .parquet:1; .py:1,demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,27_EM-DATA,23,0,2,136.8,.csv:20; .r:2; .xlsx:3,auxiliary_or_context; demographics; climate_energy; poverty,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,28_Equity Lab,54,1,2,145.1,.csv:54; .pdf:1; .r:2,poverty; social_protection; demographics; gender; labor_informality,18,"Core poverty, inequality, and household welfare source for LAC indicators."
-C:\Users\Asus\Documents\Datos_papers_PART-II,29_FAOSTAT,32,0,2,103.2,.csv:30; .r:2; .xlsx:2,climate_energy; gender; macro_controls; demographics,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,30_FRED,17,0,2,0.6,.csv:17; .r:2,auxiliary_or_context,4,"Context, documentation, or lower-priority auxiliary source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,31_HCP,16,0,2,3.6,.csv:14; .r:2; .rds:2,gender; auxiliary_or_context; macro_controls; demographics,6,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,32_HDDC,18,0,2,10.5,.csv:13; .r:2; .xlsx:5,auxiliary_or_context; demographics; social_protection,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,33_ILOSTAT,26,0,2,2564.5,.csv:11; .r:2; .xlsx:15,labor_informality; gender; demographics; poverty; macro_controls,16,"Core labor market source; use for employment, unemployment, and informality indicators where available."
-C:\Users\Asus\Documents\Datos_papers_PART-II,34_SEDLAC,37,0,2,18.2,.csv:19; .r:2; .xlsx:18,poverty; labor_informality; macro_controls; social_protection; demographics,17,"Core poverty, inequality, and household welfare source for LAC indicators."
-C:\Users\Asus\Documents\Datos_papers_PART-II,35_LPI,29,1,2,2720.6,.csv:28; .pdf:1; .r:2; .xlsx:1,auxiliary_or_context; poverty; macro_controls; demographics; trade_finance,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,36_Ministerio Economia Bolivia,24,1,1,1.5,.pdf:1; .r:1; .xls:9; .xlsx:15,auxiliary_or_context; social_protection; labor_informality,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,37_Ministerio Educacion Bolivia,101,0,1,33.2,.csv:2; .r:1; .xls:99,social_protection; macro_controls,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,38_Ministerio Trabajo Bolivia,2,0,1,0.0,.csv:1; .r:1; .xls:1,labor_informality; social_protection; demographics,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,39_UNESCO,31,5,2,1268.1,.csv:8; .doc:1; .pdf:4; .py:1; .r:1; .txt:23,auxiliary_or_context; social_protection; macro_controls; demographics,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,40_UDAPE,13,0,1,1.0,.r:1; .xls:13,poverty; social_protection,6,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,41_Oxford AI Readiness,9,7,1,1.1,.csv:1; .pdf:7; .r:1; .xlsx:8,macro_controls; labor_informality; governance; auxiliary_or_context,9,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,42_UNDP,8,0,1,12.1,.csv:6; .r:1; .rds:1; .xlsx:1,auxiliary_or_context; poverty; labor_informality; gender; macro_controls,14,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,43_UNIDO,77,0,1,496.5,.csv:77; .r:1,auxiliary_or_context; demographics; social_protection; poverty; labor_informality,13,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,44_WBL,0,0,1,0.0,.r:1,,0,"Context, documentation, or lower-priority auxiliary source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,45_WHO,3,0,1,149.2,.csv:3; .r:1,auxiliary_or_context,6,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,46_V-Dem,10,4,1,3657.2,.csv:10; .pdf:4; .r:1,governance; gender; macro_controls; demographics; poverty,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,47_UNWPP,11,0,1,2221.0,.csv:2; .parquet:1; .py:1; .xlsx:8,gender; demographics; macro_controls,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,48_DHS,4,0,1,268.2,.csv:1; .dta:1; .parquet:2; .py:1,demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,49_ASEANstats,124,0,1,54.0,.csv:8; .r:1; .xls:4; .xlsx:112,auxiliary_or_context; macro_controls; trade_finance; labor_informality; poverty,18,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,50_BLS – US,32,0,1,0.3,.csv:4; .r:1; .xlsx:28,labor_informality; macro_controls; trade_finance; demographics; auxiliary_or_context,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,51_CENSOS,10,0,1,6.2,.csv:4; .parquet:6; .py:1,demographics; macro_controls; social_protection,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,52_EHogares_monica,100,34,201,4829.5,.csv:3; .do:200; .dta:39; .parquet:23; .pdf:34; .py:1; .sav:3; .xls:26; .xlsx:6,demographics; labor_informality; poverty; gender; social_protection,19,Bolivia household survey microdata; aggregate to Bolivia-year and validate against regional series.
-C:\Users\Asus\Documents\Datos_papers_PART-II,53_Harvard - ATLAS,61,0,1,18513.5,.csv:57; .parquet:3; .py:1; .txt:1,trade_finance,6,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,54_International Energy Data - USworld,54,0,1,2679.6,.csv:54; .r:1,climate_energy; trade_finance,4,"Context, documentation, or lower-priority auxiliary source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,55_IMF-FAS,2,0,0,2900.2,.csv:2,labor_informality; gender; demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,56_WDI_gdp,2,0,1,1.9,.csv:2; .r:1,poverty; macro_controls; demographics,13,Country-year controls and poverty/inequality benchmarks.
-C:\Users\Asus\Documents\Datos_papers_PART-II,Abrir_panel_global_revision.R,0,0,1,0.0,.r:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,PanelData_completo,63,0,0,7735.1,.csv:60; .parquet:2; .xlsx:1,auxiliary_or_context; macro_controls; demographics; poverty; labor_informality,13,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,atlas_country_partner_year.parquet,1,0,0,18.2,.parquet:1,trade_finance,5,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,atlas_country_product_year.parquet,1,0,0,22.3,.parquet:1,trade_finance,5,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,atlas_country_year.csv,1,0,0,1.6,.csv:1,trade_finance,4,"Context, documentation, or lower-priority auxiliary source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,censo_agro_bolivia_country_year.csv,1,0,0,0.0,.csv:1,demographics,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,censo_agro_community_year.parquet,1,0,0,2.9,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,censo_agro_department_year.csv,1,0,0,0.0,.csv:1,demographics,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,censo_agro_municipality_year.csv,1,0,0,0.2,.csv:1,demographics,7,"Secondary controls, robustness, or extension source."
-C:\Users\Asus\Documents\Datos_papers_PART-II,census_1976_housing_indicator.parquet,1,0,0,0.0,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,census_1976_population_indicator.parquet,1,0,0,0.1,.parquet:1,macro_controls; demographics,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,census_2001_housing_community_year.parquet,1,0,0,2.4,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,census_2001_housing_country_year.parquet,1,0,0,0.0,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,census_2001_population_community_year.parquet,1,0,0,3.6,.parquet:1,macro_controls; demographics,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,census_2001_population_country_year.parquet,1,0,0,0.0,.parquet:1,macro_controls; demographics,10,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,create_panel_characteristics_image.py,0,0,1,0.0,.py:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,create_panel_characteristics_table.py,0,0,1,0.0,.py:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,create_panel_global_review_rds.py,0,0,1,0.0,.py:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,dhs_country_BOIR51.parquet,1,0,0,2.0,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,dhs_disaggregation_BOIR51.parquet,1,0,0,14.1,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
-C:\Users\Asus\Documents\Datos_papers_PART-II,ehogares_bolivia_country_year_indicator.parquet,1,0,0,8.9,.parquet:1,demographics,11,Bolivia household survey microdata; aggregate to Bolivia-year and validate against regional series.
-C:\Users\Asus\Documents\Datos_papers_PART-II,ehogares_bolivia_disaggregation_year_indicator.parquet,1,0,0,27.5,.parquet:1,demographics,11,Bolivia household survey microdata; aggregate to Bolivia-year and validate against regional series.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_exclusion_report.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_files_manifest.csv,1,0,0,0.0,.csv:1,social_protection; demographics,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_global_all_information.parquet,1,0,0,1027.0,.parquet:1,auxiliary_or_context,10,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_global_expected_content.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,3,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_global_revision.rds,1,0,0,0.3,.rds:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_global_summary.json,0,1,0,0.0,.json:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_global_verification.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,3,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_master_lpi_wdi_country_year.csv,1,0,0,1691.3,.csv:1,macro_controls,9,Country-year controls and poverty/inequality benchmarks.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_processing_manifest.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,panel_processing_manifest_Codex.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,tabla_caracteristicas_panel_global.csv,1,0,0,0.0,.csv:1,social_protection; demographics,11,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,tabla_caracteristicas_panel_global.xlsx,1,0,0,0.0,.xlsx:1,social_protection; demographics,11,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-C:\Users\Asus\Documents\Datos_papers_PART-II,usworld_panel_long_country_year_indicator.csv,1,0,0,400.5,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,10_CEPII Gravity,143,0,4,22406.3,.csv:133; .dta:4; .r:4; .rds:4; .txt:2,trade_finance; macro_controls; demographics; social_protection,11,High-priority integration candidate for country-year panel.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,11_WB - GINI,25,0,2,5.9,.csv:22; .r:2; .rds:2; .xls:1,poverty; macro_controls,12,Country-year controls and poverty/inequality benchmarks.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,12_WTO,37,0,2,1925.5,.csv:35; .r:2; .rds:1; .txt:1,auxiliary_or_context; trade_finance; demographics; labor_informality; social_protection,6,"Secondary controls, robustness, or extension source."
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,1_WB - ASPIRE,17,0,2,890.6,.csv:14; .dta:1; .r:2; .rds:1; .xlsx:1,social_protection; poverty,14,Core social protection source; harmonize program coverage and benefit/incidence variables.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,2_Barro-Lee Dataset,25,0,2,27.9,.csv:23; .r:2; .rds:2,macro_controls; gender; demographics,9,High-priority integration candidate for country-year panel.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,3_WB - WGI,19,1,1,29.5,.csv:16; .pdf:1; .r:1; .xlsx:3,macro_controls; governance,8,High-priority integration candidate for country-year panel.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,5_UNCTADstats,25,0,2,2750.4,.csv:25; .r:2,auxiliary_or_context; trade_finance; demographics; macro_controls,7,"Secondary controls, robustness, or extension source."
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,6_FINDEX,23,0,1,2026.6,.csv:22; .r:1; .xlsx:1,auxiliary_or_context; poverty; labor_informality; social_protection,10,High-priority integration candidate for country-year panel.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,7_IMF,36,0,2,3063.3,.csv:35; .r:2; .xls:1,auxiliary_or_context; macro_controls; labor_informality; gender; demographics,8,High-priority integration candidate for country-year panel.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,8_WB - Commodity-Prices,5,0,1,5.2,.csv:1; .r:1; .xlsx:4,trade_finance; demographics; climate_energy,5,"Secondary controls, robustness, or extension source."
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,9_Global Financial Development,29,0,2,1187.4,.csv:26; .r:2; .xlsx:3,trade_finance; social_protection; demographics; poverty,11,High-priority integration candidate for country-year panel.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,API_NY.GDP.MKTP.CD_DS2_es_excel_v2_501.xls,1,0,0,0.3,.xls:1,macro_controls,2,"Context, documentation, or lower-priority auxiliary source."
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,panel_processing_manifest.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
-D:\Papers Desarrollo_2026\Datos_papers_PART-I,panel_processing_manifest_Codex.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+root,top_folder,data_files,documentation_files,script_files,size_mb,extensions,main_roles,max_integration_score,recommended_use
+sources/part_ii,13_WB - IDA_GFDR,23,0,2,10.7,.csv:22; .r:2; .xlsx:1,auxiliary_or_context; macro_controls; poverty; demographics; trade_finance,10,High-priority integration candidate for country-year panel.
+sources/part_ii,14_Energy-Institute,48,5,1,341.3,.csv:41; .pdf:5; .r:1; .xlsx:7,climate_energy; labor_informality; poverty; trade_finance,10,High-priority integration candidate for country-year panel.
+sources/part_ii,14_OurworldData,19,1,1,1345.9,.csv:19; .md:1; .r:1,auxiliary_or_context; climate_energy; poverty; macro_controls; demographics,10,High-priority integration candidate for country-year panel.
+sources/part_ii,14_UNEnergy-Statistics,19,1,3,0.4,.csv:17; .pdf:1; .r:3; .xlsx:2,climate_energy; trade_finance,4,"Context, documentation, or lower-priority auxiliary source."
+sources/part_ii,14_UNEnergy-Statistics_2,17,0,1,4.3,.csv:17; .r:1,climate_energy; trade_finance,6,"Secondary controls, robustness, or extension source."
+sources/part_ii,15_Yale,622,0,3,178.9,.csv:622; .r:3,auxiliary_or_context; macro_controls; governance; social_protection; demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,16_WB - Doing Bussiness,15,0,2,130.0,.csv:15; .r:2,auxiliary_or_context,4,"Context, documentation, or lower-priority auxiliary source."
+sources/part_ii,17_BIS,10,0,1,34249.2,.csv:10; .r:1,labor_informality; governance; auxiliary_or_context; social_protection; demographics,10,High-priority integration candidate for country-year panel.
+sources/part_ii,18_OPECstatistics,55,0,2,2.4,.csv:9; .r:2; .xlsx:46,auxiliary_or_context; poverty; macro_controls; demographics; trade_finance,12,High-priority integration candidate for country-year panel.
+sources/part_ii,19_Latinobarometro,92,182,2,449.5,.csv:12; .dta:46; .pdf:182; .r:2; .xlsx:34,gender; demographics; poverty; labor_informality; social_protection,18,High-priority integration candidate for country-year panel.
+sources/part_ii,20_WDI,18,0,1,109.1,.csv:18; .r:1,macro_controls; climate_energy,9,Country-year controls and poverty/inequality benchmarks.
+sources/part_ii,20_WID,851,2,1,5865.4,.csv:851; .md:2; .r:1,demographics; auxiliary_or_context,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,21_ADB MRIO,175,4,1,166.9,.dta:4; .pdf:4; .r:1; .rds:1; .txt:1; .xlsx:169,auxiliary_or_context; macro_controls; trade_finance; demographics; labor_informality,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,22_BCB,2,0,1,0.0,.csv:1; .r:1; .xls:1,auxiliary_or_context; demographics,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,23_U.Michigan,2,0,2,0.3,.csv:2; .r:2,auxiliary_or_context,4,"Context, documentation, or lower-priority auxiliary source."
+sources/part_ii,24_CEPAL,28,0,2,14.1,.csv:27; .r:2; .xlsx:1,auxiliary_or_context; labor_informality; social_protection; macro_controls; demographics,15,High-priority integration candidate for country-year panel.
+sources/part_ii,26_CENSO AGROP_2013,6,0,1,3.0,.csv:5; .parquet:1; .py:1,demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,27_EM-DATA,23,0,2,136.8,.csv:20; .r:2; .xlsx:3,auxiliary_or_context; demographics; climate_energy; poverty,8,High-priority integration candidate for country-year panel.
+sources/part_ii,28_Equity Lab,54,1,2,145.1,.csv:54; .pdf:1; .r:2,poverty; social_protection; demographics; gender; labor_informality,18,"Core poverty, inequality, and household welfare source for LAC indicators."
+sources/part_ii,29_FAOSTAT,32,0,2,103.2,.csv:30; .r:2; .xlsx:2,climate_energy; gender; macro_controls; demographics,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,30_FRED,17,0,2,0.6,.csv:17; .r:2,auxiliary_or_context,4,"Context, documentation, or lower-priority auxiliary source."
+sources/part_ii,31_HCP,16,0,2,3.6,.csv:14; .r:2; .rds:2,gender; auxiliary_or_context; macro_controls; demographics,6,"Secondary controls, robustness, or extension source."
+sources/part_ii,32_HDDC,18,0,2,10.5,.csv:13; .r:2; .xlsx:5,auxiliary_or_context; demographics; social_protection,8,High-priority integration candidate for country-year panel.
+sources/part_ii,33_ILOSTAT,26,0,2,2564.5,.csv:11; .r:2; .xlsx:15,labor_informality; gender; demographics; poverty; macro_controls,16,"Core labor market source; use for employment, unemployment, and informality indicators where available."
+sources/part_ii,34_SEDLAC,37,0,2,18.2,.csv:19; .r:2; .xlsx:18,poverty; labor_informality; macro_controls; social_protection; demographics,17,"Core poverty, inequality, and household welfare source for LAC indicators."
+sources/part_ii,35_LPI,29,1,2,2720.6,.csv:28; .pdf:1; .r:2; .xlsx:1,auxiliary_or_context; poverty; macro_controls; demographics; trade_finance,10,High-priority integration candidate for country-year panel.
+sources/part_ii,36_Ministerio Economia Bolivia,24,1,1,1.5,.pdf:1; .r:1; .xls:9; .xlsx:15,auxiliary_or_context; social_protection; labor_informality,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,37_Ministerio Educacion Bolivia,101,0,1,33.2,.csv:2; .r:1; .xls:99,social_protection; macro_controls,8,High-priority integration candidate for country-year panel.
+sources/part_ii,38_Ministerio Trabajo Bolivia,2,0,1,0.0,.csv:1; .r:1; .xls:1,labor_informality; social_protection; demographics,10,High-priority integration candidate for country-year panel.
+sources/part_ii,39_UNESCO,31,5,2,1268.1,.csv:8; .doc:1; .pdf:4; .py:1; .r:1; .txt:23,auxiliary_or_context; social_protection; macro_controls; demographics,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,40_UDAPE,13,0,1,1.0,.r:1; .xls:13,poverty; social_protection,6,"Secondary controls, robustness, or extension source."
+sources/part_ii,41_Oxford AI Readiness,9,7,1,1.1,.csv:1; .pdf:7; .r:1; .xlsx:8,macro_controls; labor_informality; governance; auxiliary_or_context,9,High-priority integration candidate for country-year panel.
+sources/part_ii,42_UNDP,8,0,1,12.1,.csv:6; .r:1; .rds:1; .xlsx:1,auxiliary_or_context; poverty; labor_informality; gender; macro_controls,14,High-priority integration candidate for country-year panel.
+sources/part_ii,43_UNIDO,77,0,1,496.5,.csv:77; .r:1,auxiliary_or_context; demographics; social_protection; poverty; labor_informality,13,High-priority integration candidate for country-year panel.
+sources/part_ii,44_WBL,0,0,1,0.0,.r:1,,0,"Context, documentation, or lower-priority auxiliary source."
+sources/part_ii,45_WHO,3,0,1,149.2,.csv:3; .r:1,auxiliary_or_context,6,"Secondary controls, robustness, or extension source."
+sources/part_ii,46_V-Dem,10,4,1,3657.2,.csv:10; .pdf:4; .r:1,governance; gender; macro_controls; demographics; poverty,10,High-priority integration candidate for country-year panel.
+sources/part_ii,47_UNWPP,11,0,1,2221.0,.csv:2; .parquet:1; .py:1; .xlsx:8,gender; demographics; macro_controls,8,High-priority integration candidate for country-year panel.
+sources/part_ii,48_DHS,4,0,1,268.2,.csv:1; .dta:1; .parquet:2; .py:1,demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,49_ASEANstats,124,0,1,54.0,.csv:8; .r:1; .xls:4; .xlsx:112,auxiliary_or_context; macro_controls; trade_finance; labor_informality; poverty,18,High-priority integration candidate for country-year panel.
+sources/part_ii,50_BLS – US,32,0,1,0.3,.csv:4; .r:1; .xlsx:28,labor_informality; macro_controls; trade_finance; demographics; auxiliary_or_context,10,High-priority integration candidate for country-year panel.
+sources/part_ii,51_CENSOS,10,0,1,6.2,.csv:4; .parquet:6; .py:1,demographics; macro_controls; social_protection,10,High-priority integration candidate for country-year panel.
+sources/part_ii,52_EHogares_monica,100,34,201,4829.5,.csv:3; .do:200; .dta:39; .parquet:23; .pdf:34; .py:1; .sav:3; .xls:26; .xlsx:6,demographics; labor_informality; poverty; gender; social_protection,19,Bolivia household survey microdata; aggregate to Bolivia-year and validate against regional series.
+sources/part_ii,53_Harvard - ATLAS,61,0,1,18513.5,.csv:57; .parquet:3; .py:1; .txt:1,trade_finance,6,"Secondary controls, robustness, or extension source."
+sources/part_ii,54_International Energy Data - USworld,54,0,1,2679.6,.csv:54; .r:1,climate_energy; trade_finance,4,"Context, documentation, or lower-priority auxiliary source."
+sources/part_ii,55_IMF-FAS,2,0,0,2900.2,.csv:2,labor_informality; gender; demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,56_WDI_gdp,2,0,1,1.9,.csv:2; .r:1,poverty; macro_controls; demographics,13,Country-year controls and poverty/inequality benchmarks.
+sources/part_ii,Abrir_panel_global_revision.R,0,0,1,0.0,.r:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,PanelData_completo,63,0,0,7735.1,.csv:60; .parquet:2; .xlsx:1,auxiliary_or_context; macro_controls; demographics; poverty; labor_informality,13,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,atlas_country_partner_year.parquet,1,0,0,18.2,.parquet:1,trade_finance,5,"Secondary controls, robustness, or extension source."
+sources/part_ii,atlas_country_product_year.parquet,1,0,0,22.3,.parquet:1,trade_finance,5,"Secondary controls, robustness, or extension source."
+sources/part_ii,atlas_country_year.csv,1,0,0,1.6,.csv:1,trade_finance,4,"Context, documentation, or lower-priority auxiliary source."
+sources/part_ii,censo_agro_bolivia_country_year.csv,1,0,0,0.0,.csv:1,demographics,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,censo_agro_community_year.parquet,1,0,0,2.9,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,censo_agro_department_year.csv,1,0,0,0.0,.csv:1,demographics,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,censo_agro_municipality_year.csv,1,0,0,0.2,.csv:1,demographics,7,"Secondary controls, robustness, or extension source."
+sources/part_ii,census_1976_housing_indicator.parquet,1,0,0,0.0,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,census_1976_population_indicator.parquet,1,0,0,0.1,.parquet:1,macro_controls; demographics,10,High-priority integration candidate for country-year panel.
+sources/part_ii,census_2001_housing_community_year.parquet,1,0,0,2.4,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,census_2001_housing_country_year.parquet,1,0,0,0.0,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,census_2001_population_community_year.parquet,1,0,0,3.6,.parquet:1,macro_controls; demographics,10,High-priority integration candidate for country-year panel.
+sources/part_ii,census_2001_population_country_year.parquet,1,0,0,0.0,.parquet:1,macro_controls; demographics,10,High-priority integration candidate for country-year panel.
+sources/part_ii,create_panel_characteristics_image.py,0,0,1,0.0,.py:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,create_panel_characteristics_table.py,0,0,1,0.0,.py:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,create_panel_global_review_rds.py,0,0,1,0.0,.py:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,dhs_country_BOIR51.parquet,1,0,0,2.0,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,dhs_disaggregation_BOIR51.parquet,1,0,0,14.1,.parquet:1,demographics,8,High-priority integration candidate for country-year panel.
+sources/part_ii,ehogares_bolivia_country_year_indicator.parquet,1,0,0,8.9,.parquet:1,demographics,11,Bolivia household survey microdata; aggregate to Bolivia-year and validate against regional series.
+sources/part_ii,ehogares_bolivia_disaggregation_year_indicator.parquet,1,0,0,27.5,.parquet:1,demographics,11,Bolivia household survey microdata; aggregate to Bolivia-year and validate against regional series.
+sources/part_ii,panel_exclusion_report.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,panel_files_manifest.csv,1,0,0,0.0,.csv:1,social_protection; demographics,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,panel_global_all_information.parquet,1,0,0,1027.0,.parquet:1,auxiliary_or_context,10,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,panel_global_expected_content.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,3,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,panel_global_revision.rds,1,0,0,0.3,.rds:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,panel_global_summary.json,0,1,0,0.0,.json:1,,0,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,panel_global_verification.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,3,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,panel_master_lpi_wdi_country_year.csv,1,0,0,1691.3,.csv:1,macro_controls,9,Country-year controls and poverty/inequality benchmarks.
+sources/part_ii,panel_processing_manifest.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,panel_processing_manifest_Codex.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,tabla_caracteristicas_panel_global.csv,1,0,0,0.0,.csv:1,social_protection; demographics,11,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,tabla_caracteristicas_panel_global.xlsx,1,0,0,0.0,.xlsx:1,social_protection; demographics,11,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_ii,usworld_panel_long_country_year_indicator.csv,1,0,0,400.5,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_i,10_CEPII Gravity,143,0,4,22406.3,.csv:133; .dta:4; .r:4; .rds:4; .txt:2,trade_finance; macro_controls; demographics; social_protection,11,High-priority integration candidate for country-year panel.
+sources/part_i,11_WB - GINI,25,0,2,5.9,.csv:22; .r:2; .rds:2; .xls:1,poverty; macro_controls,12,Country-year controls and poverty/inequality benchmarks.
+sources/part_i,12_WTO,37,0,2,1925.5,.csv:35; .r:2; .rds:1; .txt:1,auxiliary_or_context; trade_finance; demographics; labor_informality; social_protection,6,"Secondary controls, robustness, or extension source."
+sources/part_i,1_WB - ASPIRE,17,0,2,890.6,.csv:14; .dta:1; .r:2; .rds:1; .xlsx:1,social_protection; poverty,14,Core social protection source; harmonize program coverage and benefit/incidence variables.
+sources/part_i,2_Barro-Lee Dataset,25,0,2,27.9,.csv:23; .r:2; .rds:2,macro_controls; gender; demographics,9,High-priority integration candidate for country-year panel.
+sources/part_i,3_WB - WGI,19,1,1,29.5,.csv:16; .pdf:1; .r:1; .xlsx:3,macro_controls; governance,8,High-priority integration candidate for country-year panel.
+sources/part_i,5_UNCTADstats,25,0,2,2750.4,.csv:25; .r:2,auxiliary_or_context; trade_finance; demographics; macro_controls,7,"Secondary controls, robustness, or extension source."
+sources/part_i,6_FINDEX,23,0,1,2026.6,.csv:22; .r:1; .xlsx:1,auxiliary_or_context; poverty; labor_informality; social_protection,10,High-priority integration candidate for country-year panel.
+sources/part_i,7_IMF,36,0,2,3063.3,.csv:35; .r:2; .xls:1,auxiliary_or_context; macro_controls; labor_informality; gender; demographics,8,High-priority integration candidate for country-year panel.
+sources/part_i,8_WB - Commodity-Prices,5,0,1,5.2,.csv:1; .r:1; .xlsx:4,trade_finance; demographics; climate_energy,5,"Secondary controls, robustness, or extension source."
+sources/part_i,9_Global Financial Development,29,0,2,1187.4,.csv:26; .r:2; .xlsx:3,trade_finance; social_protection; demographics; poverty,11,High-priority integration candidate for country-year panel.
+sources/part_i,API_NY.GDP.MKTP.CD_DS2_es_excel_v2_501.xls,1,0,0,0.3,.xls:1,macro_controls,2,"Context, documentation, or lower-priority auxiliary source."
+sources/part_i,panel_processing_manifest.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
+sources/part_i,panel_processing_manifest_Codex.csv,1,0,0,0.0,.csv:1,auxiliary_or_context,4,Candidate integrated panel; audit provenance before using as analysis-ready backbone.
