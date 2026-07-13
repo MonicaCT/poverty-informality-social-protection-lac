@@ -1,0 +1,308 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poverty, Informality and Social Protection in Latin America</title>
+  <meta name="description" content="Panel-data analytics on poverty, labor informality, social protection and structural vulnerability across Latin America and the Caribbean.">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" aria-label="Site header">
+    <div class="nav-wrap">
+      <a class="brand" href="https://github.com/MonicaCT" aria-label="Monica Cueto Tapia GitHub profile">
+        <strong>Monica Cueto Tapia</strong>
+        <span>Development Data Portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+        <a href="#snapshot">Snapshot</a>
+        <a href="#findings">Findings</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#figures">Figures</a>
+        <a href="#tables">Tables</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#methodology">Methods</a>
+        <a href="#reproducibility">Reproduce</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" style="background: linear-gradient(90deg, rgba(247,245,240,0.97), rgba(247,245,240,0.83)), url('assets/brand/repository-banner.png') center right / contain no-repeat;">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Development Analytics Lab</p>
+          <h1>Poverty, Informality and Social Protection in Latin America</h1>
+          <p class="subtitle">A reproducible panel-data framework for understanding poverty dynamics, labor informality and social-protection coverage across Latin America.</p>
+          <p class="lead">The project combines country-year panel construction, data-quality validation, missingness analysis, indicator engineering, dashboard communication and policy-oriented interpretation.</p>
+          <div class="actions" aria-label="Project actions">
+            <a class="button primary" href="https://monicact.github.io/poverty-informality-social-protection-lac/">Website</a>
+            <a class="button secondary" href="dashboard/">Interactive Dashboard</a>
+            <a class="button secondary" href="#figures">Main Figures</a>
+            <a class="button secondary" href="#tables">Executive Tables</a>
+            <a class="button tertiary" href="#methodology">Methodology</a>
+            <a class="button tertiary" href="https://github.com/MonicaCT/poverty-informality-social-protection-lac">Repository</a>
+            <a class="button tertiary" href="https://monicact.github.io/">Back to Portfolio</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Project signals">
+          <div class="signal"><strong>Country-year panel</strong><span>1,789 rows across 27 countries, with a preferred 2000-2023 analysis window.</span></div>
+          <div class="signal"><strong>Interactive web product</strong><span>Rendered dashboard in `docs/dashboard/index.html`, plus static portfolio overview here.</span></div>
+          <div class="signal"><strong>Responsible interpretation</strong><span>Descriptive diagnostics with explicit source coverage and missingness limits.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="snapshot">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Executive snapshot</p>
+            <h2>Verified public workflow figures</h2>
+          </div>
+          <p>Metrics are reused from the existing README, validation assets and generated tables. No indicators were recalculated for this web-quality phase.</p>
+        </div>
+        <div class="metric-grid">
+          <div class="metric"><strong>1,789</strong><span>Country-year rows in harmonized panel</span></div>
+          <div class="metric"><strong>27</strong><span>Countries in Latin America and the Caribbean</span></div>
+          <div class="metric"><strong>1946-2025</strong><span>Full public panel coverage</span></div>
+          <div class="metric"><strong>2000-2023</strong><span>Preferred analysis window</span></div>
+          <div class="metric"><strong>648</strong><span>Rows in preferred window</span></div>
+          <div class="metric"><strong>178</strong><span>Complete model-ready rows</span></div>
+          <div class="metric"><strong>17</strong><span>Countries in complete sample</span></div>
+          <div class="metric"><strong>0</strong><span>Duplicate country-year rows reported</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="findings">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Key findings</p>
+            <h2>Descriptive insights already documented</h2>
+          </div>
+          <p>The project is descriptive and diagnostic. The dashboard and figures do not claim causal effects of informality or social protection on poverty.</p>
+        </div>
+        <div class="grid three">
+          <article class="surface accent"><h3>Coverage is broad but uneven</h3><p>The public panel covers 27 countries and long time spans, while source coverage varies substantially by indicator.</p></article>
+          <article class="surface blue"><h3>Informality remains central</h3><p>Labor informality is a binding analytical dimension and remains high in several country profiles, including Bolivia.</p></article>
+          <article class="surface teal"><h3>Social protection is a key constraint</h3><p>Social-protection coverage has high missingness and is one of the main limits for complete cross-country modelling.</p></article>
+          <article class="surface green"><h3>Vulnerability is multidimensional</h3><p>The Structural Vulnerability Index combines poverty, informality, unemployment, inequality, social protection and GDP per capita.</p></article>
+          <article class="surface orange"><h3>Bolivia needs contextual comparison</h3><p>The repository includes a Bolivia-versus-Latin-America visual profile for regional interpretation.</p></article>
+          <article class="surface accent"><h3>Rankings are diagnostic</h3><p>Country rankings should be read as discussion tools, not automatic policy prescriptions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="dashboard">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2>Interactive dashboard and static portfolio view</h2>
+          </div>
+          <p>The interactive dashboard already exists as a rendered HTML product under `docs/dashboard/index.html`. This page provides the recruiter-facing entry point and static gallery.</p>
+        </div>
+        <div class="grid two">
+          <article class="project-card">
+            <div class="project-media"><img src="assets/screenshots/dashboard-overview.png" alt="Dashboard overview screenshot"></div>
+            <div class="project-body">
+              <h3>Interactive dashboard</h3>
+              <p>Country profiles, rankings, summary indicators, Bolivia profile and descriptive policy-oriented views.</p>
+              <div class="tags"><span>Quarto</span><span>Plotly</span><span>Panel data</span><span>Policy dashboard</span></div>
+              <div class="card-actions"><a class="button small primary" href="dashboard/">Open dashboard</a><a class="button small secondary" href="dashboard.md">Dashboard notes</a></div>
+            </div>
+          </article>
+          <article class="surface blue">
+            <h3>Publication status</h3>
+            <ul class="list-clean">
+              <li>Interactive dashboard source available.</li>
+              <li>Rendered dashboard HTML available in `docs/dashboard/index.html`.</li>
+              <li>Static portfolio view published in `docs/index.html`.</li>
+              <li>No pipeline or dashboard rebuild was executed in this phase.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="figures">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Main figures</p>
+            <h2>Existing publication figures</h2>
+          </div>
+          <p>Eight existing PNG figures are reused from `docs/assets/figures`. No scientific graphics were regenerated.</p>
+        </div>
+        <div class="grid two">
+          <article class="project-card"><div class="project-media"><img src="assets/figures/figure_01_evolution_poverty.png" alt="Evolution of monetary poverty"></div><div class="project-body"><h3>Evolution of monetary poverty</h3><p>Tracks the regional average poverty headcount over time.</p></div></article>
+          <article class="project-card"><div class="project-media"><img src="assets/figures/figure_02_evolution_informality.png" alt="Evolution of labor informality"></div><div class="project-body"><h3>Evolution of labor informality</h3><p>Shows whether informality moved with or against poverty over the preferred panel window.</p></div></article>
+          <article class="project-card"><div class="project-media"><img src="assets/figures/figure_03_social_protection_coverage.png" alt="Social protection coverage"></div><div class="project-body"><h3>Social protection coverage</h3><p>Summarizes expansion or contraction in the central mitigating variable.</p></div></article>
+          <article class="project-card"><div class="project-media"><img src="assets/figures/figure_04_scatter_informality_poverty.png" alt="Informality versus poverty"></div><div class="project-body"><h3>Informality versus poverty</h3><p>Displays the unconditional relationship motivating panel analysis.</p></div></article>
+          <article class="project-card"><div class="project-media"><img src="assets/figures/figure_07_regional_map.png" alt="Regional vulnerability map"></div><div class="project-body"><h3>Regional vulnerability map</h3><p>Static fallback for country-year structural vulnerability mapping.</p></div></article>
+          <article class="project-card"><div class="project-media"><img src="assets/figures/figure_08_heatmap_country_year.png" alt="Country-year heatmap"></div><div class="project-body"><h3>Country-year heatmap</h3><p>Highlights panel coverage, persistence and country-specific poverty episodes.</p></div></article>
+          <article class="project-card"><div class="project-media"><img src="assets/figures/figure_09_country_ranking.png" alt="Country vulnerability ranking"></div><div class="project-body"><h3>Country vulnerability ranking</h3><p>Ranks latest observations by structural vulnerability index.</p></div></article>
+          <article class="project-card"><div class="project-media"><img src="assets/figures/figure_12_bolivia_vs_lac.png" alt="Bolivia versus Latin America"></div><div class="project-body"><h3>Bolivia versus Latin America</h3><p>Contrasts Bolivia's poverty trajectory with the regional average.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="tables">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Executive tables</p>
+            <h2>Existing tabular outputs</h2>
+          </div>
+          <p>Tables are linked from GitHub because `outputs/` is outside the `/docs` Pages root. Nothing was regenerated.</p>
+        </div>
+        <div class="grid four">
+          <article class="surface accent"><h3>Descriptive statistics</h3><p>Core indicator distributions for poverty, informality, social protection and vulnerability.</p><a class="button small secondary" href="https://github.com/MonicaCT/poverty-informality-social-protection-lac/blob/main/outputs/tables/table_1_descriptive_statistics.html">Open table</a></article>
+          <article class="surface blue"><h3>Country ranking</h3><p>Latest observations ranked by the Structural Vulnerability Index.</p><a class="button small secondary" href="https://github.com/MonicaCT/poverty-informality-social-protection-lac/blob/main/outputs/tables/table_3_country_ranking.html">Open table</a></article>
+          <article class="surface teal"><h3>Regional summary</h3><p>Indicator summary by regional grouping.</p><a class="button small secondary" href="https://github.com/MonicaCT/poverty-informality-social-protection-lac/blob/main/outputs/tables/table_4_regional_summary.html">Open table</a></article>
+          <article class="surface green"><h3>Missing values</h3><p>Missingness patterns in analytical variables and coverage constraints.</p><a class="button small secondary" href="https://github.com/MonicaCT/poverty-informality-social-protection-lac/blob/main/outputs/tables/table_5_missing_values.html">Open table</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="data-sources">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Data sources</p>
+            <h2>Harmonized public panel</h2>
+          </div>
+          <p>The repository combines documented public indicators into a country-year panel. Source constraints and data lineage are documented separately.</p>
+        </div>
+        <div class="grid three">
+          <article class="surface accent"><h3>Sources</h3><p>SEDLAC, World Development Indicators, ILOSTAT, ASPIRE and CEPALSTAT.</p></article>
+          <article class="surface blue"><h3>Public files</h3><p>Processed panel, dashboard panel, metadata, codebook, validation and dashboard documentation.</p></article>
+          <article class="surface teal"><h3>Documentation</h3><p><a href="DATA_LINEAGE.md">Data lineage</a>, <a href="DATA_LICENSE.md">data license notes</a> and <a href="https://github.com/MonicaCT/poverty-informality-social-protection-lac/blob/main/data/metadata/CODEBOOK.md">codebook</a>.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="data-quality">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Data quality</p>
+            <h2>Coverage and validation as first-class outputs</h2>
+          </div>
+          <p>Missingness and coverage are central constraints, especially for social protection, labor informality and complete model-ready samples.</p>
+        </div>
+        <div class="grid three">
+          <article class="surface accent"><h3>Validation checks</h3><p>The README reports 0 duplicate country-year rows and 0 impossible percentage values.</p></article>
+          <article class="surface blue"><h3>Missingness</h3><p>Table 5 documents high missingness for several labor and social-expenditure variables.</p></article>
+          <article class="surface teal"><h3>Publication discipline</h3><p>Dashboard views are descriptive diagnostics and keep source coverage visible.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="container narrow">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Analytical workflow</p>
+            <h2>From harmonized indicators to public products</h2>
+          </div>
+        </div>
+        <div class="timeline" aria-label="Analytical workflow">
+          <article><h3>Processed public panel</h3><p>Country-year indicators are stored in `data/processed/`.</p></article>
+          <article><h3>Validation and missingness checks</h3><p>Panel integrity, impossible values and coverage constraints are documented.</p></article>
+          <article><h3>Indicator engineering</h3><p>Core poverty, informality, social protection and vulnerability indicators are prepared.</p></article>
+          <article><h3>Descriptive outputs</h3><p>Figures, tables, dashboard panels and country profiles are produced by the existing workflow.</p></article>
+          <article><h3>Dashboard publication</h3><p>Interactive dashboard and static gallery are published under `/docs` for GitHub Pages.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="methodology">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Methodology</p>
+            <h2>Documented descriptive framework</h2>
+          </div>
+          <p>The workflow constructs a harmonized country-year panel, standardizes country identifiers, combines poverty and labor-market indicators, and builds a descriptive Structural Vulnerability Index.</p>
+        </div>
+        <div class="grid three">
+          <article class="surface accent"><h3>Panel construction</h3><p>Multi-source country-year data are harmonized into public processed panel files.</p></article>
+          <article class="surface blue"><h3>Indicator logic</h3><p>Structural vulnerability combines poverty, informality, unemployment, inequality, social protection and GDP per capita.</p></article>
+          <article class="surface teal"><h3>Interpretation</h3><p>All dashboard outputs remain associational and descriptive, with no causal claims.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reproducibility">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Reproducibility</p>
+            <h2>Public workflow and checks</h2>
+          </div>
+          <p>The public workflow starts from processed panel files already committed to the repository. A full raw rebuild requires local data archives and was not executed here.</p>
+        </div>
+        <div class="grid three">
+          <article class="surface accent"><h3>Documentation</h3><p><a href="reproducibility.md">Reproducibility guide</a> and <a href="repository-architecture.md">repository architecture</a> describe the public workflow.</p></article>
+          <article class="surface blue"><h3>Tests</h3><p>Repository tests cover panel integrity, outputs and publication readiness.</p></article>
+          <article class="surface green"><h3>This phase</h3><p>No pipelines, models, indicators, figures or tables were regenerated.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="limitations">
+      <div class="container narrow">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Limitations</p>
+            <h2>Responsible interpretation boundaries</h2>
+          </div>
+        </div>
+        <ul class="list-clean">
+          <li>Source coverage is uneven across countries, years and indicators.</li>
+          <li>Social-protection and informality variables have substantial missingness.</li>
+          <li>The Structural Vulnerability Index is descriptive, not a causal model.</li>
+          <li>Country rankings are diagnostic views for discussion, not automatic policy prescriptions.</li>
+          <li>No standalone working paper is published in this repository.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="citation">
+      <div class="container">
+        <div class="grid two">
+          <article class="surface accent">
+            <p class="eyebrow">Citation</p>
+            <h2>Citation metadata</h2>
+            <p>Use CITATION.cff for machine-readable citation metadata. No DOI is currently listed for this repository.</p>
+            <a class="button small secondary" href="https://github.com/MonicaCT/poverty-informality-social-protection-lac/blob/main/CITATION.cff">Open CITATION.cff</a>
+          </article>
+          <article class="surface blue">
+            <p class="eyebrow">Back to portfolio</p>
+            <h2>Monica Cueto Tapia</h2>
+            <p>Return to the portfolio hub or inspect the repository source and documentation.</p>
+            <div class="card-actions"><a class="button small primary" href="https://monicact.github.io/">Back to Portfolio</a><a class="button small secondary" href="https://github.com/MonicaCT">GitHub profile</a><a class="button small tertiary" href="https://github.com/MonicaCT/poverty-informality-social-protection-lac">Repository</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <span>Poverty, Informality and Social Protection in Latin America.</span>
+      <a href="https://github.com/MonicaCT/poverty-informality-social-protection-lac">View repository</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

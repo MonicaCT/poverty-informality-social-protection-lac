@@ -9,11 +9,14 @@
 
 ![Repository banner](assets/brand/repository-banner.png)
 
-[![Dashboard](https://img.shields.io/badge/Explore-Dashboard-B23A48?style=for-the-badge)](https://monicact.github.io/poverty-informality-social-protection-lac/dashboard/)
-[![Methodology](https://img.shields.io/badge/View-Methodology-6B7280?style=for-the-badge)](#methodology)
+[![Website](https://img.shields.io/badge/Website-open-002147?style=for-the-badge)](https://monicact.github.io/poverty-informality-social-protection-lac/)
+[![Interactive Dashboard](https://img.shields.io/badge/Dashboard-open-B23A48?style=for-the-badge)](https://monicact.github.io/poverty-informality-social-protection-lac/dashboard/)
+[![Main Figures](https://img.shields.io/badge/Main%20Figures-view-C9A227?style=for-the-badge)](https://monicact.github.io/poverty-informality-social-protection-lac/#figures)
+[![Executive Tables](https://img.shields.io/badge/Executive%20Tables-open-1F7A8C?style=for-the-badge)](https://monicact.github.io/poverty-informality-social-protection-lac/#tables)
+[![Methodology](https://img.shields.io/badge/Methodology-review-6B7280?style=for-the-badge)](https://monicact.github.io/poverty-informality-social-protection-lac/#methodology)
 [![Data Dictionary](https://img.shields.io/badge/Data-Dictionary-2A9D8F?style=for-the-badge)](data/metadata/CODEBOOK.md)
-[![Reproduce](https://img.shields.io/badge/Reproduce-Analysis-264653?style=for-the-badge)](#reproducibility)
-[![Repository](https://img.shields.io/badge/View-Repository-181717?style=for-the-badge&logo=github)](https://github.com/MonicaCT/poverty-informality-social-protection-lac)
+[![Repository](https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/MonicaCT/poverty-informality-social-protection-lac)
+[![Back to Portfolio](https://img.shields.io/badge/Back%20to%20Portfolio-return-B23A48?style=for-the-badge)](https://monicact.github.io/)
 
 ## Data analyst capabilities demonstrated
 

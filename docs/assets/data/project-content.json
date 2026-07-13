@@ -1,0 +1,35 @@
+﻿{
+  "project": "Poverty, Informality and Social Protection in Latin America",
+  "repository": "https://github.com/MonicaCT/poverty-informality-social-protection-lac",
+  "website": "https://monicact.github.io/poverty-informality-social-protection-lac/",
+  "dashboard": "https://monicact.github.io/poverty-informality-social-protection-lac/dashboard/",
+  "dashboard_type": "INTERACTIVE_WEB",
+  "main_product": "interactive dashboard and static portfolio website",
+  "metrics": {
+    "panel_rows": 1789,
+    "countries": 27,
+    "full_coverage": "1946-2025",
+    "preferred_window": "2000-2023",
+    "preferred_window_rows": 648,
+    "complete_model_ready_rows": 178,
+    "complete_sample_countries": 17,
+    "duplicate_country_year_rows": 0
+  },
+  "reused_figures": [
+    "docs/assets/figures/figure_01_evolution_poverty.png",
+    "docs/assets/figures/figure_02_evolution_informality.png",
+    "docs/assets/figures/figure_03_social_protection_coverage.png",
+    "docs/assets/figures/figure_04_scatter_informality_poverty.png",
+    "docs/assets/figures/figure_07_regional_map.png",
+    "docs/assets/figures/figure_08_heatmap_country_year.png",
+    "docs/assets/figures/figure_09_country_ranking.png",
+    "docs/assets/figures/figure_12_bolivia_vs_lac.png"
+  ],
+  "reused_tables": [
+    "outputs/tables/table_1_descriptive_statistics.html",
+    "outputs/tables/table_3_country_ranking.html",
+    "outputs/tables/table_4_regional_summary.html",
+    "outputs/tables/table_5_missing_values.html"
+  ],
+  "publication_note": "Interactive dashboard source available; static portfolio view published. No pipeline, model, indicator, table or figure regeneration was performed."
+}
