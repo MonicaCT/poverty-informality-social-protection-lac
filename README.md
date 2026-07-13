@@ -1,4 +1,4 @@
-﻿# Poverty, Informality and Social Protection in Latin America
+# Poverty, Informality and Social Protection in Latin America
 
 **A reproducible panel-data framework for understanding poverty dynamics, labor informality and social-protection coverage across Latin America**
 
@@ -14,6 +14,19 @@
 [![Data Dictionary](https://img.shields.io/badge/Data-Dictionary-2A9D8F?style=for-the-badge)](data/metadata/CODEBOOK.md)
 [![Reproduce](https://img.shields.io/badge/Reproduce-Analysis-264653?style=for-the-badge)](#reproducibility)
 [![Repository](https://img.shields.io/badge/View-Repository-181717?style=for-the-badge&logo=github)](https://github.com/MonicaCT/poverty-informality-social-protection-lac)
+
+## Data analyst capabilities demonstrated
+
+- Python data processing;
+- multi-source data integration;
+- country-year panel construction;
+- data-quality validation;
+- missingness analysis;
+- indicator engineering;
+- interactive dashboard development;
+- reproducible reporting;
+- automated repository tests;
+- policy-oriented data communication.
 
 ## Research question
 
