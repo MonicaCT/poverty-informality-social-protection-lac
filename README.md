@@ -16,7 +16,7 @@
 [![Methodology](https://img.shields.io/badge/Methodology-review-6B7280?style=for-the-badge)](https://monicact.github.io/poverty-informality-social-protection-lac/#methodology)
 [![Data Dictionary](https://img.shields.io/badge/Data-Dictionary-2A9D8F?style=for-the-badge)](data/metadata/CODEBOOK.md)
 [![Repository](https://img.shields.io/badge/Repository-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/MonicaCT/poverty-informality-social-protection-lac)
-[![Back to Portfolio](https://img.shields.io/badge/Back%20to%20Portfolio-return-B23A48?style=for-the-badge)](https://monicact.github.io/)
+[![Back to Portfolio](https://img.shields.io/badge/Back%20to%20Portfolio-return-B23A48?style=for-the-badge)](https://monicact.github.io/MonicaCT/)
 
 ## Data analyst capabilities demonstrated
 
