@@ -1,4 +1,4 @@
-﻿# Validation Report - Poverty, Informality and Social Protection Website
+# Validation Report - Poverty, Informality and Social Protection Website
 
 Date: 2026-07-13
 
@@ -61,3 +61,30 @@ If the public URL returns 404, classify it as:
 ```text
 PENDING HUMAN PAGES CONFIGURATION
 ```
+
+---
+
+# Stage 1B Validation Addendum
+
+Date: 2026-07-14
+
+Scope: minimum flagship analytics standard for `poverty-informality-social-protection-lac`.
+
+## Summary
+
+Status: PASS
+
+Stage 1B created flagship documentation and visible SQL assets using existing README content, metadata, dashboard files, public outputs, figures, tables and validation reports. No data were downloaded, no pipeline was executed, no indicator was recalculated, no model was run, no figure or table was regenerated and no dashboard was rebuilt.
+
+## Checks
+
+| Check | Status | Notes |
+|---|---|---|
+| Documents created | PASS | Executive summary, recruiter guide, variable catalog, KPI dictionary, data-quality report, stakeholder requirements, data model and flagship status exist. |
+| KPI consistency | PASS | KPI names and definitions reuse existing panel variables, README, dashboard and metadata. |
+| Variables not invented | PASS | Variables are taken from existing data dictionary and dashboard panel; uncertain fields use `REVIEW_REQUIRED`. |
+| Tableau status | PASS | Tableau is marked `PLANNED`; no Tableau artifact is claimed. |
+| SQL assets | PASS | DDL, marts and validation SQL were created as future SQL/Tableau assets and were not executed. |
+| Privacy | PASS | Documentation and SQL refer only to public aggregate country-year data. |
+| Data unchanged | PASS | No files under `data/`, `dashboard/`, `outputs/`, `reports/`, `models/`, `paper/`, `scripts/`, `src/` or `docs/index.html` were modified. |
+| Results unchanged | PASS | No indicators, models, tables, figures or dashboard outputs were recalculated. |
