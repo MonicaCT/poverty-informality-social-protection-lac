@@ -1,0 +1,16 @@
+﻿// 04_social_protection_metrics.txt
+
+[Social Protection Coverage]
+AVG([social_protection_coverage])
+
+[Social Insurance Coverage]
+AVG([social_insurance_coverage_aspire])
+
+[Social Assistance Coverage]
+AVG([social_assistance_coverage_aspire])
+
+[Cash Transfer Coverage]
+AVG([cash_transfer_coverage_aspire])
+
+[Pension Coverage]
+AVG([pension_coverage_aspire])

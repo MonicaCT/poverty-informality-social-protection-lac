@@ -1,0 +1,14 @@
+﻿// 00_base_metrics.txt
+// Use these fields in Tableau after importing tableau/data CSVs.
+
+[Country Coverage]
+COUNTD([iso3])
+
+[Latest Available Year]
+{ FIXED [iso3] : MAX([year]) }
+
+[Analysis Window Filter]
+[year] >= [Start Year] AND [year] <= [End Year]
+
+[Selected Country Label]
+IFNULL([country_name], 'All countries')

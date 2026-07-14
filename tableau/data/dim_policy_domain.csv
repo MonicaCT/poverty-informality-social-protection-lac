@@ -1,0 +1,7 @@
+﻿"policy_domain_key","policy_domain_name","description"
+"poverty","Poverty","Monetary poverty, extreme poverty and poverty gap indicators"
+"labor","Labor market","Employment, unemployment and labor-force participation indicators"
+"informality","Informality","Labor informality and informality interaction indicators"
+"social_protection","Social protection","Coverage, adequacy, social assistance and social insurance indicators"
+"vulnerability","Vulnerability","Structural Vulnerability Index and macro/inequality context"
+"data_quality","Data quality","Missingness, coverage and comparability diagnostics"

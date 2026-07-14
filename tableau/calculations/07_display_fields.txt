@@ -1,0 +1,12 @@
+﻿// 07_display_fields.txt
+
+[Selected Indicator Label]
+// REVIEW_REQUIRED - DO NOT USE until Metric Selector is implemented in Tableau.
+
+[Data Quality Warning]
+IF AVG([missing_pct]) >= [Data Quality Threshold] THEN 'High missingness - interpret cautiously'
+ELSE 'Coverage acceptable for descriptive use'
+END
+
+[Methodology Note]
+'Descriptive country-year indicators; not causal estimates.'

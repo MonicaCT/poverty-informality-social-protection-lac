@@ -1,0 +1,16 @@
+﻿// 02_labor_metrics.txt
+
+[Employment Rate]
+AVG([employment])
+
+[Unemployment Rate]
+AVG([unemployment])
+
+[Labor Force Participation]
+AVG([labor_force_participation])
+
+[Female Labor Force Participation]
+AVG([female_labor_participation])
+
+[Male Labor Force Participation]
+AVG([male_labor_participation])

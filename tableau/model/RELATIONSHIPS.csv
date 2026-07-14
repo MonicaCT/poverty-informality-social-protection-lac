@@ -1,0 +1,13 @@
+﻿from_table,from_field,to_table,to_field,relationship_type,cardinality,referential_integrity,rationale,status
+dim_country,iso3,fact_poverty,iso3,logical relationship,one-to-many,some records may be unmatched if source coverage is incomplete,Country filters poverty facts,AVAILABLE
+dim_country,iso3,fact_labor,iso3,logical relationship,one-to-many,some records may be unmatched if source coverage is incomplete,Country filters labor facts,AVAILABLE
+dim_country,iso3,fact_informality,iso3,logical relationship,one-to-many,some records may be unmatched if source coverage is incomplete,Country filters informality facts,AVAILABLE
+dim_country,iso3,fact_social_protection,iso3,logical relationship,one-to-many,some records may be unmatched if source coverage is incomplete,Country filters social-protection facts,AVAILABLE
+dim_country,iso3,fact_vulnerability,iso3,logical relationship,one-to-many,some records may be unmatched if source coverage is incomplete,Country filters vulnerability facts,AVAILABLE
+dim_time,year,fact_poverty,year,logical relationship,one-to-many,some years may lack indicator coverage,Year filters poverty facts,AVAILABLE
+dim_time,year,fact_labor,year,logical relationship,one-to-many,some years may lack indicator coverage,Year filters labor facts,AVAILABLE
+dim_time,year,fact_informality,year,logical relationship,one-to-many,some years may lack indicator coverage,Year filters informality facts,AVAILABLE
+dim_time,year,fact_social_protection,year,logical relationship,one-to-many,some years may lack indicator coverage,Year filters social-protection facts,AVAILABLE
+dim_time,year,fact_vulnerability,year,logical relationship,one-to-many,some years may lack indicator coverage,Year filters vulnerability facts,AVAILABLE
+dim_indicator,indicator_code,fact_data_quality,variable,logical relationship,one-to-many,some quality variables may need review,Indicator metadata filters quality facts,AVAILABLE
+dim_policy_domain,policy_domain_key,dim_indicator,policy_domain_key,logical relationship,one-to-many,all documented indicators should map to a domain,Policy domain groups indicator metadata,AVAILABLE

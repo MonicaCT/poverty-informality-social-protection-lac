@@ -1,4 +1,4 @@
-﻿# Flagship Status
+# Flagship Status
 
 | component | status | evidence | next action |
 |---|---|---|---|
@@ -14,7 +14,7 @@
 | SQL marts | COMPLETE | `sql/marts/` | use as future Tableau extract logic |
 | SQL validation | COMPLETE | `sql/validation/` | run only when SQL database exists |
 | dashboard web | COMPLETE | `dashboard/index.html`, `docs/dashboard/index.html` | do not rebuild in Stage 1B |
-| Tableau | PLANNED | no Tableau artifact exists | Stage 2 candidate |
+| Tableau package | COMPLETE | `tableau/` data, model, calculations, specs, wireframes and handoff | build real workbook manually |`n| Tableau workbook | PENDING MANUAL BUILD | no Tableau Desktop/Public tooling available in this environment | create `.twb` or `.twbx` manually |
 | Power BI | NOT REQUIRED | Tableau is planned for this repository; Power BI not requested | no action |
 | paper/report | PARTIAL | dashboard documentation, release notes and validation assets exist; no standalone paper | consider later only if authorized |
 | reproducibility | COMPLETE | `docs/reproducibility.md`, tests and pipeline scripts | do not rerun in Stage 1B |

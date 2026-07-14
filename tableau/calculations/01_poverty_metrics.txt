@@ -1,0 +1,13 @@
+﻿// 01_poverty_metrics.txt
+
+[Poverty Rate]
+AVG([monetary_poverty])
+
+[Extreme Poverty Rate]
+AVG([extreme_poverty])
+
+[Poverty Gap]
+AVG([poverty_gap])
+
+[Bolivia Poverty Value]
+AVG(IF [iso3] = 'BOL' THEN [monetary_poverty] END)

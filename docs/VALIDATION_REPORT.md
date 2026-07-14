@@ -88,3 +88,30 @@ Stage 1B created flagship documentation and visible SQL assets using existing RE
 | Privacy | PASS | Documentation and SQL refer only to public aggregate country-year data. |
 | Data unchanged | PASS | No files under `data/`, `dashboard/`, `outputs/`, `reports/`, `models/`, `paper/`, `scripts/`, `src/` or `docs/index.html` were modified. |
 | Results unchanged | PASS | No indicators, models, tables, figures or dashboard outputs were recalculated. |
+
+---
+
+# Stage 2 Tableau Validation Addendum
+
+Date: 2026-07-14
+
+Scope: Tableau analytics package and manual workbook handoff for `poverty-informality-social-protection-lac`.
+
+## Summary
+
+Status: WARNING
+
+Tableau Desktop, Tableau Public, tabcmd and Hyper tooling were not available in PATH or standard install locations. No GUI automation was attempted, no tools were installed and no repeated attempts were made. The repository now contains a professional Tableau package and manual build handoff using only public aggregate outputs.
+
+## Checks
+
+| Check | Status | Notes |
+|---|---|---|
+| Public Tableau data package | PASS | `tableau/data/` contains public aggregate CSVs derived from existing processed panel and quality outputs. |
+| Model documentation | PASS | Relationships, field dictionary, calculated fields and parameters are documented. |
+| Dashboards | PASS | Exactly five dashboards are specified. |
+| Story | PASS | One six-point story is specified. |
+| Workbook artifact | WARNING | No real Tableau workbook could be built in this environment. |
+| Fake artifacts | PASS | No fake `.twb`, `.twbx`, `.hyper`, PDF or screenshots were created. |
+| Privacy | PASS | No raw data, private paths, credentials or personal identifiers were added. |
+| Results unchanged | PASS | No indicators, models, figures, tables or dashboard outputs were recalculated. |

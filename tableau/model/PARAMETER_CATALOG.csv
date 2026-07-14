@@ -1,0 +1,8 @@
+﻿parameter_name,data_type,allowable_values,default_value,uses,status
+Metric Selector,String,"Poverty Rate; Extreme Poverty Rate; Informality Rate; Employment Rate; Unemployment Rate; Social Protection Coverage; Vulnerability Index",Poverty Rate,Switch dashboard metric and titles,AVAILABLE
+Country Benchmark Selector,String,"Bolivia; selected country",Bolivia,Choose focal country for comparison,AVAILABLE
+Start Year,Integer,Years present in dim_time,2000,Filter analysis period start,AVAILABLE
+End Year,Integer,Years present in dim_time,2023,Filter analysis period end,AVAILABLE
+Regional Comparator,String,"LAC average; same region; all countries",LAC average,Define benchmark group,AVAILABLE
+Absolute versus Relative Difference,String,"Absolute difference; relative difference",Absolute difference,Control benchmark calculation display,AVAILABLE
+Data Quality Threshold,Float,"0 to 100",80,Flag high-missingness indicators,AVAILABLE

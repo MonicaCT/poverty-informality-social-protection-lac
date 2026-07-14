@@ -1,0 +1,11 @@
+﻿// 06_benchmark_metrics.txt
+
+[Missingness Rate]
+AVG([missing_pct])
+
+[Bolivia versus Regional Benchmark]
+// REVIEW_REQUIRED - DO NOT USE until the selected metric and regional comparator are manually implemented.
+// The KPI exists conceptually in docs/KPI_DICTIONARY.md, but metric-specific Tableau logic must be configured in the workbook.
+
+[Difference from Regional Average]
+// REVIEW_REQUIRED - DO NOT USE until [Selected Metric] is implemented through the Metric Selector parameter.

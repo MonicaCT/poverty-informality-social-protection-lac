@@ -1,0 +1,10 @@
+﻿// 03_informality_metrics.txt
+
+[Informality Rate]
+AVG([labor_informality])
+
+[Informality Lag 1]
+AVG([labor_informality_lag1])
+
+[Informality Social Protection Interaction]
+AVG([informality_x_social_protection])

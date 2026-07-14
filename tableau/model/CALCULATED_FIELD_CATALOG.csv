@@ -1,0 +1,17 @@
+﻿calculated_field,tableau_formula,source_kpi,format,status,notes
+Poverty Rate,AVG([monetary_poverty]),poverty rate,Percentage,AVAILABLE,Use only where monetary_poverty is non-null
+Extreme Poverty Rate,AVG([extreme_poverty]),extreme poverty rate,Percentage,AVAILABLE,Use only where extreme_poverty is non-null
+Informality Rate,AVG([labor_informality]),informality rate,Percentage,AVAILABLE,Definition varies by source and coverage
+Employment Rate,AVG([employment]),employment rate,Percentage,AVAILABLE,Use with source caveat
+Unemployment Rate,AVG([unemployment]),unemployment,Percentage,AVAILABLE,Use with source caveat
+Social Protection Coverage,AVG([social_protection_coverage]),social protection coverage,Percentage,AVAILABLE,High missingness warning required
+Social Insurance Coverage,AVG([social_insurance_coverage_aspire]),social insurance coverage,Percentage,AVAILABLE,ASPIRE-specific indicator
+Social Assistance Coverage,AVG([social_assistance_coverage_aspire]),social assistance coverage,Percentage,AVAILABLE,ASPIRE-specific indicator
+Vulnerability Index,AVG([structural_vulnerability_index]),vulnerability index,Number,AVAILABLE,Descriptive index only
+Missingness Rate,AVG([missing_pct]),missingness rate,Percentage,AVAILABLE,Use in Data Quality dashboard
+Country Coverage,COUNTD([iso3]),country coverage,Integer,AVAILABLE,Use as coverage count
+Bolivia versus Regional Benchmark,AVG(IF [iso3] = 'BOL' THEN [monetary_poverty] END) - AVG([monetary_poverty]),Bolivia versus regional benchmark,Percentage points,REVIEW_REQUIRED - DO NOT USE,Metric-specific benchmark must be selected before use
+Difference from Regional Average,AVG([Selected Metric]) - WINDOW_AVG(AVG([Selected Metric])),Bolivia versus regional benchmark,Number,REVIEW_REQUIRED - DO NOT USE,Requires manual Tableau parameter implementation
+Latest Available Year,{ FIXED [iso3] : MAX([year]) },country coverage,Year,AVAILABLE,Use for latest-country profile views
+Selected Country Label,IFNULL([country_name], 'All countries'),country coverage,Text,AVAILABLE,Display helper
+Selected Indicator Label,[Metric Selector],REVIEW_REQUIRED,Text,REVIEW_REQUIRED - DO NOT USE,Requires Tableau parameter creation
